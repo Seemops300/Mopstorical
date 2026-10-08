@@ -12,3 +12,6 @@ Modding files:
 - When overriding a define from common/defines, follow the namespace structure of the define and add the original value as a comment
 	- e.g. overriding the output of a military factory would look like this in the file:  
 		NDefines.NProduction.BASE_FACTORY_SPEED_MIL = 4 -- 3.5
+
+States:
+- https://hoi4.paradoxwikis.com/List_of_states
