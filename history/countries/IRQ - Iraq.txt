@@ -290,11 +290,11 @@ IF = {
 			active = yes
 		}
 
-		diplomatic_relation = {
-			country = AFG
-			relation = non_aggression_pact
-			active = yes
-		}
+		# diplomatic_relation = {
+			# country = AFG
+			# relation = non_aggression_pact
+			# active = yes
+		# }
 
 		add_dynamic_modifier = { modifier = SSB_saadabad_pact }
 

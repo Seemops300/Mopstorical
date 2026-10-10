@@ -401,11 +401,11 @@ if = {
 			active = yes
 		}
 
-		diplomatic_relation = {
-			country = AFG
-			relation = non_aggression_pact
-			active = yes
-		}
+		# diplomatic_relation = {
+			# country = AFG
+			# relation = non_aggression_pact
+			# active = yes
+		# }
 	}
 
 	set_technology = {
