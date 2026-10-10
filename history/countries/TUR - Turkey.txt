@@ -395,11 +395,11 @@ if = {
 			active = yes
 		}
 
-		diplomatic_relation = {
-			country = IRQ
-			relation = non_aggression_pact
-			active = yes
-		}
+		# diplomatic_relation = {
+			# country = IRQ
+			# relation = non_aggression_pact
+			# active = yes
+		# }
 
 		# diplomatic_relation = {
 			# country = AFG

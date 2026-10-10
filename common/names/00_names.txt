@@ -3806,40 +3806,6 @@ PSH = {
 	callsigns = { }
 }
 
-IRQ = {
-	male = {
-		names = { Karim
-			"Abd Allah" "Abd al-Karim" "Abd al-Malik" "Abd al-Qadir" "Abd al-Rahman" Ahmad Ali
-			Fawzi Fuad Halil Hasan Hisham Ibrahim Ishaq Iskandar Jamal Kamil Khalid
-			Muhammad Mustafa "Nur al-Din" "Sa'd al-Din" Salim Shukri
-			Tawfiq Umar Uthman Yahya Yusuf Zafir
-		}
-		surnames = { Muammar "al-Baghdadi" "al-Basri" "al-Ghazzawi" "al-Halabi" "al-Hamawi" "al-Himsi"
-				"al-Mawsili" "al-Nablusi" "al-Qudsi" "al-Shami"
-				"ibn Abd Allah" "ibn Abd al-Qadir" "ibn Abu Bakr" "ibn Ahmad" "ibn Ali"
-				"ibn Fuad" "ibn Halil" "ibn Hasan" "ibn Hisham" "ibn Ishaq" "ibn Ja'far" "ibm Kamil" "ibn Khalid"
-				"ibn Muhammad" "ibn Mustafa" "ibn Salim"
-				"ibn Umar" "ibn Uthman" "ibn Yusuf"
-		}
-	}
-	female = {
-		names = {
-			Badr Fatimah Acenith Alia Amunet Andali Asanet Asenath Asenet Azenet Badiat Cena Fatima Halima
-			Jamila Khadija Majida Mariam Maria Nabila Nura Radiya Rana Sacmis Safiya
-			Samira Suhaila Tawaret Taweret Titi Thuriya Zara Zahra Zahra
-		}
-		surnames = { Muammar "al-Baghdadi" "al-Basri" "al-Ghazzawi" "al-Halabi" "al-Hamawi" "al-Himsi"
-				"al-Mawsili" "al-Nablusi" "al-Qudsi" "al-Shami"
-				"bint Abd Allah" "bint Abd al-Qadir" "bint Abu Bakr" "bint Ahmad" "bint Ali"
-				"bint Fuad" "bint Halil" "bint Hasan" "bint Hisham" "bint Ishaq" "bint Ja'far" "ibm Kamil" "bint Khalid"
-				"bint Muhammad" "bint Mustafa" "bint Salim"
-				"bint Umar" "bint Uthman" "bint Yusuf"
-
-		}
-	}
-	callsigns = { }
-}
-
 ASY = {
 	male = {
 		names = {
