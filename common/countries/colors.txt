@@ -161,10 +161,6 @@ ELS = {
 	color = rgb { 152 130 191 }
 	color_ui = rgb { 198 169 248 }
 }
-ETH = {
-	color = rgb { 152 130 191 }
-	color_ui = rgb { 198 169 248 }
-}
 GUA = {
 	color = rgb { 72 49 112 }
 	color_ui = rgb { 72 49 112 }
@@ -832,10 +828,6 @@ MEL = {
 CHU = {
 	color = rgb { 191 128 64 }
 	color_ui = rgb { 134 89 45 }
-}
-AFA = {
-	color = rgb { 153 0 51 }
-	color_ui = rgb { 77 0 25 }
 }
 BEG = {
 	color = rgb { 255 212 128 }

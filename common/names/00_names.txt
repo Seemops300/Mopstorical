@@ -6212,20 +6212,6 @@ LIB = {
 	 }
 	callsigns = { }
 }
-ETH = {
-	male = {
-		names = {
-			Abate Abebe Aberra Abiye Ademe Admassu Afawarq Aklilu Amare Amde Anbassu Asfawossen Asrate Atikam Ayalew Balambaras Beine Bekele Belew Berhanu Berihun Beshah Bezibibeh Birru Damtew Debebe Demissie Desta Emmanual Endelkachew Gessesse Getachew Geteye Girma Haile Hailemariam Hapte Kass Kassa Kebbede Kelile Makonnen Mariam Melekot Mengesha Merid Mikael Nasibu Negasi Saleh Sebhat Seged Selassie Seyum Sileshi Tedeamme Wasane Wondosson Wossen Zeamanuel Zelleka Zewde
-		   }
-	}
-	female = {
-		names = { Abrihet Amete Amhara Bekele Belkis Cheren Debtera Degiat Falasha Falashina Fannah Feiven Genat Habesha Hagos Ijigayehou Jazarah Kayla Kelile Kelyle Kess Kifle Louama Mariam Medferiashwork Nishan Nyala Qwara Rahel Retta Sheba Tsage Tsigemariam Wagaye Wolete Wosenyelesh Yehudit Zala Zauditu Zeina Zena Zenia Zimam Zuriashwork }
-	}
-	surnames = {
-			Abate Abebe Aberra Abiye Ademe Admassu Afawarq Aklilu Amare Amde Anbassu Asfawossen Asrate Atikam Ayalew Balambaras Beine Bekele Belew Berhanu Berihun Beshah Bezibibeh Birru Damtew Debebe Demissie Desta Emmanual Endelkachew Gessesse Getachew Geteye Girma Haile Hailemariam Hapte Kass Kassa Kebbede Kelile Makonnen Mariam Melekot Mengesha Merid Mikael Nasibu Negasi Saleh Sebhat Seged Selassie Seyum Sileshi Tedeamme Wasane Wondosson Wossen Zeamanuel Zelleka Zewde "Ali Nur" "Walda Samayat" "Wolde Malakot" Gebre-Igziabiher "Zera Yacob"
-	 }
-	callsigns = { }
-}
 ANG = {
 	male = {
 		names = {
@@ -9011,27 +8997,6 @@ RKK = {
 
 
 # Ethiopian releasables
-
-AFA = {
-   	male = {
-   		names = {
-			Camad Cate Kaamil Macammad Makki Mocammad Qali Qasso Mahfuz Lebna Umar Kandhafo Mahammad Aydahis Hanfadhe Yayyo Alimirah Hanfare Ali Mohamed Yahya Said
-       }
-       surnames = {
-          "ibn Kadhafo" "ibn Mahammad" "ibn Aydahis" "ibn Hanfadhe" "ibn Alimirah" Macammad Mocammed Camad Qali Mahfuz Umar Kaamil Mira Wossen Tafari Zahir
-       }
-   	}
-   female = {
-       	names = {
-       		Faatuma Haawa Mayram Saami
-        }
-        surnames = {
-           "bint Kadhafo" "bint Mahammad" "bint Aydahis" "bint Hanfadhe" "bint Alimirah" Macammad Mocammed Camad Qali Mahfuz Umar Kaamil Mira Wossen Tafari Zahir
-        }
-   }
-   callsigns = { "Danakil" "Aussa" "Keyi Bahiri" }
-}
-
 
 TIG = {
    	male = {
