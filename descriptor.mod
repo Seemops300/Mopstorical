@@ -1,12 +1,11 @@
 version="0.1.1"
-
-
 tags={
 	"Gameplay"
 	"Balance"
 	"Map"
 	"Historical"
 }
+replace_path="history/countries"
 picture="thumbnail.png"
 name="Mopstorical"
-supported_version="1.19.3"
+supported_version="1.19.3.0"
