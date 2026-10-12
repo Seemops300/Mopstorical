@@ -319,19 +319,9 @@ EGY = {
 	color_ui = rgb { 230 230 70 }
 }
 
-LEB = {
-	color = rgb { 130  150  60 }
-	color_ui = rgb { 130  150  60 }
-}
-
 JOR = {
 	color = rgb { 111  55  78 }
 	color_ui = rgb { 111  55  78 }
-}
-
-SYR = {
-	color = rgb { 100  100  150 }
-	color_ui = rgb { 100  100  150 }
 }
 
 SER = {
