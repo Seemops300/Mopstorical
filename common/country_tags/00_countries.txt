@@ -61,9 +61,13 @@ YUN = "countries/Yunnan.txt"
 USA = "countries/USA.txt"
 MON = "countries/Mongolia.txt"
 TAN = "countries/Tannu Tuva.txt"
+<<<<<<< HEAD
 CUB = "countries/Cuba.txt"
 DOM = "countries/Dominican Republic.txt"
 HAI = "countries/Haiti.txt"
+=======
+PAR = "countries/Paraguay.txt"
+>>>>>>> aec50e15c4e1180e62091ae59e0608086a17e418
 YEM = "countries/Yeman.txt"
 OMA = "countries/Oman.txt"
 SLO = "countries/Slovakia.txt"

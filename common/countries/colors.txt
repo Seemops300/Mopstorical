@@ -113,10 +113,6 @@ HUN = {
 	color = rgb { 249 126 98 }
 	color_ui = rgb { 255 164 127 }
 }
-ARG = {
-	color = rgb { 145 157 236 }
-	color_ui = rgb { 189 204 255 }
-}
 AST = {
 	color = rgb { 57 143 97 }
 	color_ui = rgb { 74 186 126 }
@@ -172,10 +168,6 @@ HON = {
 JAP = {
 	color = hsv { 0.05 0.3 1 }
 	color_ui = hsv { 0.05 0.25 1.2 }
-}
-LIB = {
-	color = rgb { 152 130 191 }
-	color_ui = rgb { 198 169 248 }
 }
 MEX = {
 	color = rgb { 104 152 83 }
@@ -250,22 +242,6 @@ MEN = {
 TAN = {
 	color = rgb { 152 130 191 }
 	color_ui = rgb { 198 169 248 }
-}
-PAR = {
-	color = rgb { 57 113 228 }
-	color_ui = rgb { 74 147 255 }
-}
-CUB = {
-	color = rgb { 140 65 166 }
-	color_ui = rgb { 140 65 166 }
-}
-DOM = {
-	color = rgb { 152 130 191 }
-	color_ui = rgb { 198 169 248 }
-}
-HAI = {
-	color = rgb { 174 113 113 }
-	color_ui = rgb { 174 113 113 }
 }
 YEM = {
 	color = rgb { 155 101 107 }
