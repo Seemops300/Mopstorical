@@ -225,10 +225,7 @@ TIB = {
 	color = rgb { 80 100 45}
 	color_ui = rgb { 222 247 198 }
 }
-URG = {
-	color = rgb { 171 190 152 }
-	color_ui = rgb { 222 247 198 }
-}
+
 VEN = {
 	color = rgb { 171 190 152 }
 	color_ui = rgb { 222 247 198 }
@@ -320,11 +317,6 @@ LBA = {
 EGY = {
 	color = rgb { 230 230 70 }
 	color_ui = rgb { 230 230 70 }
-}
-
-PAL = {
-	color = rgb { 170  125  80 }
-	color_ui = rgb { 170  125  80 }
 }
 
 LEB = {
