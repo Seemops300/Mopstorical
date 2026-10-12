@@ -329,11 +329,6 @@ JOR = {
 	color_ui = rgb { 111  55  78 }
 }
 
-SYR = {
-	color = rgb { 100  100  150 }
-	color_ui = rgb { 100  100  150 }
-}
-
 SER = {
 	color = rgb { 160 110 110 }
 	color_ui = rgb { 160 110 110 }
