@@ -1,0 +1,38 @@
+
+state = {
+	id = 301
+	name = "STATE_301"
+	manpower = 1
+	
+	state_category = town
+	
+	history = {
+
+		owner = KOS
+		add_core_of = KOS
+
+		buildings = {
+			infrastructure = 2
+		}
+		
+		victory_points = {
+			2152 10 
+		}
+
+		victory_points = {
+			2194 5 
+		}
+
+		victory_points = {
+			11023 1
+		}
+
+	}
+
+	provinces = {
+		2152 2173 2194 11023 12901 
+	}
+	
+
+	local_supplies = 0.0 
+}
