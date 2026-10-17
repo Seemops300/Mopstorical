@@ -2415,60 +2415,6 @@ SAF = {
 	}
 }
 
-MAL = {
-	submarine = {
-		prefix = "KD"
-		generic = { "Submarine" }
-		unique = {
-			"Tunku Abdul Rahman" "Tun Abdul Razak"
-		}
-	}
-	destroyer = {
-		prefix = "KD"
-		generic = { 
-			"Destroyer"
-		}
-		unique = {
-			"Kasturi" "Lekir" "Laksamana Hang Nadim" "Laksamana Tun Abdul Jamil" "Kedah" "Pahang" "Perak" "Terengganu" "Kelantan" "Selangor" "Perdana" "Serang" "Ganas" "Ganyang" "Handalan" "Perkasa" "Pendekar" "Gempita" "Jerung" "Todak" "Paus" "Yu" "Baung" "Pari" "Sri Perlis" "Sri Johor"
-		}
-	}
-	light_cruiser = {
-		prefix = "KD"
-		generic = { "Light Cruiser" }
-		unique = {
-			"Jebat" "Lekiu" "Kuala Lumpur" "Kuantan" "Mersing" "Kulai" "Skudai" "Kluang" "Balok" "Chukai" "Kuala Dungun" "Georgetown" "Butterworth" "Jelutong" "Bukit Mertajam" "Kuching" "Sibu" "Bintulu" "Miri" "Tawau" "Sandakan" "Lahad Datu" "Kudat" "Ipoh" "Kota Barhu"
-		}
-	}
-	heavy_cruiser = {
-		prefix = "KD"
-		generic = { "Heavy Cruiser" }
-		unique = {
-			"Jebat" "Lekiu" "Kuala Lumpur" "Kuantan" "Mersing" "Kulai" "Skudai" "Kluang" "Balok" "Chukai" "Kuala Dungun" "Georgetown" "Butterworth" "Jelutong" "Bukit Mertajam" "Kuching" "Sibu" "Bintulu" "Miri" "Tawau" "Sandakan" "Lahad Datu" "Kudat"
-		}
-	}
-	battle_cruiser = {
-		prefix = "KD"
-		generic = { "Battle Cruiser" }
-		unique = {
-			"Malaya" "Singapore" "Malacca" "Borneo" "Brunai" "Segamat" "Penang" "Sabah" "Sarawak"
-		}
-	}
-	battleship = {
-		prefix = "KD"
-		generic = { "Battleship" }
-		unique = {
-			"Malaya" "Singapore" "Malacca" "Borneo" "Brunai" "Segamat" "Penang" "Sabah" "Sarawak"
-		}
-	}
-	carrier = {
-		prefix = "KD"
-		generic = { "Carrier" }
-		unique = {
-			"Malaya" "Singapore" "Malacca" "Borneo" "Brunai" "Segamat" "Penang" "Sabah" "Sarawak"
-		}
-	}
-}
-
 MEX = {
 	submarine = {
 		prefix = "ARM"

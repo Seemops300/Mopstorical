@@ -347,11 +347,6 @@ CAM = {
 	color_ui = rgb { 100  71  150 }
 }
 
-MAL = {
-	color = rgb { 197  96  100 }
-	color_ui = rgb { 213  169  121 }
-}
-
 MNT = {
 	color = rgb { 77  90  105 }
 	color_ui = rgb { 77  90  105 }

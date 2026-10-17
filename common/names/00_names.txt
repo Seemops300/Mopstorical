@@ -4675,28 +4675,6 @@ RAJ_UK = {
 	callsigns = { }
 }
 
-MAL_UK = {
-	male = {
-		names = { Albert Alexander Alfred Archibald Arthur Bernard Charles Colbert
-			Colin Cyril David Donald Douglas Edmund Edward Fairfax  Francis
-			Geoffrey George Graham Henrey Herbert Horatio Hubert Hugh Ian
-			James Jeremy John Leopold Lester Martin Nigel Oswald Max
-			Percy Reginald Richard Robert Russell Stanley Thomas Wallace William Winston Zachary Jake
-		  }
-	}
-	female = {
-		names = { Elizabeth Anne }
-	}
-	surnames = { 	Allenby Battemberg Beatty Beresford Brown Buller Butler Campbell Cardigan Churchill
-			Cochrane Cockburn Dundas Fisher French Gough Grant Grenfell Haig Murphy
-			Hamilton Hardinge Havelock Hope Jellicoe Kitchener Lyons Madden Milne Montgomery
-			Moresby Mundy Napier Plummer Ragland Roberts Seaton Seymour Collin
-			Smith Stewart Thesiger Tyron Tyrwhitt Williams Windsor Wolseley Wood Leiper Roberts
-
-		}
-	callsigns = { }
-}
-
 RAJ = {
 	male = {
 		names = {
@@ -5327,22 +5305,6 @@ KOR = {
 		names = { "Ae-jung" Bora "Chae-won" "Hye-ja" "Ji-young" "Seong-ja" Sora "Yeo-jin" "Kyung-hee" }
 	}
 	surnames = { Kim Cho Lee Park Jeong Choe Jang Yun Rim Ryu Gang }
-	callsigns = { }
-}
-
-MAL = {
-	male = {
-		names = { Najib Muhammad Tengku Kadir "Tengku Kadir" Embok Eunos Ibrahim Pak Pandir Rashid Ahmad Nordin Abdul Amin Lokman Yaacob Elyas Mazlan }
-	}
-	female = {
-		names = {
-			Azura Merenui Metetini Miri Moea Moeata Moerani Mohea Nanihi "Nu’utea" Orama Poe Pear Poehina Poenui Poerava Puaiti
-			Puatea Puaura Ranitea Rarahu Raunui Raurii Tahiata Taiana Taina Tania Taurua Tautiare Tehani
-			Tehea Teora Tera Tevai Titaina Titaua Tuianu Tumata Unutea Urarii Vaea Vaiana Vaianu Vaiata Vaihere Vaimiti Vairea
-			Vaite Vaitiare
-		}
-	}
-	surnames = { Razak Yusof Ali Suloh Abdullah Yaacob Sako Maidin Boestamam Aziz Latiff Omar }
 	callsigns = { }
 }
 
