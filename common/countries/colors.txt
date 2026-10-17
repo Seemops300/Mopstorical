@@ -117,10 +117,6 @@ AST = {
 	color = rgb { 57 143 97 }
 	color_ui = rgb { 74 186 126 }
 }
-BOL = {
-	color = hsv { 0.1 0.47 0.8 } #255 180 136
-	color_ui = rgb { 255 234 177 }
-}
 BRA = {
 	color = rgb { 76 145 63 }
 	color_ui = rgb { 99 189 82 }
@@ -136,10 +132,6 @@ CHI = {
 COL = {
 	color = rgb { 222 187 91 }
 	color_ui = rgb { 255 243 118 }
-}
-COS = {
-	color = rgb { 152 128 43 }
-	color_ui = rgb { 152 128 43 }
 }
 ECU = {
 	color = rgb { 249 146 98 }
@@ -227,14 +219,6 @@ MEN = {
 	color = rgb { 185  255  152 }
 	color_ui = rgb { 165  230  132 }
 }
-TAN = {
-	color = rgb { 152 130 191 }
-	color_ui = rgb { 198 169 248 }
-}
-YEM = {
-	color = rgb { 155 101 107 }
-	color_ui = rgb { 202 131 139 }
-}
 OMA = {
 	color = rgb { 155 101 107 }
 	color_ui = rgb { 202 131 139 }
@@ -281,11 +265,6 @@ LBA = {
 EGY = {
 	color = rgb { 230 230 70 }
 	color_ui = rgb { 230 230 70 }
-}
-
-JOR = {
-	color = rgb { 111  55  78 }
-	color_ui = rgb { 111  55  78 }
 }
 
 SER = {

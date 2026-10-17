@@ -4018,39 +4018,6 @@ TUR = {
 	}
 	callsigns = { }
 }
-YEM = {
-	male = {
-		names = {
-			"Abd Allah" "Abd al-Karim" "Abd al-Malik" "Abd al-Qadir" "Abd al-Rahman" "Abu Bakr" Ahmad Ali
-			Fawzi Fuad Halil Hasan Hisham Ibrahim Ishaq Iskandar Ja'far Jamal Kamil Khalid
-			Muhammad Mustafa "Nur al-Din" "Sa'd al-Din" Salim  Sa'ud Shukri
-			Tawfiq Umar Uthman Yahya Yusuf Zafir Chandler
-		}
-		surnames = {
-			"ibn Abd Allah" "ibn Abd al-Qadir" "ibn Abu Bakr" "ibn Ahmad" "ibn Ali"
-				"ibn Fuad" "ibn Halil" "ibn Hasan" "ibn Hisham" "ibn Ishaq" "ibn Ja'far" "ibm Kamil" "ibn Khalid"
-				"ibn Muhammad" "ibn Mustafa" "ibn Salim"
-				"ibn Umar" "ibn Uthman" "ibn Yusuf"
-				"al-Najdi" "al-Hijazi"
-		}
-	}
-	female = {
-		names = {
-			Nadiyya Adila Amsha Asiya Faghira Habiba Hanifa Jahaira Kamala Layla Maryam Nafisa Nyawela Parand
-			Parween Paymaneh Paywand Qamara Rafiqa Rasa Rashida Reshawna
-			Saaman Sabba Saghar Sahba Sajida Samira Semeah Setara Shahrbano Shahzadah Shameem Shararah
-			Sheeftah Sheeva Shogofa Shokouh Shola Sholah Simin Souzan
-			Taliba Tanaz Taneen Yagana Yakta Yasmin Zaynab
-		}
-		surnames = {
-			"bint Abd Allah" "bint Abd al-Qadir" "bint Abu Bakr" "bint Ahmad" "bint Ali"
-				"bint Fuad" "bint Halil" "bint Hasan" "bint Hisham" "bint Ishaq" "bint Ja'far" "ibm Kamil" "bint Khalid"
-				"bint Muhammad" "bint Mustafa" "bint Salim"
-				"bint Umar" "bint Uthman" "bint Yusuf"
-				"al-Najdi" "al-Hijazi"
-		}
-	}
-}
 FSA = {
 	male = {
 		names = {
@@ -4115,136 +4082,6 @@ EGY = {
 		}
 	}
 	callsigns = { Osiris Isis Anubis Anukis Ra Sobek Khnum Ptah Nephthys Nekhbet Sekhment Sokar Selket Reshpu Heket Mafdet }
-}
-SYR = {
-	male = {
-		names = {
-			"Abd Allah" "Abd al-Karim" "Abd al-Malik" "Abd al-Qadir" "Abd al-Rahman" "Abu Bakr" Ahmad Ali
-			Fawzi Fuad Halil Hasan Hisham Ibrahim Ishaq Iskandar Ja'far Jamal Kamil Khalid
-			Muhammad Mustafa "Nur al-Din" "Sa'd al-Din" Salim  Sa'ud Shukri
-			Tawfiq Umar Uthman Yahya Yusuf Zafir
-		}
-		surnames = {
-			"ibn Abd Allah" "ibn Abd al-Qadir" "ibn Abu Bakr" "ibn Ahmad" "ibn Ali"
-				"ibn Fuad" "ibn Halil" "ibn Hasan" "ibn Hisham" "ibn Ishaq" "ibn Ja'far" "ibn Kamil" "ibn Khalid"
-				"ibn Muhammad" "ibn Mustafa" "ibn Salim"
-				"ibn Umar" "ibn Uthman" "ibn Yusuf"
-				"al-Najdi" "al-Hijazi"
-		}
-	}
-	female = {
-		names = {
-			Ihsan Marwa Aisha Aziza Duha Farida Golbahar Gulnar Gulnaz Gulpari Hafsa Hasti Huma Ibtisam Jalila Kamala
-			Karima Khandan Khaterah Khatira Kinah Lala Madiha Mahdokht Nazy Neelab Negar Niki Nikoo Noushin Rabiya
-			Mahsa Mahwash Marwa Mastana Mehri Mina Minoo Munawwar Muzhdah Nahal Najela Nasiba Nastaran Nazaneen
-			Rajiya Sadiya Salma Sitara Thana Zahra Zahra Zuhayra
-		}
-		surnames = {
-			"bint Abd Allah" "bint Abd al-Qadir" "bint Abu Bakr" "bint Ahmad" "bint Ali"
-				"bint Fuad" "bint Halil" "bint Hasan" "bint Hisham" "bint Ishaq" "bint Ja'far" "bint Kamil" "bint Khalid"
-				"bint Muhammad" "bint Mustafa" "bint Salim"
-				"bint Umar" "bint Uthman" "bint Yusuf"
-				"al-Najdi" "al-Hijazi"
-		}
-	}
-	callsigns = { }
-}
-LEB = {
-	male = {
-		names = {
-			"Abd Allah" "Abd al-Karim" "Abd al-Malik" "Abd al-Qadir" "Abd al-Rahman" "Abu Bakr" Ahmad Ali
-			Fawzi Fuad Halil Hasan Hisham Ibrahim Ishaq Iskandar Ja'far Jamal Kamil Khalid
-			Muhammad Mustafa "Nur al-Din" "Sa'd al-Din" Salim  Sa'ud Shukri
-			Tawfiq Umar Uthman Yahya Yusuf Zafir
-		}
-		surnames = {
-			"ibn Abd Allah" "ibn Abd al-Qadir" "ibn Abu Bakr" "ibn Ahmad" "ibn Ali"
-				"ibn Fuad" "ibn Halil" "ibn Hasan" "ibn Hisham" "ibn Ishaq" "ibn Ja'far" "ibn Kamil" "ibn Khalid"
-				"ibn Muhammad" "ibn Mustafa" "ibn Salim"
-				"ibn Umar" "ibn Uthman" "ibn Yusuf"
-				"al-Najdi" "al-Hijazi"
-		}
-	}
-	female = {
-		names = {
-			Ihsan Marwa Aisha Aziza Duha Farida Golbahar Gulnar Gulnaz Gulpari Hafsa Hasti Huma Ibtisam Jalila Kamala
-			Karima Khandan Khaterah Khatira Kinah Lala Madiha Mahdokht Nazy Neelab Negar Niki Nikoo Noushin Rabiya
-			Mahsa Mahwash Marwa Mastana Mehri Mina Minoo Munawwar Muzhdah Nahal Najela Nasiba Nastaran Nazaneen
-			Rajiya Sadiya Salma Sitara Thana Zahra Zahra Zuhayra
-		}
-		surnames = {
-			"bint Abd Allah" "bint Abd al-Qadir" "bint Abu Bakr" "bint Ahmad" "bint Ali"
-				"bint Fuad" "bint Halil" "bint Hasan" "bint Hisham" "bint Ishaq" "bint Ja'far" "bint Kamil" "bint Khalid"
-				"bint Muhammad" "bint Mustafa" "bint Salim"
-				"bint Umar" "bint Uthman" "bint Yusuf"
-				"al-Najdi" "al-Hijazi"
-		}
-	}
-	callsigns = { }
-}
-JOR = {
-	male = {
-		names = {
-			"Abd Allah" "Abd al-Karim" "Abd al-Malik" "Abd al-Qadir" "Abd al-Rahman" "Abu Bakr" Ahmad Ali
-			Fawzi Fuad Halil Hasan Hisham Ibrahim Ishaq Iskandar Ja'far Jamal Kamil Khalid
-			Muhammad Mustafa "Nur al-Din" "Sa'd al-Din" Salim  Sa'ud Shukri
-			Tawfiq Umar Uthman Yahya Yusuf Zafir
-		}
-		surnames = {
-			"ibn Abd Allah" "ibn Abd al-Qadir" "ibn Abu Bakr" "ibn Ahmad" "ibn Ali"
-				"ibn Fuad" "ibn Halil" "ibn Hasan" "ibn Hisham" "ibn Ishaq" "ibn Ja'far" "ibn Kamil" "ibn Khalid"
-				"ibn Muhammad" "ibn Mustafa" "ibn Salim"
-				"ibn Umar" "ibn Uthman" "ibn Yusuf"
-				"al-Najdi" "al-Hijazi"
-		}
-	}
-	female = {
-		names = {
-			Ihsan Marwa Aisha Aziza Duha Farida Golbahar Gulnar Gulnaz Gulpari Hafsa Hasti Huma Ibtisam Jalila Kamala
-			Karima Khandan Khaterah Khatira Kinah Lala Madiha Mahdokht Nazy Neelab Negar Niki Nikoo Noushin Rabiya
-			Mahsa Mahwash Marwa Mastana Mehri Mina Minoo Munawwar Muzhdah Nahal Najela Nasiba Nastaran Nazaneen
-			Rajiya Sadiya Salma Sitara Thana Zahra Zahra Zuhayra
-		}
-		surnames = {
-			"bint Abd Allah" "bint Abd al-Qadir" "bint Abu Bakr" "bint Ahmad" "bint Ali"
-				"bint Fuad" "bint Halil" "bint Hasan" "bint Hisham" "bint Ishaq" "bint Ja'far" "bint Kamil" "bint Khalid"
-				"bint Muhammad" "bint Mustafa" "bint Salim"
-				"bint Umar" "bint Uthman" "bint Yusuf"
-				"al-Najdi" "al-Hijazi"
-		}
-	}
-	callsigns = { }
-}
-
-KUW = {
-	male = {
-		names = {
-			Aali "Abd Al-Latif"  Abdul "Abdul-Rahman" Abu Adnan Ahmed Ali Amir Ammar Ashfaq Ayuub Baqi Bassem Danyal Esmail Fadil Fareed Fawzi Gabir Ghufran Haider Hakeem Hamid Hanif Hatim Houssam Husain Ibrahim
-			Idris Imen Iskandar "Ismai'il" Jafar Jamal Jibril Karim Latif Mahometus Maqsud "Mikha'il" Mohammed Mostafa Murtada Nadeem Najm Navid Nur Omar Osama Qasim Rais Rashid Rayan Ruh Saif Salih Shad Shakir
-			Shukri Sulaiman Taj Tayyib Wafai Yakub Yuhanna Zahi Zawar Zulfaqar
-			#Kuwait Specific
-			Abdulaziz Abdullah Abdulqader "Abdul-Razzak" Ahmad Ajeel Alaa Amani Bader Fahid Faisal Fathi Fayez Fehaid Fouzi Ibrahim Jamal Jasem Kazem Khaled Khalifa Messaed Mishary Mohammed Mojeb Musaed Nasser Nawaf Saad Saleh
-			Wael Yousuf Yusuf Zaid
-		}
-	}
-	female = {
-		names = {
-			Aaliyah Aisha Amaal Anisa Ayda Basma Djamila Farah Fatin Gamila Hadia Haifa Haniyah Hosni Ihab Israa Jathibiyya Khalida Latifa Maha Mona Nadia Nashwa Nimat Rabab Rana Rayhana Ruqayyah Sahar Samia Sarah
-			Shahrizad Shayma Suraya Uzma Yasmin Zahia Zakiya Zulekha
-			#Kuwait Specific
-			Danah Essra Ibtihal Massouma Nawal Thuraya
-		}
-	}
-	surnames = {
-		Abdullah Abdulrashid Ahmad Ahmed Ajam "Al-Amin" Alfarsi "Al-Ghazzawi" "Al-Hashim" Ali "Al-Mufti" Amjad Boulos Bousaid Hakim Hussain Kader Karim Karimi Mohammed Muhammad Naaji Nagi Najm Nejem Qadir Saab Samara
-		Saqqaf Sultan Tawfeek Tawfiq Zaman
-		#Kuwait Specific
-		Adees "Al-Adwani" Ajab "Al-Ajar" "Al-Ajmi" Ali Alqattar Alyan "Al-Anberi" "Al Awda" "Al Azmi" Bandar "Al-Baqsami" Behbehani "Al-Bloushi" "Al-Buloushi" "Al-Dakhil" "Al-Deehani" "Al-Dihani" "Al-Dousari" "El-Efasy" Ghareeb
-		"Al-Habashi" "Al Hadhood" "Al-Haji" "Al Hammad" "Al-Harb" "Al Huwaidi" Ibrahem Kamel "Al-Kharafi" "Al-Khatib" Khraibut "El Kuwaitia" "Al-Mathkour" Mohammed Mubarak "Al-Mubarak" "Al-Mudhaf" "Al Mutairi" "Al-Mutawa"
-		"Al-Nashi" "Al-Nashmi" "Al-Nasrallah" Neda "Al-Obeidi" "Al Rashidi" "Al-Razouki" "Al Refai" "Al Rowaished" "Al-Rubei" "Al-Sabah" "Al-Sadoun" "Al-Saleh" Shah "Al Shammari" "Al Shatty" "Al-Soula" "Al-Suwaidan"
-		"Al-Tarabilsi" "Al-Watani" Yacob "Al-Yassin" "Al Zamel" "Al-Zinkawi"
-	}
-	callsigns = { }
 }
 
 UAE = {
@@ -4330,41 +4167,6 @@ BHR = {
 		Saqqaf Sultan Tawfeek Tawfiq Zaman
 		#Qatar Specific
 		"Al Ansari" "Al-Haidos" "Al Jaidah" "Al Kubaisi" Mubarak Muftah "Al-Nubi" "Al-Rahim" Sahid Saifeldin Sattar Shahenn "Al-Sulaiti" "Al Thani" "bin Thani" Warsama Zaidan Zeidan
-	}
-	callsigns = { }
-}
-
-PAL = {
-	male = {
-		names = {
-			"Abd Allah" "Abd al-Karim" "Abd al-Malik" "Abd al-Qadir" "Abd al-Rahman" "Abu Bakr" Ahmad Ali
-			Fawzi Fuad Halil Hasan Hisham Ibrahim Ishaq Iskandar Ja'far Jamal Kamil Khalid
-			Muhammad Mustafa "Nur al-Din" "Sa'd al-Din" Salim  Sa'ud Shukri
-			Tawfiq Umar Uthman Yahya Yusuf Zafir
-		}
-		surnames = {
-			"ibn Abd Allah" "ibn Abd al-Qadir" "ibn Abu Bakr" "ibn Ahmad" "ibn Ali"
-				"ibn Fuad" "ibn Halil" "ibn Hasan" "ibn Hisham" "ibn Ishaq" "ibn Ja'far" "ibm Kamil" "ibn Khalid"
-				"ibn Muhammad" "ibn Mustafa" "ibn Salim"
-				"ibn Umar" "ibn Uthman" "ibn Yusuf"
-				"al-Najdi" "al-Hijazi"
-
-		}
-	}
-	female = {
-		names = {
-			Ihsan Marwa Aisha Aziza Duha Farida Golbahar Gulnar Gulnaz Gulpari Hafsa Hasti Huma Ibtisam Jalila Kamala
-			Karima Khandan Khaterah Khatira Kinah Lala Madiha Mahdokht Nazy Neelab Negar Niki Nikoo Noushin Rabiya
-			Mahsa Mahwash Marwa Mastana Mehri Mina Minoo Munawwar Muzhdah Nahal Najela Nasiba Nastaran Nazaneen
-			Rajiya Sadiya Salma Sitara Thana Zahra Zahra Zuhayra
-		}
-		surnames = {
-			"bint Abd Allah" "bint Abd al-Qadir" "bint Abu Bakr" "bint Ahmad" "bint Ali"
-				"bint Fuad" "bint Halil" "bint Hasan" "bint Hisham" "bint Ishaq" "bint Ja'far" "ibm Kamil" "bint Khalid"
-				"bint Muhammad" "bint Mustafa" "bint Salim"
-				"bint Umar" "bint Uthman" "bint Yusuf"
-				"al-Najdi" "al-Hijazi"
-		}
 	}
 	callsigns = { }
 }
@@ -4635,17 +4437,6 @@ TML = {
 	callsigns = { }
 }
 
-BHU = {
-	male = {
-		names = { Tsarong Chamba Trimon Penor Gendün Jamphel Norbhu Mipham Tsepon Andruk Namgang   }
-	}
-	female = {
-		names = { Kamala Indira Dawa Dechen Diki Choden Dohna Dolkar Karma Sonam Sangmu }
-	}
-	surnames = { Dzasa Wangyal Shatra Lungshar Rinpoche Chöphel Shakabpa Tashi  }
-	callsigns = { }
-}
-
 TIB = {
 	male = {
 		names = { Tsarong Chamba Trimon Penor Gendün Jamphel Norbhu Mipham Tsepon Andruk Namgang   }
@@ -4654,17 +4445,6 @@ TIB = {
 		names = { Kamala Indira Dawa Dechen Diki Choden Dohna Dolkar Karma Sonam Sangmu }
 	}
 	surnames = { Dzasa Wangyal Shatra Lungshar Rinpoche Chöphel Shakabpa Tashi  }
-	callsigns = { }
-}
-
-NEP = {
-	male = {
-		names = { Bhimsen Amar Ranjur Bhakti Jang Renaudip Shamsher "Bir Shamsher" "Deva Shamsher" "Chandra Shamsher" "Bhim Shamsher"  }
-	}
-	female = {
-		names = { Devaladevi Kaushalyawati Rajendralakshmi Maiya Nanu Nani Maya Pragya Anu Chameli Nirmala Anushka Sarmila Komal }
-	}
-	surnames = { Thapa "Singh Thapa" Singh Rana "Bahadur Rana"  }
 	callsigns = { }
 }
 
@@ -5539,17 +5319,6 @@ MAN = {
 	callsigns = { }
 }
 
-TAN = {
-	male = {
-		names = {  Ma Deng Zhao Tong Guan Oboi Sonin Songgotu Suksaha Mingzhu Nalan Fu Hesehn Changlin  }
-	}
-	female = {
-		names = { Mandukhai Samar Zaufishan Mulan Aigiarn Borte Chabi Conchaka Doquez-khatum Goland Khultulun Kokachin Mandughai Oghul Qamish Orqina Sorghaghtani Beki Toregene }
-	}
-	surnames = { Zhanshan Tiemei Shangzhi Linge Xiangying Xingde Kang'an }
-	callsigns = { }
-}
-
 KOR = {
 	male = {
 		names = { "Hee-Seok" "Jae-Hoon" "Shin-Woo" Sang Gun Kwang Woong Chul Hyuk "Yoon-Gi" "Han-gyeol" }
@@ -6194,24 +5963,6 @@ KOM = {
 ###############################################################
 # Africa
 ###############################################################
-LIB = {
-	male = {
-		names = {
-			Aaron Alexander Andre Benton Caesar Cathay Charles Colin Ebenezer Edgar
-			Edward Frederick George Henry James Joseph Lewis Lloyd Matin Michael
-			Milton Osborne  Robert Samuel Stewart Thomas William Wilson
-		 }
-	}
-	female = {
-		names = { Arway Donyen Japlo Nyonontee Sorntee Mary Jane }
-	}
-	surnames = {
-		Anderson Antoine Augusta Basset Beaty Blake Brooks Brown Cailloux Carney
-		Delany Douglass  Fields Flipper Gardner Griffin Hawkins Holland Jackson
-		King Mink Nell Pinn Ratcliff Remond Smith Stukes Tubman Veale
-	 }
-	callsigns = { }
-}
 ANG = {
 	male = {
 		names = {
@@ -7563,32 +7314,6 @@ YUC = {
 	callsigns = { Yucatán Itza Xiú Uxmal Kabah Sayil Yucatec }
 }
 
-COS = {
-	male = {
-		names = {
-			Alejandro Andrés Aniceto Arturo Bartolomé Basilio Benito Benjamín Bernardo Carlos
-			Daniel Diego Doroteo Eduardo Eugenio Felipe Félix Fermín Fernando Francisco
-			Fruto Jacobo Jesús Joaquín Jorge "José Francisco" "José María" Juan "Juan Antonio" "Juan Pablo"
-			Julio Justo Lisandro Lorenzo Manuel Marcelino Maximiliano Máximo Óscar Pedro
-			Ponciano Próspero Rafael Ramón Santiago Sebastián Tiburcio Tomás Toribio Victoriano
-		  }
-	}
-	female = {
-		names = {
-			Adelita Araceli Belén Camila Candelaria Chavela Consuelo Cristina Delfina Esperanza
-			Fidelia Graciela Isadora Isabella Jimena Ximena Luciana Lucrecia María Marisol
-			Noemí Nohemi Valentina Valeria Rocío Socorro Sofía Teófila Amaranta Úrsula Rebeca Remedios
-		}
-	}
-	surnames = {
-		Aguilar Andino Araujo Arbenz Barahona Barillas Barrios Cabañas Cárdenas Carrera
-		Castellanos Chamorro Chávez Corral Escalón Esquivel Estrada Ezeta Fernández Ferrera
-		Figueroa Garrigó Guzmán Hernández Jerez Jiménez Leiva López Machado Martínez
-		Medina Mejía Menéndez Montes Montiel Morazán Palacios Peralta Quiros Regalado
-		Rosales Sevilla Sinibaldi Soto Terán Ubico Vasconcelos Vigil Zelaya Zeledón
-	}
-	callsigns = { }
-}
 ELS = {
 	male = {
 		names = {
@@ -7720,84 +7445,6 @@ PAN = {
 	}
 	callsigns = { }
 }
-CUB = {
-	male = {
-		names = {
-			Alberto Alejandro Alfredo Ambrosio Anselmo Antonio Arturo Benigno Buenaventura Calixto
-			Carlos Ceferino Cesáreo Demetrio Desiderio Dionisio Domingo Eugenio Federico Felipe
-			Fernando Fidel Fulgencio Gerardo Gregorio Guillermo Horacio Ignacio Jacinto Jacobo
-			Jesús Joaquín José "José Miguel" Juan "Juan Bautista" Manuel Mariano Mario Máximo
-			Osvaldo Pablo Pedro Rafael Ramón Raúl Salvador Romás Ulises Wenceslao
-
-		  }
-	}
-	female = {
-		names = {
-			Adelita Araceli Belén Camila Candelaria Chavela Consuelo Cristina Delfina Esperanza
-			Fidelia Graciela Isadora Isabella Jimena Ximena Luciana Lucrecia María Marisol
-			Noemí Nohemi Valentina Valeria Rocío Socorro Sofía Teófila Amaranta Úrsula Rebeca Remedios
-		}
-	}
-	surnames = {
-		Acosta Alfau Báez Batista Bayo Cabral Carmona Castillo Castro Cisneros
-		"de Céspedes" "de la Rosa" "de Meriño" "de Rojas" Espaillat Estrada Estrella Fernández Figuereo García
-		Gil Gómez Gonzáles González Grau Guillermo Henríquez Herrera Hevia Laredo
-		Luperón Maceo Machado Márquez Mella Méndez Mendieta Moncada Morales Mota
-		Pelletier Pimentel Puello Santana Sosa Trujillo Valverde Vásquez Vázquez Zayas
-	}
-	callsigns = { }
-}
-DOM = {
-	male = {
-		names = {
-			Alberto Alejandro Alfredo Ambrosio Anselmo Antonio Arturo Benigno Buenaventura Calixto
-			Carlos Ceferino Cesáreo Demetrio Desiderio Dionisio Domingo Eugenio Federico Felipe
-			Fernando Fidel Fulgencio Gerardo Gregorio Guillermo Horacio Ignacio Jacinto Jacobo
-			Jesús Joaquín José "José Miguel" Juan "Juan Bautista" Manuel Mariano Mario Máximo
-			Osvaldo Pablo Pedro Rafael Ramón Raúl Salvador Romás Ulises Wenceslao
-
-
-		 }
-	}
-	female = {
-		names = {
-			Adelita Araceli Belén Camila Candelaria Chavela Consuelo Cristina Delfina Esperanza
-			Fidelia Graciela Isadora Isabella Jimena Ximena Luciana Lucrecia María Marisol
-			Noemí Nohemi Valentina Valeria Rocío Socorro Sofía Teófila Amaranta Úrsula Rebeca Remedios
-		}
-	}
-	surnames = {
-		Acosta Alfau Báez Batista Bayo Cabral Carmona Castillo Castro Cisneros
-		"de Céspedes" "de la Rosa" "de Meriño" "de Rojas" Espaillat Estrada Estrella Fernández Figuereo García
-		Gil Gómez Gonzáles González Grau Guillermo Henríquez Herrera Hevia Laredo
-		Luperón Maceo Machado Márquez Mella Méndez Mendieta Moncada Morales Mota
-		Pelletier Pimentel Puello Santana Sosa Trujillo Valverde Vásquez Vázquez Zayas
-	}
-	callsigns = { }
-}
-HAI = {
-	male = {
-		names = {
-			Alexis André Anténor Antoine Augustin Balthazar Beaubrun Céligny Charlemagne Charles
-			Cincinnatus Dantès Demesvar Denys Emmanuel Eugène Fabre Faustin Florvil François
-			Guillaume Hannibal Henri Jacques Jean Jean-Baptiste Jean-Louis Jean-Pierre Jonathas Joseph
-			Léon Louis Louis-Eugène Louis-Joseph Lysius Michel Monpoint Nissage Nord Oreste
-			Philippe Pierre Simon Sténio Sylvain Tandredè Thomas Timoleón Tirésias Vilbrum
-		 }
-	}
-	female = {
-		names = { Bernadette Camille Fleur Catherine }
-	}
-	surnames = {
-		Alexis Ardouin Auguste Bellegarde Boisrond-Canal Bonnet Borno Boyer Brutus Christophe
-		Conzé Dartiguenave Delorme Dessalines Domingue Firmin Geffrad Granville Guerrier Hyppolite
-		Iginac Janvier Jeune Lafontant Laleau Leconte Légitime Legouaze Léon Lhérisson
-		Madiou Péralte Pierrot Planchet Price Price-Mars Riché Rigaud Rivière-Hérard Roumain
-		Roy Saget Salnave Salomon Sam Simon Soulouque Théodore Vincent Zamor
-
-	}
-	callsigns = { }
-}
 
 
 ###############################################################
@@ -7850,66 +7497,8 @@ RKV = {
 	callsigns = { }
 }
 
-
-ARG = {
-	male = {
-		names = {
-			Agustín Antonio Atanasio Baltasar Bartolomé Bernardino Bernardo Cándido Carlos Cecilio
-			Cirilo Claudio Domingo Emiliano Esteban Eugenio Evaristo Facundo Faustino Feliciano
-			Félix Francisco Fructuoso Gabriel Gaspar Guillermo Hipólito Ignacio José "Juan José"
-			"Juan Manuel" "Juan Ramón" Julio Justo Lorenzo Luis Manuel Marcial Máximo Miguel
-			Nicolás Patricio Pedro Ramón Roberto Roque Salvador Santiago Torcuato Venancio
-		  }
-	}
-	female = {
-		names = {
-			Adelita Araceli Belén Camila Candelaria Chavela Consuelo Cristina Delfina Esperanza
-			Fidelia Graciela Isadora Isabella Jimena Ximena Luciana Lucrecia María Marisol
-			Noemí Nohemi Valentina Valeria Rocío Socorro Sofía Teófila Amaranta Úrsula Rebeca Remedios
-		}
-	}
-	surnames = {
-		Aguirre Avellaneda Báez Balcarce Bareiro Berro Brown Caballero Cruz "de Alvear"
-		"de la Plaza" "de Rosas" "de Urquiza" Derqui Díaz Ellauri Escobar Flores González Jovellanos
-		Juárez Justo Latorre López Machaín Maza Meza Mitre Paz Pedernera
-		Pellegrini Pereira Quintana Rivarola Rivera Roca "Rodríguez de Francia" Rojas Rondeau Sáenz
-		Santos Sarmineto Solano Tajes Uriburu Viamonte Vidal Williman Wisner Yrigoyen
-
-	}
-	callsigns = { }
-}
-
 # ANDEAN REICHSKOMMISSARIAT
 RAN = {
-	male = {
-		names = {
-			Adolfo Agustín Alejandro Andrés Aníbal Antonio Bartolomé Bernardo David Diego
-			Domingo Eduardo Emiliano Emilio Enrique Esteban Eusebio Federico Felipe Francisco
-			Germán Hernando Hilarión Ignacio Isidoro Ismael Jorge José "José Miguel" Juan
-			"Juan Antonio" "Juan Francisco" Justo Ladislao Luis Manuel Mariano Miguel Narciso
-			Nicolás Pablo Patricio Pedro Ramón Rufino Ruperto Santiago Sebastián Severino Tomás
-
-		  }
-	}
-	female = {
-		names = {
-			Adelita Araceli Belén Camila Candelaria Chavela Consuelo Cristina Delfina Esperanza
-			Fidelia Graciela Isadora Isabella Jimena Ximena Luciana Lucrecia María Marisol
-			Noemí Nohemi Valentina Valeria Rocío Socorro Sofía Teófila Amaranta Úrsula Rebeca Remedios
-		}
-	}
-	surnames = {
-		Abaroa Ágreda Altamirano Arteaga Ballivián Baquedano Belzú Blanche Blanco Bulnes
-		Cabrera Calvo Campero Castilla Corrico Daza "de la Cruz" "de Santa Cruz" "de Velasco" "de Vidal"
-		Echenique Errázuriz Fernández Figueroa Franco Freire Gamarra Gorostiaga Grau
-		Guilarte "La Mar" Latorre Lynch Melgarejo Monje Montero Montes Montt Orbegoso
-		Pezet Rebolledo Ruíz-Tagle Salaverry "Santa María" Siles Sotomayor Toro Valencia Zañartu Zapata
-
-	}
-	callsigns = { }
-}
-
-CHL = {
 	male = {
 		names = {
 			Adolfo Agustín Alejandro Andrés Aníbal Antonio Bartolomé Bernardo David Diego
@@ -8134,63 +7723,7 @@ COL = {
 	}
 	callsigns = { }
 }
-BOL = {
-	male = {
-		names = {
-			Adolfo Agustín Alejandro Andrés Aníbal Antonio Bartolomé Bernardo David Diego
-			Domingo Eduardo Emiliano Emilio Enrique Esteban Eusebio Federico Felipe Francisco
-			Germán Hernando Hilarión Ignacio Isidoro Ismael Jorge José "José Miguel" Juan
-			"Juan Antonio" "Juan Francisco" Justo Ladislao Luis Manuel Mariano Miguel Narciso
-			Nicolás Pablo Patricio Pedro Ramón Rufino Ruperto Santiago Sebastián Severino Tomás "del Carpio"
-
-		  }
-	}
-	female = {
-		names = {
-			Adelita Araceli Belén Camila Candelaria Chavela Consuelo Cristina Delfina Esperanza
-			Fidelia Graciela Isadora Isabella Jimena Ximena Luciana Lucrecia María Marisol
-			Noemí Nohemi Valentina Valeria Rocío Socorro Sofía Teófila Amaranta Úrsula Rebeca Remedios
-		}
-	}
-	surnames = {
-		Abaroa Ágreda Altamirano Arteaga Ballivián Baquedano Belzú Blanche Blanco Bulnes
-		Cabrera Calvo Campero Castilla Corrico Daza "de la Cruz" "de Santa Cruz" "de Velasco" "de Vidal"
-		Echenique Errázuriz Fernández Figueroa Franco Freire Gamarra Gorostiaga Grau
-		Guilarte "La Mar" Latorre Lynch Melgarejo Monje Montero Montes Montt Orbegoso
-		Pezet Rebolledo Ruíz-Tagle Salaverry "Santa María" Siles Sotomayor Toro Valencia Zañartu Zapata
-
-	}
-	callsigns = { }
-}
 ECU = {
-	male = {
-		names = {
-			Adolfo Agustín Alejandro Andrés Aníbal Antonio Bartolomé Bernardo David Diego
-			Domingo Eduardo Emiliano Emilio Enrique Esteban Eusebio Federico Felipe Francisco
-			Germán Hernando Hilarión Ignacio Isidoro Ismael Jorge José "José Miguel" Juan
-			"Juan Antonio" "Juan Francisco" Justo Ladislao Luis Manuel Mariano Miguel Narciso
-			Nicolás Pablo Patricio Pedro Ramón Rufino Ruperto Santiago Sebastián Severino Tomás
-
-		  }
-	}
-	female = {
-		names = {
-			Adelita Araceli Belén Camila Candelaria Chavela Consuelo Cristina Delfina Esperanza
-			Fidelia Graciela Isadora Isabella Jimena Ximena Luciana Lucrecia María Marisol
-			Noemí Nohemi Valentina Valeria Rocío Socorro Sofía Teófila Amaranta Úrsula Rebeca Remedios
-		}
-	}
-	surnames = {
-		Abaroa Ágreda Altamirano Arteaga Ballivián Baquedano Belzú Blanche Blanco Bulnes
-		Cabrera Calvo Campero Castilla Corrico Daza "de la Cruz" "de Santa Cruz" "de Velasco" "de Vidal"
-		Echenique Errázuriz Fernández Figueroa Franco Freire Gamarra Gorostiaga Grau
-		Guilarte "La Mar" Latorre Lynch Melgarejo Monje Montero Montes Montt Orbegoso
-		Pezet Rebolledo Ruíz-Tagle Salaverry "Santa María" Siles Sotomayor Toro Valencia Zañartu Zapata
-
-	}
-	callsigns = { }
-}
-PAR = {
 	male = {
 		names = {
 			Adolfo Agustín Alejandro Andrés Aníbal Antonio Bartolomé Bernardo David Diego
