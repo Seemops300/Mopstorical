@@ -177,11 +177,6 @@ TIB = {
 	color = rgb { 80 100 45}
 	color_ui = rgb { 222 247 198 }
 }
-
-VEN = {
-	color = rgb { 171 190 152 }
-	color_ui = rgb { 222 247 198 }
-}
 YUN = {
 	color = rgb { 114 148 80 }
 	color_ui = rgb { 222 247 198 }
