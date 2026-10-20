@@ -129,14 +129,6 @@ CHI = {
 	color = rgb { 40 40 140 }
 	color_ui = rgb { 40 40 140 }
 }
-COL = {
-	color = rgb { 222 187 91 }
-	color_ui = rgb { 255 243 118 }
-}
-ECU = {
-	color = rgb { 249 146 98 }
-	color_ui = rgb { 255 190 127 }
-}
 ELS = {
 	color = rgb { 152 130 191 }
 	color_ui = rgb { 198 169 248 }
@@ -169,17 +161,9 @@ PAN = {
 	color = rgb { 152 130 191 }
 	color_ui = rgb { 198 169 248 }
 }
-PER = {
-	color = rgb { 71 113 97 }
-	color_ui = rgb { 92 147 126 }
-}
 PHI = {
 	color = rgb { 0 40 195 }
 	color_ui = rgb { 0 40 195 }
-}
-PRU = {
-	color = rgb { 196 189 204 }
-	color_ui = rgb { 255 246 255 }
 }
 SAF = {
 	color = rgb { 195 107 160 }
