@@ -157,10 +157,6 @@ NZL = {
 	color = rgb { 152 130 191 }
 	color_ui = rgb { 198 169 248 }
 }
-PAN = {
-	color = rgb { 152 130 191 }
-	color_ui = rgb { 198 169 248 }
-}
 PHI = {
 	color = rgb { 0 40 195 }
 	color_ui = rgb { 0 40 195 }
