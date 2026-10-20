@@ -4,16 +4,6 @@ state= {
 	
 	history = {
 
-		
-		}
-
-		victory_points = {
-			12883 1 
-		}
-
-		victory_points = {
-			5037 5
-		}
 	}
 	manpower = 1
 	state_category = pastoral
