@@ -7,7 +7,7 @@ state = {
 	state_category = pastoral
 
 	history = {
-		owner = ECU #Used to be PRU but should become theirs through the Peruvian-Ecuadorian War
+		owner = KOS #Used to be PRU but should become theirs through the Peruvian-Ecuadorian War
 		buildings = {
 			infrastructure = 1
 		}
