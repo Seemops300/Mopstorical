@@ -1,0 +1,13 @@
+#scripted triggers for IRQ - GOE
+
+kurdistan_exists = {
+	custom_trigger_tooltip = {
+		tooltip = kurdistan_exists_tt
+		OR = {
+			KUR = {
+				exists = yes
+			}
+			has_global_flag = kurdistan_exists_flag
+		}
+	}	
+}

@@ -129,10 +129,6 @@ CHI = {
 	color = rgb { 40 40 140 }
 	color_ui = rgb { 40 40 140 }
 }
-HON = {
-	color = rgb { 128 145 65 }
-	color_ui = rgb { 128 145 65 }
-}
 JAP = {
 	color = hsv { 0.05 0.3 1 }
 	color_ui = hsv { 0.05 0.25 1.2 }

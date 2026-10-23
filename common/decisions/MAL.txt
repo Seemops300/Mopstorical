@@ -1,0 +1,56 @@
+
+
+# Political Actions 
+political_actions = { 
+
+	MAL_loosen_societal_restrictions_decision = {
+
+		icon = GFX_decision_SWI_support_humanitarian_efforts
+
+		allowed = {
+			always = no
+		}
+
+		visible = {
+			always = no
+		}
+
+		available = {
+			OR = {
+				is_subject = no 
+				compare_autonomy_state > autonomy_puppet
+			}
+		}
+
+		fire_only_once = no
+
+		cost = 100 
+
+		priority = 100
+
+		ai_will_do = {
+			base = 500
+		}
+
+		modifier = {
+			political_power_factor = -0.1
+		}
+
+		days_remove = 70 
+
+		remove_effect = {
+		}
+
+		complete_effect = {
+					
+		}	
+
+	}
+
+
+}
+
+
+
+
+

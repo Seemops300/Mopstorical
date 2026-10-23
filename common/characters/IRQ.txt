@@ -1,0 +1,119 @@
+characters = {
+
+	##### NON-ALIGNED #####
+
+
+
+
+
+
+
+	##### FASCISM #####
+
+
+
+	#### COMMUNISM ####
+
+
+
+	##### DEMOCRACY #####
+
+
+
+
+
+
+	###################
+	#####ADVISORS######
+	###################
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+	ARM_calouste_gulbenkian = {
+		name = ARM_calouste_gulbenkian
+		portraits = {
+			civilian = {
+				small= GFX_portrait_ARM_calouste_gulbenkian_small
+			}
+		}
+
+		advisor = {
+			allowed = {
+				has_dlc = "Graveyard of Empires" 
+			} 
+			slot = political_advisor
+			idea_token = ARM_calouste_gulbenkian
+
+			traits  = {
+				# Incredibly wealthy bussinessman and the one who started the exploitation of middle-eastern oil
+				IRQ_armenian_oil_magnate
+			}
+			available = {
+				always = no
+			}
+			ai_will_do  = {
+				factor  = 0.000
+			}
+		}
+	}
+
+
+
+
+
+
+
+
+
+	######################
+	##### THEORISTS ######
+	######################
+
+	
+
+
+
+
+	######################
+	## CHIEFS OF A/N/A ###
+	######################
+
+
+
+
+
+
+
+
+
+
+	######################
+	#### HIGH COMMAND ####
+	######################
+
+
+
+
+
+	
+
+	#####################
+	##### GENERALS ######
+	#####################
+
+
+
+}

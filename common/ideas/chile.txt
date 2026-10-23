@@ -1,0 +1,539 @@
+ideas = {
+	country = {
+
+		CHL_the_mapuche_conflict_rebellion = {
+			name = CHL_the_mapuche_conflict
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = CHL_the_mapuche_conflict
+			
+			modifier = {
+				line_change_production_efficiency_factor = -0.05
+				consumer_goods_factor = 0.15
+				conscription_factor = -0.1
+				war_support_factor = -0.15
+				stability_factor = -0.15
+				resistance_target = 0.15
+			}
+		}
+
+		CHL_the_mapuche_conflict_much_worse = {
+			name = CHL_the_mapuche_conflict
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = CHL_the_mapuche_conflict
+			
+			modifier = {
+				line_change_production_efficiency_factor = -0.05
+				consumer_goods_factor = 0.12
+				conscription_factor = -0.1
+				war_support_factor = -0.15
+				stability_factor = -0.05
+			}
+		}
+
+		CHL_the_mapuche_conflict_worse = {
+			name = CHL_the_mapuche_conflict
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = CHL_the_mapuche_conflict
+			
+			modifier = {
+				line_change_production_efficiency_factor = -0.05
+				consumer_goods_factor = 0.07
+				conscription_factor = -0.08
+				war_support_factor = -0.12
+			}
+		}
+
+		CHL_the_mapuche_conflict = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = CHL_the_mapuche_conflict
+			
+			modifier = {
+				line_change_production_efficiency_factor = -0.05
+				consumer_goods_factor = 0.05
+				conscription_factor = -0.05
+				war_support_factor = -0.1
+			}
+		}
+
+		CHL_the_mapuche_conflict_calmed = {
+			name = CHL_the_mapuche_conflict
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = CHL_the_mapuche_conflict
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+				conscription_factor = -0.05
+				war_support_factor = -0.05
+			}
+		}
+
+		CHL_the_mapuche_conflict_near_gone = {
+			name = CHL_the_mapuche_conflict
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = CHL_the_mapuche_conflict
+			
+			modifier = {
+				conscription_factor = -0.02
+				war_support_factor = -0.02
+			}
+		}
+
+		CHL_mapuche_conflict_done = {
+			name = CHL_the_mapuche_conflict
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = CHL_the_mapuche_conflict
+			
+			modifier = {
+			}
+		}
+
+
+		idea_CHL_near_anarchic_society = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = CHL_near_anarchic_society
+			
+			modifier = {
+				stability_factor = -0.25
+				political_power_factor = -0.15
+				war_support_factor = -0.1
+				fascism_drift = 0.02
+			}
+		}
+
+		idea_CHL_near_anarchic_society_2 = {
+			name = idea_CHL_near_anarchic_society
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = CHL_near_anarchic_society
+			
+			modifier = {
+				stability_factor = -0.2
+				political_power_factor = -0.05
+				war_support_factor = -0.1
+				fascism_drift = 0.02
+			}
+		}
+
+		idea_CHL_near_anarchic_society_3 = {
+			name = idea_CHL_near_anarchic_society
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = CHL_near_anarchic_society
+			
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.1
+				fascism_drift = 0.01
+			}
+		}
+
+		idea_CHL_near_anarchic_society_4 = {
+			name = idea_CHL_near_anarchic_society
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = CHL_near_anarchic_society
+			
+			modifier = {
+				stability_factor = -0.05
+				fascism_drift = 0.01
+			}
+		}
+
+
+		CHL_relief_efforts_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = SPA_recovering_from_the_civil_war
+			
+			modifier = {
+				consumer_goods_factor = 0.1
+				stability_weekly = 0.005
+				communism_drift = 0.02
+				democratic_drift = 0.02
+			}
+
+			on_remove = {
+				CHL_anarchic_society_level_down = yes 
+			}
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	}
+
+
+	hidden_ideas = {
+		idea_JUNO_truck_production_cost = {
+			removal_cost = -1
+			#picture = ITA_bandits_war
+				
+			allowed = {
+				OR = {
+					original_tag = BRA
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+					
+			equipment_bonus = {
+				motorized_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+					reliability = 0.05
+				}
+				mechanized_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+					reliability = 0.05
+				}
+			}
+
+			modifier = {
+			}
+		}
+
+		JUNO_hidden_aa_production_ns = { #Hidden idea to apply aa production bonuses. 
+
+			removal_cost = -1
+
+			picture = generic_artillery_regiments 
+				
+			allowed = {
+				OR = {
+					original_tag = BRA
+				}
+			}
+					
+			equipment_bonus = { 
+				anti_air_equipment = {
+					instant = yes
+					build_cost_ic = -0.06
+				}
+			}
+		}
+
+		JUNO_hidden_aa_production_ns_2 = { #Hidden idea to apply aa production bonuses. 
+
+			removal_cost = -1
+
+			picture = generic_artillery_regiments 
+				
+			allowed = {
+				OR = {
+					original_tag = BRA
+				}
+			}
+					
+			equipment_bonus = { 
+				anti_air_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+			}
+		}
+
+		JUNO_hidden_at_production_ns = { #Hidden idea to apply at production bonuses. 
+
+			removal_cost = -1
+
+			picture = generic_artillery_regiments 
+
+			allowed = {
+				OR = {
+					original_tag = BRA
+				}
+			}
+					
+			equipment_bonus = { 
+				anti_tank_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+			}
+		}
+
+		JUNO_license_idea = { #Hidden idea for license production
+
+			removal_cost = -1
+
+			picture = generic_artillery_regiments 
+
+			allowed = {
+				OR = {
+					original_tag = BRA
+				}
+			}
+					
+			equipment_bonus = { 
+			}
+
+			modifier = {
+				license_armor_purchase_cost = -0.4
+				license_purchase_cost = -0.3
+			}
+		}
+
+		JUNO_license_air_idea = { #Hidden idea for license production
+
+			removal_cost = -1
+
+			picture = generic_artillery_regiments 
+
+			allowed = {
+				OR = {
+					original_tag = BRA
+					original_tag = COG
+				}
+			}
+					
+			equipment_bonus = { 
+			}
+
+			modifier = {
+				license_air_purchase_cost = -0.4
+				license_purchase_cost = -0.3
+			}
+		}
+
+
+
+
+	}
+
+	industrial_concern = {
+
+
+
+
+
+
+
+
+
+
+	}
+
+	materiel_manufacturer = {
+
+
+
+
+
+	}
+
+	tank_manufacturer = { 
+		
+		designer = yes
+	}
+	naval_manufacturer = { 
+		designer = yes
+
+
+
+	}
+
+	aircraft_manufacturer = {
+		designer = yes
+
+
+
+	}
+	
+}

@@ -47,10 +47,8 @@ ITA_missiolinis_weigh_mussolini_feels_safe = {
 	surrender_progress < 0.01
 }
 
-ETH_is_in_exile = { #Add any more stuff needed here
-	ETH = {
-		is_government_in_exile = yes
-	}
+ETH_is_in_exile = {
+	always = no
 }
 
 ITA_is_italian_colony = { #State scope
@@ -58,7 +56,6 @@ ITA_is_italian_colony = { #State scope
 		is_core_of = ERI
 		is_core_of = LBA
 		is_core_of = SOM
-		is_core_of = ETH
 	}
 }
 
@@ -554,10 +551,7 @@ ITA_is_anti_fascist = {
 }
 
 ITA_hosting_exiled_ethiopia = {
-	OR = {
-		check_variable = { ETH.host_nation = ENG }
-		var:ETH.host_nation = {	is_in_faction_with = ENG }
-	}
+	always = no
 }
 
 #A.I.#

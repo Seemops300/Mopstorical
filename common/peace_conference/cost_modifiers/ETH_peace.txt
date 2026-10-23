@@ -1,0 +1,29 @@
+# Scripted cost modifiers for peace actions.
+# See documentation.info file for more detailed scripting information.
+
+peace_action_modifiers = {
+
+    ETH_agreed_state_peace_cost_modifier = {
+        category = treaties_or_conferences
+        peace_action_type = take_states
+
+        enable = {
+        	always = no
+        }
+
+        cost_multiplier = 0.55
+    }
+
+
+    ETH_end_of_civil_war_cost_modifier_low = {
+        category = treaties_or_conferences
+        peace_action_type = take_states
+
+        enable = {
+        	always = no
+        }
+
+        cost_multiplier = 0.2
+    }
+
+}

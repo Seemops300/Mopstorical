@@ -1004,22 +1004,6 @@ if = {
 	# }
 }
 #South America
-PRU = {
-	add_relation_modifier = {
-		target = ROOT
-		modifier = CZE_i_am_agreeable_to_license
-	}
-	if = {
-		limit = {
-			has_dlc = "Arms Against Tyranny"
-		}
-		add_ai_strategy = {
-			type = equipment_market_trade_desire
-			id = CZE
-			value = 175 #Need alot for you
-		}
-	}
-}
 #Asia
 CHI = {
 	add_relation_modifier = {
@@ -1054,18 +1038,12 @@ if = {
 		value = 75
 	}
 	#South America
-	add_ai_strategy = {
-		type = equipment_market_trade_desire
-		id = PRU
-		value = 175 #Need alot for you
-	}
 	#Asia
 	add_ai_strategy = {
 		type = equipment_market_trade_desire
 		id = CHI
 		value = 100
 	}
-	give_market_access = PRU
 	give_market_access = CHI
 	give_market_access = YUG
 	give_market_access = ROM
@@ -1174,39 +1152,7 @@ if = {
 			has_dlc = "Peace For Our Time"
 		}
 	}
-	ARG = {
-		add_relation_modifier = {
-			target = ROOT
-			modifier = CZE_i_am_agreeable_to_license
-		}
-		if = {
-			limit = {
-				has_dlc = "Arms Against Tyranny"
-			}
-			add_ai_strategy = {
-				type = equipment_market_trade_desire
-				id = CZE
-				value = 75 #Need alot for you
-			}
-		}
-	}
 	BRA = {
-		add_relation_modifier = {
-			target = ROOT
-			modifier = CZE_i_am_agreeable_to_license
-		}
-		if = {
-			limit = {
-				has_dlc = "Arms Against Tyranny"
-			}
-			add_ai_strategy = {
-				type = equipment_market_trade_desire
-				id = CZE
-				value = 75
-			}
-		}
-	}
-	BOL = {
 		add_relation_modifier = {
 			target = ROOT
 			modifier = CZE_i_am_agreeable_to_license
@@ -1229,20 +1175,9 @@ if = {
 		}
 		add_ai_strategy = {
 			type = equipment_market_trade_desire
-			id = ARG
-			value = 100
-		}
-		add_ai_strategy = {
-			type = equipment_market_trade_desire
 			id = BRA
 			value = 100
 		}
-		add_ai_strategy = {
-			type = equipment_market_trade_desire
-			id = BOL
-			value = 100
-		}
-		give_market_access = BOL
 		give_market_access = BRA
 		#give_market_access = ARG they will just cancel it right away due to no trade route
 	}

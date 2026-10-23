@@ -1,0 +1,161 @@
+ideas = {
+	country = {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		PER_hellmand_altered_no_treaty= {
+			allowed = {
+				always = no
+			}
+
+			cancel = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = PER_helmand_no_treaty
+
+			modifier = {
+				stability_factor = -0.1
+				consumer_goods_factor = 0.15
+			}
+		}
+
+
+		PER_hellmand_altered_adopted_treaty= {
+			allowed = {
+				always = no
+			}
+
+			cancel = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = AFG_helmand_adopted_treaty
+
+			modifier = {
+				stability_factor = -0.05
+				consumer_goods_factor = 0.075
+			}
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		AFG_expanded_the_madrasas_idea = {
+			allowed = {
+				OR = {
+					original_tag = KHM
+				}
+			}
+		
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+		
+			picture = raj_marginalized_muslim_community_happy
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+			
+			}
+
+			modifier = {
+				stability_factor = 0.1
+				research_speed_factor = 0.02
+				political_power_factor = 0.05
+			}
+		}
+
+
+
+
+
+		AFG_compulsory_jizya = {
+			
+			allowed = {
+				OR = {
+					original_tag = KHM
+				}
+			}
+
+			picture = generic_agrarian_reform
+
+			allowed_civil_war = {
+				always = yes
+			}
+		
+			removal_cost = -1
+
+			modifier = {
+				conscription_factor = -0.1
+				consumer_goods_factor = -0.1
+				compliance_gain = 0.01
+			}
+		}
+
+
+
+
+	}
+
+	industrial_concern = {
+
+
+
+
+
+	}
+}

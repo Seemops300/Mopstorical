@@ -1,0 +1,87 @@
+
+infantry_CHI = {
+
+	available_for = {
+		CHI
+		PRC 
+		GXC
+		YUN
+		SHX
+		XSM
+		MEN
+		MAN
+		GDC
+		SND
+		SIC
+		NXM
+		GSM
+		XIC
+		KHM
+		KUM
+		HBC
+	}
+
+	role = infantry
+	
+	upgrade_prio = {
+		factor = 2
+
+		modifier = {
+			factor = 5
+		}
+	}
+	
+	infantry_default_CHI = {
+	
+		upgrade_prio = {
+			factor = 2
+
+			modifier = {
+				factor = 1
+			}
+		}
+		
+		target_template = {
+			
+			support = {
+				engineer = 1
+			}
+			
+			regimental_support = {
+				field_guns = 2
+			}
+			regiments = {
+				infantry = 10
+			}
+		}
+	}
+
+	infantry_2_CHI = {
+	
+		upgrade_prio = {
+			factor = 2
+
+			modifier = {
+				factor = 0
+				num_of_factories < 50
+			}
+		}
+		
+		target_template = {
+			
+			support = {
+				engineer = 1
+				recon = 1
+			}
+			
+			regimental_support = {
+				field_guns = 2
+			}
+
+			regiments = {
+				infantry = 9
+				artillery_brigade = 1
+			}
+		}
+	}
+}

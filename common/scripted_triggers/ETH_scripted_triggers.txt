@@ -1,0 +1,91 @@
+#scripted triggers for Ethiopia
+
+# Is initial war still ongoing?
+has_anarchist_government = {
+	custom_trigger_tooltip = {
+		tooltip = has_anarchist_government_tt
+		OR = {
+			has_country_leader_ideology = anarchist_communism 
+			has_country_leader_ideology = anarchism 
+		}
+	}	
+}
+
+has_military_academy = {
+	IF = {
+		limit = {
+			always = no
+		}
+		custom_trigger_tooltip = {
+			tooltip = has_military_academy_tt 
+			always = no
+		}
+	}
+}
+
+has_naval_academy = {
+	IF = {
+		limit = {
+			always = no
+		}
+		custom_trigger_tooltip = {
+			tooltip = has_naval_academy_tt 
+			always = no
+		}
+	}
+}
+
+has_air_academy = {
+	IF = {
+		limit = {
+			always = no
+		}
+		custom_trigger_tooltip = {
+			tooltip = has_air_academy_tt 
+			always = no
+		}
+	}
+}
+
+has_air_force_command = {
+	IF = {
+		limit = {
+			always = no
+		}
+		custom_trigger_tooltip = {
+			tooltip = has_air_force_command_tt 
+			always = no
+		}
+	}
+}
+
+controls_all_ethiopian_core_states = {
+	custom_trigger_tooltip = {
+		tooltip = controls_ethiopian_cores_tt 
+		controls_state = 271 
+		controls_state = 835 
+		controls_state = 836 
+		controls_state = 837
+		controls_state = 838
+		controls_state = 839 
+		controls_state = 840
+		controls_state = 841 
+		controls_state = 842 
+		controls_state = 843 
+	}
+}
+
+ETH_is_horn_of_africa_original_tag = {
+	OR = {
+		original_tag = SOM
+		original_tag = ERI
+		original_tag = DJI
+		original_tag = HAR
+		original_tag = TIG
+		original_tag = BEG
+		original_tag = GBA
+		original_tag = SID
+		original_tag = ORO
+		original_tag = QEM
+	}
+}

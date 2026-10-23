@@ -1,0 +1,150 @@
+
+
+AFG_create_puppet_army = {
+	division_template = {
+		name = "Tribal Militia"		
+		#division_names_group = AFG_INF_01
+		is_locked = yes
+		force_allow_recruiting = yes
+		regiments = {
+			militia = { x = 0 y = 0 }
+			militia = { x = 0 y = 1 }
+			militia = { x = 1 y = 0 }
+			militia = { x = 1 y = 1 }
+		}
+	}
+	capital_scope = {
+		create_unit = {
+			division = "division_template = \"Tribal Militia\" start_experience_factor = 0.05 start_equipment_factor = 1"
+			owner = PREV
+			count = 3
+		}
+	}
+}
+
+create_soviet_iranian_joint_submarine = {
+	IF = {
+		limit = {
+			has_dlc = "Man the Guns"
+		}
+
+		IF = {
+			limit = {
+				NOT = { has_tech = early_ship_hull_submarine }
+			}
+			set_technology = {
+				early_ship_hull_submarine = 1
+				popup = no
+			}
+			create_equipment_variant = {
+				name = "Soviet-Iranian Class"
+				type = ship_hull_submarine_1
+				name_group = PER_SS_HISTORICAL
+				parent_version = 0
+				allow_without_tech = yes
+				modules = {
+					fixed_ship_engine_slot = sub_ship_engine_2
+					fixed_ship_torpedo_slot = ship_torpedo_sub_2
+					rear_1_custom_slot = ship_torpedo_sub_2
+				}
+			}
+
+		}
+
+		ELSE_IF = {
+			limit = {
+				has_tech = early_ship_hull_submarine
+				NOT = { has_tech = basic_ship_hull_submarine }
+			}
+			set_technology = {
+				basic_ship_hull_submarine = 2
+				popup = no
+			}
+			create_equipment_variant = {
+				name = "Soviet-Iranian Class"
+				type = ship_hull_submarine_2
+				name_group = PER_SS_HISTORICAL
+				parent_version = 0
+				allow_without_tech = yes
+				modules = {
+					fixed_ship_engine_slot = sub_ship_engine_2
+					fixed_ship_torpedo_slot = ship_torpedo_sub_2
+					rear_1_custom_slot = ship_torpedo_sub_2
+				}
+			}
+
+		}
+		ELSE_IF = {
+			limit = {
+				has_tech = basic_ship_hull_submarine
+				NOT = {has_tech = improved_ship_hull_submarine }
+			}
+			set_technology = {
+				improved_ship_hull_submarine = 3
+				popup = no
+			}
+			create_equipment_variant = {
+				name = "Soviet-Iranian Class"
+				type = ship_hull_submarine_3
+				name_group = PER_SS_HISTORICAL
+				parent_version = 0
+				allow_without_tech = yes
+				modules = {
+					fixed_ship_engine_slot = sub_ship_engine_2
+					fixed_ship_torpedo_slot = ship_torpedo_sub_2
+					front_1_custom_slot = empty
+					mid_1_custom_slot = ship_sub_snorkel_1
+					rear_1_custom_slot = ship_torpedo_sub_2
+				}
+			}
+
+		}
+		ELSE_IF = {
+			limit = {
+				has_tech = improved_ship_hull_submarine
+			}
+			set_technology = {
+				advanced_ship_hull_submarine = 1
+				popup = no
+			}
+			create_equipment_variant = {
+				name = "Soviet-Iranian Class"
+				type = ship_hull_submarine_4
+				name_group = PER_SS_HISTORICAL
+				parent_version = 0
+				allow_without_tech = yes
+				modules = {
+					fixed_ship_engine_slot = sub_ship_engine_2
+					fixed_ship_torpedo_slot = ship_torpedo_sub_2
+					front_1_custom_slot = empty
+					mid_1_custom_slot = ship_sub_snorkel_1
+					rear_1_custom_slot = ship_torpedo_sub_2
+				}
+			}
+
+		}
+	}
+}
+
+create_soviet_iranian_joint_nav_bomber = {
+	IF = {
+		limit = {
+			has_dlc = "By Blood Alone"
+		}
+		create_equipment_variant = {
+			name = "Soviet-Iranian NAV"
+			type = small_plane_naval_bomber_airframe_2
+			allow_without_tech = yes
+			modules = {
+				fixed_main_weapon_slot = torpedo_mounting
+				engine_type_slot = engine_2_1x
+				special_type_slot_1 = lmg_defense_turret
+				special_type_slot_2 = floats
+			}
+			#icon = "GFX_GER_naval_bomber1_medium"
+		}
+	}
+	ELSE = {
+
+	}
+}

@@ -1143,60 +1143,6 @@ CHI = {
 	}
 }
 
-COL = {
-	submarine = {
-		prefix = "ARC"
-		generic = { "Submarino" }
-		unique = {
-			"20 de Julio" "7 de Agosto" "Santander" "Almirante Padilla" "Almirante Tono" "Almirante Brión" "Cordoba" "Antioquia" "Caldas" 
-		}
-	}
-	destroyer = {
-		prefix = "ARC"
-		generic = { 
-			"Destructor"
-		}
-		unique = {
-			"Antioquia" "Caldas" "20 de Julio" "7 de Agosto" "Santander" "Almirante Padilla" "Almirante Tono" "Almirante Brión" "Cordoba" 
-		}
-	}
-	light_cruiser = {
-		prefix = "ARC"
-		generic = { "Crucero Ligero" }
-		unique = {
-			"Medellín" "Cartagena" "Barranquilla" "Santa Marta" "Bucaramanga" "Tumaco" "Buenaventura" 
-		}
-	}
-	heavy_cruiser = {
-		prefix = "ARC"
-		generic = { "Crucero Pesado" }
-		unique = {
-			"Medellín" "Cartagena" "Barranquilla" "Santa Marta" "Bucaramanga" "Tumaco" "Buenaventura" 
-		}
-	}
-	battle_cruiser = {
-		prefix = "ARC"
-		generic = { "Crucero de Batalla" }
-		unique = {
-			"Cristobal Colón" "Bogotá" 
-		}
-	}
-	battleship = {
-		prefix = "ARC"
-		generic = { "Acorazado" }
-		unique = {
-			"Cristobal Colón" "Bogotá" 
-		}
-	}
-	carrier = {
-		prefix = "ARC"
-		generic = { "Portaaviones" }
-		unique = {
-			"República de Colombia" "La Gloriosa" "Magdalena" "Bogotá" "Pamplonita" "Rio Negro" "Arauca" 
-		}
-	}
-	
-}
 
 CZE = {
 	submarine = {
@@ -1429,115 +1375,7 @@ DEN = {
 	
 }
 
-ECU = {
-	submarine = {
-		prefix = "BAE"
-		generic = { "Submarino" }
-		unique = {
-			"Shyri" "Huancavilca" "Esmeraldas" "Manabí" "Los Ríos" "El Oro" "Loja" "Galápagos" 
-		}
-	}
-	destroyer = {
-		prefix = "BAE"
-		generic = { 
-			"Destructor"
-		}
-		unique = {
-			"Libertador Bolívar" "Tarqui" "Esmeraldas" "Manabí" "Los Ríos" "El Oro" "Loja" "Galápagos" 
-		}
-	}
-	light_cruiser = {
-		prefix = "BAE"
-		generic = { "Crucero Ligero" }
-		unique = {
-			"Esmeraldas" "El Oro" "Manabí" "Galápagos" "Los Ríos" "Loja" 
-		}
-	}
-	heavy_cruiser = {
-		prefix = "BAE"
-		generic = { "Crucero Pesado" }
-		unique = {
-			"Esmeraldas" "El Oro" "Manabí" "Galápagos" "Los Ríos" "Loja" 
-		}
-	}
-	battle_cruiser = {
-		prefix = "BAE"
-		generic = { "Crucero de Batalla" }
-		unique = {
-			"Presidente Alfaro" "Morán Valverde" 
-		}
-	}
-	battleship = {
-		prefix = "BAE"
-		generic = { "Acorazado" }
-		unique = {
-			"Presidente Alfaro" "Morán Valverde" 
-		}
-	}
-	carrier = {
-		prefix = "BAE"
-		generic = { "Portaaviones" }
-		unique = {
-			"Quito" "Guayaquil" 
-		}
-	}
-	
-}
 
-ELS = {
-	submarine = {
-		prefix = "ARS"
-		generic = { "Submarino" }
-		unique = {
-			"Chalatenango" "Cojutepeque" "La Palma" "Jazubal" "Sonsonate" 
-		}
-	}
-	destroyer = {
-		prefix = "ARS"
-		generic = { 
-			"Destructor"
-		}
-		unique = {
-			"Chalatenango" "Cojutepeque" "La Palma" "Jazubal" "Sonsonate" 
-		}
-	}
-	light_cruiser = {
-		prefix = "ARS"
-		generic = { "Crucero Ligero" }
-		unique = {
-			"Chalatenango" "Cojutepeque" "La Palma" "Jazubal" "Sonsonate" 
-		}
-	}
-	heavy_cruiser = {
-		prefix = "ARS"
-		generic = { "Crucero Pesado" }
-		unique = {
-			"Chalatenango" "Cojutepeque" "La Palma" "Jazubal" "Sonsonate" 
-		}
-	}
-	battle_cruiser = {
-		prefix = "ARS"
-		generic = { "Crucero de Batalla" }
-		unique = {
-			"La Libertad" "Santa Ana" 
-		}
-	}
-	battleship = {
-		prefix = "ARS"
-		generic = { "Acorazado" }
-		unique = {
-			"La Libertad" "Santa Ana" 
-		}
-	}
-	carrier = {
-		prefix = "ARS"
-		generic = { "Portaaviones" }
-		unique = {
-			"República de El Salvador" "San Salvador" 
-		}
-	}
-	
-}
 
 EST = {
 	submarine = {
@@ -1737,59 +1575,6 @@ GRE = {
 	}
 }
 
-GUA = {
-	submarine = {
-		prefix = "ARG"
-		generic = { "Submarino" }
-		unique = {
-			"Tapachula" "Puerto Barrios" "Jacaltenango" "El Estor" "El Progreso" 
-		}
-	}
-	destroyer = {
-		prefix = "ARG"
-		generic = { 
-			"Destructor"
-		}
-		unique = {
-			"Tapachula" "Puerto Barrios" "Jacaltenango" "El Estor" "El Progreso" 
-		}
-	}
-	light_cruiser = {
-		prefix = "ARG"
-		generic = { "Crucero Ligero" }
-		unique = {
-			"Tapachula" "Puerto Barrios" "Jacaltenango" "El Estor" "El Progreso" 
-		}
-	}
-	heavy_cruiser = {
-		prefix = "ARG"
-		generic = { "Crucero Pesado" }
-		unique = {
-			"Tapachula" "Puerto Barrios" "Jacaltenango" "El Estor" "El Progreso" 
-		}
-	}
-	battle_cruiser = {
-		prefix = "ARG"
-		generic = { "Crucero de Batalla" }
-		unique = {
-			"Ciudad de Guatemala" "Quezaltenango" 
-		}
-	}
-	battleship = {
-		prefix = "ARG"
-		generic = { "Acorazado" }
-		unique = {
-			"Ciudad de Guatemala" "Quezaltenango" 
-		}
-	}
-	carrier = {
-		prefix = "ARG"
-		generic = { "Portaaviones" }
-		unique = {
-			"República de Guatemala" "Escuintia" 
-		}
-	}
-}
 
 HOL = {
 	submarine = {
@@ -2121,59 +1906,6 @@ HUN = {
 	}
 }
 
-HON = {
-	submarine = {
-		prefix = "ARH"
-		generic = { "Submarino" }
-		unique = {
-			"Guaymuras" "Honduras" "Hibueras" "Yojoa" "Goascoran" "Petula" "Ulua" "Choluteca" "Piraña" "Tegucigalpa" "Chamelecán" "Lempira" "Morazan" 
-		}
-	}
-	destroyer = {
-		prefix = "ARH"
-		generic = { 
-			"Destructor"
-		}
-		unique = {
-			"Guaymuras" "Honduras" "Hibueras" "Yojoa" "Goascoran" "Petula" "Ulua" "Choluteca" "Piraña" "Tegucigalpa" "Chamelecán" "Lempira" "Morazan" 
-		}
-	}
-	light_cruiser = {
-		prefix = "ARH"
-		generic = { "Crucero Ligero" }
-		unique = {
-			"San Antonio de Cortes" "El Progreso" "Puerto Cortés" "Iriona" "La Ceiba" 
-		}
-	}
-	heavy_cruiser = {
-		prefix = "ARH"
-		generic = { "Crucero Pesado" }
-		unique = {
-			"San Antonio de Cortes" "El Progreso" "Puerto Cortés" "Iriona" "La Ceiba" 
-		}
-	}
-	battle_cruiser = {
-		prefix = "ARH"
-		generic = { "Crucero de Batalla" }
-		unique = {
-			"Tegucigalpa" "San Pedro Sula" 
-		}
-	}
-	battleship = {
-		prefix = "ARH"
-		generic = { "Acorazado" }
-		unique = {
-			"Tegucigalpa" "San Pedro Sula" 
-		}
-	}
-	carrier = {
-		prefix = "ARH"
-		generic = { "Portaaviones" }
-		unique = {
-			"República de Honduras" "La Paloma" 
-		}
-	}
-}
 
 IRE = {
 	submarine = {
@@ -2550,59 +2282,6 @@ MEX = {
 	}
 }
 
-NIC = {
-	submarine = {
-		prefix = "ARN"
-		generic = { "Submarino" }
-		unique = {
-			"Managua" "Masaya" "Granada" "León" "Chinandega" 
-		}
-	}
-	destroyer = {
-		prefix = "ARN"
-		generic = { 
-			"Destructor"
-		}
-		unique = {
-			"Managua" "Masaya" "Granada" "León" "Chinandega" 
-		}
-	}
-	light_cruiser = {
-		prefix = "ARN"
-		generic = { "Crucero Ligero" }
-		unique = {
-			"Managua" "Masaya" "Granada" "León" "Chinandega" 
-		}
-	}
-	heavy_cruiser = {
-		prefix = "ARN"
-		generic = { "Crucero Pesado" }
-		unique = {
-			"Managua" "Masaya" "Granada" "León" "Chinandega" 
-		}
-	}
-	battle_cruiser = {
-		prefix = "ARN"
-		generic = { "Crucero de Batalla" }
-		unique = {
-			"Anastacio Somoza" "La Republica" 
-		}
-	}
-	battleship = {
-		prefix = "ARN"
-		generic = { "Acorazado" }
-		unique = {
-			"Anastacio Somoza" "La Republica" 
-		}
-	}
-	carrier = {
-		prefix = "ARN"
-		generic = { "Portaaviones" }
-		unique = {
-			"Somoza y Nicaragua" "Tachito" 
-		}
-	}
-}
 
 NOR = {
 	submarine = {
@@ -2742,111 +2421,7 @@ NZL = {
 	}
 }
 
-OMA = {
-	submarine = {
-		prefix = "SNV"
-		generic = { "Submarine" }
-		unique = {
-			"Al Shamikh" "Al Rahmani" "Al Rasikh" "Qahir Al Amwaj" "Al Mua'zzar" "Al Mubrukah"
-		}
-	}
-	destroyer = {
-		prefix = "SNV"
-		generic = { "Destroyer" }
-		unique = {
-			"Al Shamikh" "Al Rahmani" "Al Rasikh" "Qahir Al Amwaj" "Al Mua'zzar" "Al Mubrukah"
-		}
-	}
-	light_cruiser = {
-		prefix = "SNV"
-		generic = { "Light Cruiser" }
-		unique = {
-			"Salalah" "Raysut" "Mirbah" "Sawqirah" "Duqm" 
-		}
-	}
-	heavy_cruiser = {
-		prefix = "SNV"
-		generic = { "Heavy Cruiser" }
-		unique = {
-			"Salalah" "Raysut" "Mirbah" "Sawqirah" "Duqm" 
-		}
-	}
-	battle_cruiser = {
-		prefix = "SNV"
-		generic = { "Battlecruiser" }
-		unique = {
-			"Masqat" "Matrah" 
-		}
-	}
-	battleship = {
-		prefix = "SNV"
-		generic = { "Battleship" }
-		unique = {
-			"Masqat" "Matrah" 
-		}
-	}
-	carrier = {
-		prefix = "SNV"
-		generic = { "Aircraft Carrier" }
-		unique = {
-			"Salah al-Din" 
-		}
-	}
-}
 
-PAN = {
-	submarine = {
-		prefix = "ARP"
-		generic = { "Submarino" }
-		unique = {
-			"Chiriqui" "Panama" "Panquiaco" "Tres De Noviembre" "10 de Noviembre" "28 de Noviembre" "Escudo de Veraguas" "Flamenco" "Naos" "Negrita" "Nombre de Dios" "Taboga" 
-		}
-	}
-	destroyer = {
-		prefix = "ARP"
-		generic = { 
-			"Destructor"
-		}
-		unique = {
-			"Chiriqui" "Panama" "Panquiaco" "Tres De Noviembre" "10 de Noviembre" "28 de Noviembre" "Escudo de Veraguas" "Flamenco" "Naos" "Negrita" "Nombre de Dios" "Taboga" 
-		}
-	}
-	light_cruiser = {
-		prefix = "ARP"
-		generic = { "Crucero Ligero" }
-		unique = {
-			"Colon" "La Chorrera" "David" "Penonome" "Punta Mata" 
-		}
-	}
-	heavy_cruiser = {
-		prefix = "ARP"
-		generic = { "Crucero Pesado" }
-		unique = {
-			"Colon" "La Chorrera" "David" "Penonome" "Punta Mata" 
-		}
-	}
-	battle_cruiser = {
-		prefix = "ARP"
-		generic = { "Crucero de Batalla" }
-		unique = {
-			"Ciudad de PanamA" "La Revolución de 1889" 
-		}
-	}
-	battleship = {
-		prefix = "ARP"
-		generic = { "Acorazado" }
-		unique = {
-			"Ciudad de PanamA" "La Revolución de 1889" 
-		}
-	}
-	carrier = {
-		prefix = "ARP"
-		generic = { "Portaaviones" }
-		unique = {
-			"Republica de PanamA" "El Destructor" 
-		}
-	}
-}
 
 PER = {
 	submarine = {
@@ -3114,57 +2689,6 @@ POR = {
 	}
 }
 
-PRU = {
-	submarine = {
-		prefix = "BAP"
-		generic = { "Submarino" }
-		unique = {
-			"R1" "R2" "R3" "R4" "Dos de Mayo" "Abtao" "Angamos" "Iquique" "Pacocha" "La Pedrera" "Angamos" "Antofagasta" "Pisagua" "Chipana" "Islay" "Arica" 
-		}
-	}
-	destroyer = {
-		prefix = "BAP"
-		generic = { "Destructor" }
-		unique = {
-			"Almirante Villar" "Almirante Guise" "Palacios" "Ferre" "Garcia y Garcia" "Coronel Bolognesi" "Castilla" "Capitan Quinones" "Galvez" "Diez Canseco" "Aguirre" "Rodriguez" 
-		}
-	}
-	light_cruiser = {
-		prefix = "BAP"
-		generic = { "Crucero Ligero" }
-		unique = {
-			"Almirante Grau" "Coronel Bolognesi" "CapitAn Quinones" "Aguirre" "Chimbote" "Callao" "Arequipa" "Huancayo" "Cusco" "Puno" 
-		}
-	}
-	heavy_cruiser = {
-		prefix = "BAP"
-		generic = { "Crucero Pesado" }
-		unique = {
-			"Almirante Grau" "Coronel Bolognesi" "CapitAn Quinones" "Aguirre" "Chimbote" "Callao" "Arequipa" "Huancayo" "Cusco" "Puno" 
-		}
-	}
-	battle_cruiser = {
-		prefix = "BAP"
-		generic = { "Crucero de Batalla" }
-		unique = {
-			"Lima" "Mariscal CAceres" "Gloriosa" 
-		}
-	}
-	battleship = {
-		prefix = "BAP"
-		generic = { "Acorazado" }
-		unique = {
-			"Lima" "Mariscal CAceres" "Gloriosa" 
-		}
-	}
-	carrier = {
-		prefix = "BAP"
-		generic = { "Portaaviones" }
-		unique = {
-			"Republica del Peru" "Los Andes" "Cordillera Occidental" 
-		}
-	}
-}
 
 PRC = {
 	air_wing_names_template = AIR_WING_NAME_CHI_FALLBACK
@@ -3708,57 +3232,6 @@ YUG = {
 }
 
 
-VEN = {
-	submarine = {
-		prefix = "ARV"
-		generic = { "Submarino" }
-		unique = {
-			"SAbalo" "Caribe" "Almirante Clemente" "General Flores" "General Moran" "Almirante Brión" "General Austria" "Almirante Garcia"
-		}
-	}
-	destroyer = {
-		prefix = "ARV"
-		generic = { "Destructor" }
-		unique = {
-			"Nueva Esparta" "Zulia" "Aragua" "Almirante Clemente" "General Flores" "General Moran" "Almirante Brión" "General Austria" "Almirante Garcia"
-		}
-	}
-	light_cruiser = {
-		prefix = "ARV"
-		generic = { "Crucero Ligero" }
-		unique = {
-			"Maracay" "Barquisimeto" "Valencia" "Petare Teques" "Puerto de la Cruz" "Cumana" "Maturin" "Sotavento" "Isla de Tortuga" "Pedregal" 
-		}
-	}
-	heavy_cruiser = {
-		prefix = "ARV"
-		generic = { "Crucero Pesado" }
-		unique = {
-			"Maracay" "Barquisimeto" "Valencia" "Petare Teques" "Puerto de la Cruz" "Cumana" "Maturin" "Sotavento" "Isla de Tortuga" "Pedregal" 
-		}
-	}
-	battle_cruiser = {
-		prefix = "ARV"
-		generic = { "Crucero de Batalla" }
-		unique = {
-			"Coronel Eduardo Blanco" "Almirante San Pablo" "Caracas" 
-		}
-	}
-	battleship = {
-		prefix = "ARV"
-		generic = { "Acorazado" }
-		unique = {
-			"Coronel Eduardo Blanco" "Almirante San Pablo" "Caracas" 
-		}
-	}
-	carrier = {
-		prefix = "ARV"
-		generic = { "Portaaviones" }
-		unique = {
-			"Republica de Venezuela" "Simón Bolivar" "General Urdaneta" "Almirante Brión" "General Soublette" "General Salóm" 
-		}
-	}
-}
 
 SWE = {
 	submarine = {
@@ -4100,57 +3573,6 @@ TUR = {
 }
 
 
-SAU = {
-	submarine = {
-		prefix = "HMS"
-		generic = { "Submarine" }
-		unique = {
-			"Al Riyadh" "Makkah" "Al Damman" "Al Madinah" "Hofouf" "Abha" "Taif"
-		}
-	}
-	destroyer = {
-		prefix = "HMS"
-		generic = { "Destroyer" }
-		unique = {
-			"Al Riyadh" "Makkah" "Al Damman" "Al Madinah" "Hofouf" "Abha" "Taif"
-		}
-	}
-	light_cruiser = {
-		prefix = "HMS"
-		generic = { "Light Cruiser" }
-		unique = {
-			"Jiddah" "Ad Damman" "Al Hufüf" "At Tä'if" "Najran" 
-		}
-	}
-	heavy_cruiser = {
-		prefix = "HMS"
-		generic = { "Heavy Cruiser" }
-		unique = {
-			"Jiddah" "Ad Damman" "Al Hufüf" "At Tä'if" "Najran" 
-		}
-	}
-	battle_cruiser = {
-		prefix = "HMS"
-		generic = { "Battlecruiser" }
-		unique = {
-			"Makkah" "al Madinah" 
-		}
-	}
-	battleship = {
-		prefix = "HMS"
-		generic = { "Battleship" }
-		unique = {
-			"Makkah" "al Madinah" 
-		}
-	}
-	carrier = {
-		prefix = "HMS"
-		generic = { "Aircraft Carrier" }
-		unique = {
-			"Al 'Arabiyah as Su'udiyah" "Aziz ibn Saud" 
-		}
-	}
-}
 
 SPR = {
 	submarine = {
