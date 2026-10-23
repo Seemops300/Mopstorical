@@ -7,8 +7,6 @@ state={
 	state_category = pastoral
 
 	history={
-		owner = KOS
-		add_core_of = KOS
 		
 		# owner = SIK
 		# add_core_of = SIK

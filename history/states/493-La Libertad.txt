@@ -11,11 +11,9 @@ state={
 	state_category = town
 
 	history={
-		owner = KOS
 		buildings = {
 			infrastructure = 1
 		}
-		add_core_of = KOS
 		victory_points = {
 			2023 1 
 		}

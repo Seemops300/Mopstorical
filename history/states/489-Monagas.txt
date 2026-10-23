@@ -12,11 +12,9 @@ state={
 	}
 
 	history={
-		owner = KOS
 		buildings = {
 			infrastructure = 1
 		}
-		add_core_of = KOS
 		victory_points = {
 			1944 1 
 		}

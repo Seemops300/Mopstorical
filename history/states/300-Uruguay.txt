@@ -11,8 +11,6 @@ state = {
 	}
 
 	history = {
-		owner = KOS
-		add_core_of = KOS
 
 		# owner = URG
 		# add_core_of = URG

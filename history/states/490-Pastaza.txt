@@ -7,7 +7,6 @@ state = {
 	state_category = pastoral
 
 	history = {
-		owner = KOS #Used to be PRU but should become theirs through the Peruvian-Ecuadorian War
 		buildings = {
 			infrastructure = 1
 		}
@@ -16,8 +15,6 @@ state = {
 			13289 2
 		}
 
-		add_core_of = KOS
-		add_core_of = KOS
 	}
 
 	provinces = {

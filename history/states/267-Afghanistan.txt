@@ -13,8 +13,6 @@ state={
 
 	}
 	history={
-		owner = KOS
-		add_core_of = KOS
 	
 		# owner = AFG
 		buildings = {
