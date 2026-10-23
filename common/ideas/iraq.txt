@@ -1,0 +1,103 @@
+ideas = {
+
+	country = {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		KUR_rejected_ankara_treaty = {
+			allowed = {
+				OR = {
+					original_tag = KUR
+				}
+			}
+			removal_cost = -1
+			picture = HUN_treaty_of_triannon
+			modifier = {
+				war_support_factor = 0.1
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+			}
+		}
+
+		KUR_united_idea = {
+			allowed = {
+				OR = {
+					original_tag = KUR
+				}
+			}
+			removal_cost = -1
+			picture = KUR_united_idea
+			modifier = {
+				stability_factor = 0.2
+				production_speed_buildings_factor = 0.05
+				production_speed_infrastructure_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+		}
+
+
+		IRQ_command_of_the_faithful = {
+			allowed = {
+				OR = {
+					original_tag = KUM
+					original_tag = KHM
+				}
+			}
+			removal_cost = -1
+			picture = raj_marginalized_muslim_community_angry
+			modifier = {
+				weekly_manpower = 500
+			}
+		}
+
+
+
+
+
+
+
+
+
+
+	}
+
+	industrial_concern = {
+
+
+
+
+
+
+
+
+	}
+
+}

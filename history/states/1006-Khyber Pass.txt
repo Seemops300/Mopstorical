@@ -7,8 +7,6 @@ state={
 		5082 12831 
 	}
 	history={
-		owner = KOS
-		add_core_of = KOS
 		
 		# owner = AFG
 		buildings = {

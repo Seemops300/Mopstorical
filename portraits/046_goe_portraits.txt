@@ -1,0 +1,45 @@
+
+
+
+
+PER = {
+	army = {
+		male = {
+			"GFX_portrait_PER_generic_military_1"
+			"GFX_Portrait_Arabia_Generic_land_1"
+			"GFX_Portrait_Arabia_Generic_land_2"
+			"GFX_Portrait_Arabia_Generic_land_3"
+		}
+	}
+	navy = {
+		male = {
+			"GFX_portrait_PER_generic_navy_1"
+			"GFX_Portrait_Arabia_Generic_navy_1"
+			"GFX_Portrait_Arabia_Generic_navy_2"
+			"GFX_Portrait_Arabia_Generic_navy_3"
+		}
+		
+	}
+	political = {
+		communism = {
+			male = { 
+				"GFX_portrait_PER_generic_military_1"
+			}
+		}
+		democratic = {
+			male = { 
+				
+			}
+		}
+		fascism = {
+			male = { 
+				"GFX_portrait_PER_generic_military_1"
+			}
+		}
+		neutrality = {
+			male = { 
+				"GFX_portrait_PER_generic_military_1"
+			}
+		}
+	}
+}

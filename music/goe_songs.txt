@@ -1,0 +1,142 @@
+
+music_station = "base_music"
+
+
+#### AFG ###
+music = {
+	song = "afghanistan_civilian_homeland"
+	chance = {
+		base = 1
+
+		modifier = {
+			factor = 0.05
+		}
+	}
+}
+
+music = {
+	song = "afghanistan_military_graveyard_of_empires"
+	chance = {
+		base = 1
+
+		modifier = {
+			factor = 0.05
+		}
+	}
+}
+
+### RAJ ###
+
+music = {
+	song = "india_civilian_land_of_colours"
+	chance = {
+		base = 1
+
+		modifier = {
+			factor = 0.05
+			NOT = { original_tag = RAJ }
+		}
+		modifier = {
+			factor = 2.5
+			original_tag = RAJ
+			has_war = no
+		}
+		modifier = {
+			factor = 10
+			NOT = { original_tag = RAJ }
+			is_in_faction_with = RAJ
+			has_war = no
+		}
+	}
+}
+
+music = {
+	song = "india_the_japanese_cometh"
+	chance = {
+		base = 1
+
+		modifier = {
+			factor = 0.05
+			NOT = { original_tag = RAJ }
+		}
+		modifier = {
+			factor = 5
+			original_tag = RAJ
+			has_war = yes
+		}
+		modifier = {
+			factor = 10
+			has_war_with = RAJ
+		}
+	}
+}
+
+### IRQ (files have wrong country) ###
+
+music = {
+	song = "iran_civilian_baghdad_nightlife"
+	chance = {
+		base = 1
+
+		modifier = {
+			factor = 0.05
+		}
+	}
+}
+
+music = {
+	song = "iran_military_between_two_rivers"
+	chance = {
+		base = 1
+
+		modifier = {
+			factor = 0.05
+		}
+	}
+}
+
+
+### PER ###
+music = {
+	song = "iran_civilian_king_of_kings"
+	chance = {
+		base = 1
+
+		modifier = {
+			factor = 0.05
+			NOT = { original_tag = PER }
+		}
+		modifier = {
+			factor = 2.5
+			original_tag = PER
+			has_war = no
+		}
+		modifier = {
+			factor = 10
+			NOT = { original_tag = PER }
+			is_in_faction_with = PER
+			has_war = no
+		}
+	}
+}
+
+music = {
+	song = "iran_military_glory_of_cyrus_the_great"
+	chance = {
+		base = 1
+
+		modifier = {
+			factor = 0.05
+			NOT = { original_tag = PER }
+		}
+		modifier = {
+			factor = 5
+			original_tag = PER
+			has_war = yes
+		}
+		modifier = {
+			factor = 10
+			has_war_with = PER
+		}
+	}
+}

@@ -1316,7 +1316,6 @@ set_popularities = {
 create_faction_from_template = faction_template_comintern
 add_to_faction = SOV
 add_to_faction = MON
-add_to_faction = TAN
 
 if = {
 	limit = {

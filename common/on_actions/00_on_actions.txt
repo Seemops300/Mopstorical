@@ -744,7 +744,6 @@ on_actions = {
 					OR = {
 						original_tag = CAN
 						original_tag = RAJ
-						original_tag = MAL
 						original_tag = INS
 					}
 				}
@@ -1620,7 +1619,6 @@ on_actions = {
 					OR = {
 						original_tag = RAJ
 						original_tag = CAN
-						original_tag = MAL
 						original_tag = INS
 					}
 					is_puppet = no
@@ -3148,21 +3146,9 @@ on_actions = {
 							}
 							modifier = {
 								OR = {
-									CHL = {
-										is_ai = no
-									}
 									BRA = {
 										is_ai = no
 									}
-									ARG = {
-										is_ai = no
-									}			
-									PAR = {
-										is_ai = no
-									}									
-									URG = {
-										is_ai = no
-									}									
 								}
 								factor = 1.25
 							}
@@ -3892,59 +3878,6 @@ on_actions = {
 					}
 				}
 			}
-			ETH = {
-				if = {
-					limit = {
-						has_dlc = "By Blood Alone"
-						OR = {
-							AND = {
-								is_historical_focus_on = no
-								has_game_rule = {
-									rule = ETH_ai_behavior
-									option = DEFAULT
-								}
-							}
-							has_game_rule = {
-								rule = ETH_ai_behavior
-								option = RANDOM
-							}
-						}
-					}
-					random_list = {
-						20 = { set_country_flag = ETH_AI_RANDOM_HISTORICAL }
-						15 = { set_country_flag = ETH_AI_RANDOM_IMPERIAL }
-						20 = { set_country_flag = ETH_AI_RANDOM_STALINIST}
-						20 = { set_country_flag = ETH_AI_RANDOM_ANARCHIST}
-						20 = { set_country_flag = ETH_AI_RANDOM_COLLABORATIONIST}
-						20 = { set_country_flag = ETH_AI_RANDOM_INDEPENDENT_FASCIST}
-						#TODO_TA Set Correct values
-						#15 = {
-						#	modifier = {
-						#		factor = 0.25
-						#		game_weight_can_add_communist = no
-						#	}
-						#	set_add_communist_weight_small = yes
-						#	set_country_flag = ETH_AI_RANDOM_COMMUNIST
-						#}
-						#10 = {
-						#	modifier = {
-						#		factor = 0.25
-						#		game_weight_can_add_fascist = no
-						#	}
-						#	set_add_fascist_weight_small = yes
-						#	set_country_flag = ETH_AI_RANDOM_FASCIST
-						#}
-						#10 = {
-						#	modifier = {
-						#		factor = 0.25
-						#		game_weight_can_add_democratic = no
-						#	}
-						#	set_add_democratic_weight_small = yes
-						#	set_country_flag = ETH_AI_RANDOM_DEMOCRATIC
-						#}
-					}
-				}
-			}
 			SWI = {
 				if = {
 					limit = {
@@ -4263,45 +4196,6 @@ on_actions = {
 					}
 				}
 			}
-			CHL = {
-				IF = {
-					limit = {
-						OR = {
-							AND = {
-								is_historical_focus_on = no
-								has_game_rule = {
-									rule = CHL_ai_behavior
-									option = DEFAULT
-								}
-							}
-							has_game_rule = {
-								rule = CHL_ai_behavior
-								option = RANDOM
-							}
-						}
-					}
-					random_list = {
-						50 = {
-							CHL = { set_country_flag = CHL_AI_RANDOM_HISTORICAL }
-						}
-						50 = {
-							CHL = { set_country_flag = CHL_AI_RANDOM_COMMUNIST }
-						}
-						50 = {
-							CHL = { set_country_flag = CHL_AI_RANDOM_OPERATION_BOLIVAR }
-						}
-						40 = {
-							CHL = { set_country_flag = CHL_AI_RANDOM_PAN_HISPANISM }
-						}
-						25 = {
-							CHL = { set_country_flag = CHL_AI_RANDOM_ANTI_IMPERIALISM }
-						}
-						10 = {
-							CHL = { set_country_flag = CHL_AI_RANDOM_LE_DELUGE }
-						}
-					}
-				}
-			}
 			BRA = {
 				IF = {
 					limit = {
@@ -4345,105 +4239,11 @@ on_actions = {
 				}
 			}
 
-			PAR = {
-				IF = {
-					limit = {
-						OR = {
-							AND = {
-								is_historical_focus_on = no
-								has_game_rule = {
-									rule = PAR_AI_BEHAVIOR
-									option = DEFAULT
-								}
-							}
-							has_game_rule = {
-								rule = PAR_AI_BEHAVIOR
-								option = RANDOM
-							}
-						}
-					}
-					random_list = {
-						1 = {
-							PAR = { set_country_flag = PAR_AI_RANDOM_HISTORICAL }
-						}
-						1 = {
-							PAR = { set_country_flag = PAR_AI_RANDOM_COMMUNIST }
-						}
-						1 = {
-							PAR = { set_country_flag = PAR_AI_RANDOM_DEMOCRATIC }
-						}
-					}
-				}
-			}
-
-			URG = {
-				IF = {
-					limit = {
-						OR = {
-							AND = {
-								is_historical_focus_on = no
-								has_game_rule = {
-									rule = URG_AI_BEHAVIOR
-									option = DEFAULT
-								}
-							}
-							has_game_rule = {
-								rule = URG_AI_BEHAVIOR
-								option = RANDOM
-							}
-						}
-					}
-					random_list = {
-						1 = {
-							URG = { set_country_flag = URG_AI_RANDOM_DEMOCRATIC_ALT }
-						}
-						1 = {
-							URG = { set_country_flag = URG_AI_RANDOM_FASCIST }
-						}
-						1 = {
-							URG = { set_country_flag = URG_AI_RANDOM_HISTORICAL }
-						}
-					}
-				}
-			}
 
 
 
 
-			ARG = {
-				IF = {
-					limit = {
-						OR = {
-							AND = {
-								is_historical_focus_on = no
-								has_game_rule = {
-									rule = ARG_ai_behavior
-									option = DEFAULT
-								}
-							}
-							has_game_rule = {
-								rule = ARG_ai_behavior
-								option = RANDOM
-							}
-						}
-					}
-					random_list = {
-						1 = {
-							ARG = { set_country_flag = ARG_AI_RANDOM_FASCISM }
-						}
-						1 = {
-							ARG = { set_country_flag = ARG_AI_RANDOM_COMMUNIST }
-						}
-						1 = {
-							ARG = { set_country_flag = ARG_AI_RANDOM_DEMOCRATIC }
-						}
 
-						1 = {
-							ARG = { set_country_flag = ARG_AI_RANDOM_HISTORICAL }
-						}
-					}
-				}
-			}
 
 			AUS = {
 				IF = {
@@ -4591,43 +4391,6 @@ on_actions = {
 				   type = alliance
 				   id = GER
 				   value = -2000
-				}
-			}
-			IRQ = {
-				IF = {
-					limit = {
-						has_dlc = "Graveyard of Empires"
-						OR = {
-							AND = {
-								is_historical_focus_on = no
-								has_game_rule = {
-									rule = IRQ_AI_BEHAVIOR
-									option = DEFAULT
-								}
-							}
-							has_game_rule = {
-								rule = IRQ_AI_BEHAVIOR
-								option = RANDOM
-							}
-						}
-					}
-					random_list = {
-						50 = {
-							IRQ = { set_country_flag = IRQ_AI_RANDOM_HISTORICAL }
-						}
-						10 = {
-							IRQ = { set_country_flag = IRQ_AI_RANDOM_FASCISM }
-						}
-						10 = {
-							IRQ = { set_country_flag = IRQ_AI_RANDOM_HASHEMITE }
-						}
-						5 = {
-							IRQ = { set_country_flag = IRQ_AI_RANDOM_KURDISTAN }
-						}
-						5 = {
-							IRQ = { set_country_flag = IRQ_AI_RANDOM_SIDQI }
-						}
-					}
 				}
 			}
 			PER = {

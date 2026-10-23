@@ -1,0 +1,3 @@
+CHL_hub_of_the_revolution_trigger = {
+	always = no
+}

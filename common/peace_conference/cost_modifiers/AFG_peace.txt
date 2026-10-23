@@ -1,0 +1,17 @@
+# Scripted cost modifiers for peace actions.
+# See documentation.info file for more detailed scripting information.
+
+peace_action_modifiers = {
+
+    AFG_agreed_state_peace_cost_modifier = {
+        category = treaties_or_conferences
+        peace_action_type = take_states
+
+        enable = {
+        	always = no
+        }
+
+        cost_multiplier = 0.55
+    }
+
+}

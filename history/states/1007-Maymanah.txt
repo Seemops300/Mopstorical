@@ -12,8 +12,6 @@ state={
 		7448 7584 10896 12248 12877 
 	}
 	history={
-		owner = KOS
-		add_core_of = KOS
 		
 		# owner = AFG
 		buildings = {

@@ -7,12 +7,10 @@ state={
 	state_category = pastoral
 
 	history={
-		owner = KOS
 		buildings = {
 			infrastructure = 1
 
 		}
-		add_core_of = KOS
 		victory_points = {
 			10879 1
 		}

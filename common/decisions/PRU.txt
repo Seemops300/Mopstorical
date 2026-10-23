@@ -1,0 +1,245 @@
+
+PRU_pastaza_conflict = {
+
+
+	# Declare War on Ecuador
+	PRU_start_military_conflict_with_ecuador  = {
+
+		priority = 100
+
+		icon = GFX_decision_generic_operation
+
+		ai_will_do = {
+			base = 250
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+				date < 1941.1.1
+			}
+			modifier = {
+				add = 500
+				is_historical_focus_on = yes
+				date > 1941.6.1
+			}
+		}
+
+		allowed = {
+			always = no
+		}
+
+		visible = { 
+			NOT = {
+				owns_state = 490
+			}
+		}
+
+		available = {
+			is_subject = no
+			NOT = {
+				OR = {
+					owns_state = 490
+					any_country = {
+						AND = {
+							is_ally_with = ROOT
+							owns_state = 490
+						}
+					}
+					any_country = {
+						AND = {
+							is_subject_of = ROOT
+							owns_state = 490
+						}
+					}
+				}
+			}
+			OR = {
+				USA = {
+					has_war = yes
+				}
+				threat > 0.35
+			}
+			command_power > 39
+
+			has_war_support > 0.49
+
+			is_in_faction = no
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 490
+			}
+		}
+
+		cost = 100
+ 
+		#days_remove = 14 
+
+		fire_only_once = yes
+
+		complete_effect = { 
+
+			add_command_power = -40
+
+			random_country = {
+				limit = {
+					owns_state = 490
+				}
+			}
+
+			ROOT = {
+			}
+
+			random_country = {
+				limit = {
+					owns_state = 490
+				}
+			} 
+
+			hidden_effect = {
+
+				set_country_flag = PRU_has_invaded_ecuador
+
+
+				news_event = { 
+					id = south_american_news.1 
+					days = 3
+					random_days = 4
+				}
+
+
+			}
+		}
+
+		remove_effect = {
+
+		}
+
+	}
+
+	# Enforce Our Claims to Pastaza
+	PRU_force_peace_ecuador_good  = {
+
+		priority = 90
+
+		icon = GFX_decision_generic_nationalism
+
+		ai_will_do = {
+			base = 1000
+		}
+
+		allowed = {
+			always = no
+		}
+
+		visible = { 
+			NOT = {
+				owns_state = 490
+				OR = {
+					has_country_flag = PRU_has_ended_their_invasion_won
+					has_country_flag = PRU_has_ended_their_invasion_lost		
+				}
+			}
+		}
+
+		available = {
+			always = no
+		}
+
+		cost = 25
+ 
+		#days_remove = 14  
+
+		fire_only_once = yes
+
+		complete_effect = { 
+
+			add_war_support = 0.1
+			add_stability = 0.05
+			add_political_power = 50
+
+			hidden_effect = {
+				set_country_flag = PRU_has_ended_their_invasion_won
+			}	
+			
+			every_country = {
+				limit = {
+					always = no
+				}
+				country_event = {
+					id = south_american_events.17
+					hours = 3
+				}
+			}
+		}
+
+		remove_effect = {
+
+		}
+
+	}
+
+
+	# Withdraw from the Amazon
+	PRU_force_peace_ecuador_bad  = {
+
+		priority = 80
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		ai_will_do = {
+			base = 500
+		}
+
+		allowed = {
+			always = no
+		}
+
+		visible = { 
+			NOT = {
+				owns_state = 490
+				OR = {
+					has_country_flag = PRU_has_ended_their_invasion_won
+					has_country_flag = PRU_has_ended_their_invasion_lost		
+				}
+			}
+		}
+
+		available = {
+			always = no
+		}
+
+		cost = 10
+ 
+		#days_remove = 14  
+
+		fire_only_once = yes
+
+		complete_effect = { 		
+
+			every_country = {
+				limit = {
+					always = no
+				}
+				country_event = {
+					id = south_american_events.20
+					hours = 3
+				}
+			}
+
+			add_war_support = -0.1
+
+			add_stability = -0.05
+
+			hidden_effect = {
+				set_country_flag = PRU_has_ended_their_invasion_lost
+			}
+		}
+
+		remove_effect = {
+
+		}
+	}
+
+}
+

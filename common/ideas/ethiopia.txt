@@ -1,0 +1,225 @@
+ideas = {
+	hidden_ideas = {
+		
+
+	}
+	country = {
+		#War Escalation NSs
+
+
+
+		ETH_coffee_exports_idea = {
+
+			picture = ETH_coffee_exports
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.10
+			}
+		}
+
+
+
+#		ETH_support_for_ethiopia_idea = {
+#
+#			picture = generic_war_preparation
+#			
+#			allowed = {
+#				always = no
+#			}
+#
+#			allowed_civil_war = {
+#				always = no
+#			}
+#			rule = {
+#				can_send_volunteers = yes
+#			}
+#
+#			removal_cost = -1
+#			
+#			modifier = {
+#				send_volunteers_tension = -0.5
+#				send_volunteer_divisions_required = -0.75
+#			}
+#		}
+
+
+
+
+
+		ETH_aid_SPC = {
+
+			picture = generic_manpower_bonus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			rule = {
+				can_send_volunteers = yes
+			}
+			modifier = {
+				send_volunteer_size = 3
+				send_volunteer_divisions_required = -1
+				lend_lease_tension = -0.30
+			}
+		}
+
+
+		ETH_integrate_puppet = {
+			picture = generic_constitutional_guarantees
+			allowed = {always = no}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				#TODO: Change down to 10
+				autonomy_gain = -100
+			}
+		}
+
+
+
+
+
+
+
+
+
+		ETH_rebuilding_the_country_idea = {
+
+			picture = man_five_year_plan_industry
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+
+			removal_cost = -1
+			
+			modifier = {
+				industry_repair_factor = 0.1
+				industry_free_repair_factor = 0.1
+				repair_speed_infrastructure_factor = 0.25
+				repair_speed_rail_way_factor = 0.25
+				production_speed_buildings_factor = 0.2
+			}
+		}
+
+
+		ETH_secular_education = {
+			picture = SOV_opiate_of_the_masses
+			allowed = {
+				always = no
+			} 
+			allowed_civil_war =  {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+		ETH_mass_transit_idea = {
+
+			picture = SPR_anarchist_public_transport
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_speed_factor = 0.10
+			}
+		}
+
+		ETH_purge_ideology_boost_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_democratic_drift_bonus		
+
+			modifier = {
+				democratic_drift = 0.05
+				legitimacy_daily = -1
+			}
+		}
+	}
+	industrial_concern = {
+
+
+
+
+
+
+
+	}
+
+	materiel_manufacturer = {
+			
+		designer = yes
+		
+
+
+
+
+
+
+
+
+	}
+
+	tank_manufacturer = {
+		designer = yes
+
+
+		designer = yes
+
+
+	}
+
+	naval_manufacturer = {
+		designer = yes
+
+
+	}
+
+	aircraft_manufacturer = {
+
+		designer = yes
+
+
+
+
+
+	}
+}

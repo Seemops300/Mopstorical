@@ -1,0 +1,16 @@
+################
+##### VEN ######
+################
+
+VEN_abc_islands = {
+	
+	icon = saf_anti_colonialist_crusade
+
+	allowed = {
+		always = no
+	}
+
+	visible = {
+		HOL = { owns_state = 695 }
+	}
+}
