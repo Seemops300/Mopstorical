@@ -4369,17 +4369,6 @@ TML = {
 	callsigns = { }
 }
 
-TIB = {
-	male = {
-		names = { Tsarong Chamba Trimon Penor Gendün Jamphel Norbhu Mipham Tsepon Andruk Namgang   }
-	}
-	female = {
-		names = { Kamala Indira Dawa Dechen Diki Choden Dohna Dolkar Karma Sonam Sangmu }
-	}
-	surnames = { Dzasa Wangyal Shatra Lungshar Rinpoche Chöphel Shakabpa Tashi  }
-	callsigns = { }
-}
-
 BRM = {
 	male = {
 		names = {
@@ -4954,21 +4943,6 @@ DIP = {
 	surnames = { 
 		Neru Gandhi Modi Singh Suhag Rawat Hira Saha Sharma Nimbhorkar Talwar Thoge Hooda Bakshi Negi Hariz Chand Soni Verma Reddy Gupta Cheema Prasad Bharali Shivane Unni Sarin Patyal Chakravarty Bali Datta Naravane Chavan Chandra Bandyopadhyay Krishna Pannu Ambre Ahir Varadarajan Wangchuk Yadav Khan Ali Malik Nabiullah Sadiq Shafi Pirbhai Ahmed Baig Johar
 		}
-	callsigns = { }
-}
-
-PHI = {
-	male = {
-		names = { Emilio Apolinario Andrés José Hermano Jacinto Mariano Deodato Ladislao Teodoro Valentíne Antonio León Simeón Arcadio Artemio Manuel  }
-	}
-	female = {
-		names = {
-			Ana Consolación Graciela Imelda Ineng Isabella Lemy María Nina Vilma Raquel Yasmin Zenaida
-		}
-	}
-	surnames = {
-		Aguainaldo Mabini Bonifacio Jacinto Rizal Díaz Plata Diwa Arellano
-	}
 	callsigns = { }
 }
 

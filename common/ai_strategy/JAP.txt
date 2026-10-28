@@ -1082,22 +1082,6 @@ JAP_template_design = {
 	}
 }
 
-# hey dynamic targets would be swole as f*
-all_china_must_prosper_in_my_prosperity_sphere_SIK = {
-	allowed = {
-		original_tag = JAP
-	}
-	enable = {
-		always = no
-	}
-
-	abort = {
-		always = yes
-	}
-
-	always = no
-}
-
 all_china_must_prosper_in_my_prosperity_sphere_XSM = {
 	allowed = {
 		original_tag = JAP

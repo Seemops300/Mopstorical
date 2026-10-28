@@ -83,13 +83,6 @@ ETH_upgrade_state_category = {
 	}
 }
 
-ETH_BOP_decentralization_large_effect = {
-	add_power_balance_value = {
-		id = ETH_centralization_balance
-		value = -0.1
-	}
-}
-
 ETH_add_random_civ_factory_effect = {
 		random_owned_controlled_state = {
 				limit = {

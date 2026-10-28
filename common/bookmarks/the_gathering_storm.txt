@@ -986,23 +986,6 @@ bookmarks = {
 				PER_strengthen_iranian_parliament
 			}
 		}
-		PHI = {
-			minor = yes
-			history = "PHI_GATHERING_STORM_DESC" 
-			ideology = neutrality
-			required_dlc = { "No Compromise, No Surrender" }
-			version = no_compromise_no_surrender
-			ideas = {
-				PHI_island_nation_ns_fake
-				PHI_the_great_depression_ns_fake
-				PHI_philippine_army_ns_fake
-			}
-			focuses = {
-				PHI_appoint_macarthur
-				PHI_national_defense_act
-				PHI_treaty_of_manila
-			}
-		}
 		CHI = {
 			minor = yes
 			history = "CHI_GATHERING_STORM_DESC"
