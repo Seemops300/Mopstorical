@@ -215,7 +215,7 @@ bookmarks = {
 				RAJ_princely_states
 			}
 			focuses = {
-				RAJ_all_india_forward_bloc
+				RAJ_quit_india_movement
 				RAJ_indian_gurkhas
 				RAJ_the_smiling_buddha
 			}
@@ -234,8 +234,8 @@ bookmarks = {
 			}
 			focuses = {
 				RAJ_a_congress_resurgent
-				RAJ_forward_bloc
-				RAJ_hindutva
+				RAJ_mahatma
+				RAJ_two_nation_theory_dlc
 			}
 		}
 
