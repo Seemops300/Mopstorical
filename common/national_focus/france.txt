@@ -11,7 +11,7 @@
 	}
 
 	initial_show_position = {
-		x = 0
+		x = 26
 	}
 
 	
@@ -20,7 +20,7 @@
 	focus = {
 		id = FRA_devalue_the_franc
 		icon = GFX_focus_fra_devalue_the_franc
-		x = 0
+		x = 26
 		y = 0
 		
 		prerequisite = {}
@@ -809,7 +809,7 @@
 	focus = {
 		id = FRA_begin_rearmament
 		icon = GFX_goal_generic_construct_mil_factory
-		x = 15
+		x = 41
 		y = 0
 		
 		prerequisite = {}
@@ -1558,7 +1558,7 @@
 	focus = {
 		id = FRA_form_the_popular_front
 		icon = GFX_goal_generic_intelligence_exchange
-		x = 26
+		x = 52
 		y = 0
 
 		offset = {
@@ -3006,7 +3006,7 @@
 	focus = {
 		id = FRA_review_foreign_policy
 		icon = GFX_goal_support_democracy
-		x = 10
+		x = 9
 		y = 1
 		
 		offset = {
