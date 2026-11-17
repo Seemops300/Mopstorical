@@ -78,7 +78,7 @@ bookmarks = {
 				george_v
 			}
 			focuses = {
-				ENG_imperial_federation
+				ENG_war_with_germany
 				ENG_steady_as_she_goes
 				ENG_home_defence
 			}
