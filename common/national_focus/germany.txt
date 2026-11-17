@@ -8175,7 +8175,7 @@ focus_tree = {
 		icon = GFX_focus_intervention_spain_nationalists
 		prerequisite = { focus = GER_remilitarize_the_rhineland }
 
-		x = 17
+		x = 14
 		y = 1
 		relative_position_id = GER_remilitarize_the_rhineland
 
@@ -13908,7 +13908,7 @@ focus_tree = {
 		alternate_icon = GFX_focus_GER_befriend_japan
 
 		prerequisite = { focus = GER_anti_comintern_pact }
-		x = 7
+		x = 4
 		y = 1
 		relative_position_id = GER_anti_comintern_pact
 		cost = 5
