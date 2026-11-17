@@ -11088,44 +11088,12 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = GER_influence_the_benelux
-		icon = GFX_focus_generic_influence_benelux
-		prerequisite = { focus = GER_danzig_or_war }
-		mutually_exclusive = { focus = GER_around_maginot }
-		x = 1
-		y = 3
-		relative_position_id = GER_fate_of_czechoslovakia
-		cost = 5
-		available = {
-			is_subject = no
-		}
-
-		ai_will_do = {
-			factor = 5
-			modifier = {
-				factor = 0
-				OR = {
-					has_government = democratic
-					has_government = communism
-				}
-			}
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-			custom_effect_tooltip = GER_unlock_influence_countries_tt
-		}
-	}
-	
-	focus = {
 		id = GER_around_maginot
 
 		icon = GFX_focus_GER_around_maginot
 		alternate_icon = GFX_focus_GER_around_maginot_historical
 
 		prerequisite = { focus = GER_danzig_or_war }
-		mutually_exclusive = { focus = GER_influence_the_benelux }
 		x = -1
 		y = 2
 		relative_position_id = GER_danzig_or_war
@@ -12498,7 +12466,6 @@ focus_tree = {
 		id = GER_second_ljubljana_award
 		icon = GFX_goal_generic_forceful_treaty
 		prerequisite = { focus = GER_fate_of_yugoslavia }
-		mutually_exclusive = { focus = GER_war_with_greece }
 		x = -1
 		y = 1
 		relative_position_id = GER_fate_of_yugoslavia
@@ -12854,50 +12821,6 @@ focus_tree = {
 					id = greece.3 
 					hours = 6 
 				} 
-			}
-		}
-	}
-
-	focus = {
-		id = GER_war_with_greece
-		icon = GFX_focus_generic_attack_greece
-		prerequisite = { focus = GER_fate_of_yugoslavia }
-		mutually_exclusive = { focus = GER_second_ljubljana_award }
-		x = 1
-		y = 1
-		relative_position_id = GER_fate_of_yugoslavia
-		cost = 10
-		
-		will_lead_to_war_with = GRE
-		
-		available = {
-			is_subject = no
-			GRE = { 
-				exists = yes
-				has_war = yes
-			}
-			NOT = { is_in_faction_with = GRE }
-			NOT = { has_war_with = GRE }
-		}
-
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 0
-				OR = {
-					has_government = democratic
-					has_government = communism
-				}
-			}
-		}
-		
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-
-		completion_reward = {
-			create_wargoal = {
-				target = GRE
-				type = annex_everything
-				expire = 0
 			}
 		}
 	}
