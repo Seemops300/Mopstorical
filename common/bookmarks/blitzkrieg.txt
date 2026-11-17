@@ -268,7 +268,7 @@ bookmarks = {
 				ROM_iron_guard
 			}
 			focuses = {
-				ROM_balkans_dominance
+				ROM_iron_guard
 				ROM_institute_royal_dictatorship
 				ROM_preserve_greater_romania
 			}
