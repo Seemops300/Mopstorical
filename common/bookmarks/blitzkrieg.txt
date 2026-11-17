@@ -407,7 +407,7 @@ bookmarks = {
 			focuses = {
 				MEX_focus_bolivarian_alliance
 				MEX_focus_aztec_eagles
-				MEX_focus_the_gold_shirts
+				MEX_focus_nationalize_the_oil_fields
 			}
 		}
 
