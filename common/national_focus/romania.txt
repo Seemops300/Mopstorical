@@ -1056,7 +1056,7 @@ focus_tree = {
 	focus = {
 		id = ROM_institute_royal_dictatorship
 		icon = GFX_focus_rom_royal_dictatorship
-		x = 21
+		x = 14
 		y = 0
 
 		cost = 10
@@ -1719,7 +1719,7 @@ focus_tree = {
 	focus = {
 		id = ROM_expand_the_air_force
 		icon = GFX_goal_generic_build_airforce
-		x = 32
+		x = 24
 		y = 0
 
 		cost = 10
@@ -2408,7 +2408,7 @@ focus_tree = {
 	focus = {
 		id = ROM_army_maneuvers
 		icon = GFX_goal_generic_army_doctrines
-		x = 40
+		x = 32
 		y = 0
 
 		cost = 10
@@ -3104,7 +3104,7 @@ focus_tree = {
 	focus = {
 		id = ROM_expand_the_galati_shipyards
 		icon = GFX_goal_generic_construct_naval_dockyard
-		x = 47
+		x = 39
 		y = 0
 
 		cost = 10
