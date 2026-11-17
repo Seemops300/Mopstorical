@@ -999,8 +999,8 @@ bookmarks = {
 			}
 			focuses = {
 				CHI_denounce_feudalism
-				CHI_prepare_for_a_change_in_leadership
-				CHI_strengthening_our_resolve
+				CHI_dang_guo
+				CHI_protracted_warfare
 			}
 		}
 		PRC = {
