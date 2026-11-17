@@ -27,7 +27,7 @@ focus_tree = {
 	continuous_focus_position = { x = 50 y = 2500 }
 
 	initial_show_position = {
-		x = 33
+		x = 27
 		y = 0
 		offset = {
 			x = -16
@@ -99,7 +99,7 @@ focus_tree = {
 		
 		
 		icon = GFX_goal_generic_demand_territory
-		x = 31
+		x = 25
 		y = 0
 		offset = {
 			x = -14
@@ -153,7 +153,7 @@ focus_tree = {
 		prerequisite = { focus = SPA_a_great_spain }
 		
 		icon = GFX_focus_generic_concessions
-		x = -15
+		x = -9
 		y = 1
 		offset = {
 			x = 15
@@ -379,7 +379,7 @@ focus_tree = {
 		}
 		
 		icon = GFX_goal_generic_national_unity
-		x = 33
+		x = 27
 		y = 0
 		offset = {
 			x = -19
@@ -433,7 +433,7 @@ focus_tree = {
 		mutually_exclusive = { focus = SPR_secure_the_guardia_civil }
 		
 		icon = GFX_goal_generic_political_pressure
-		x = 13
+		x = 2
 		y = 1
 		offset = {
 			x = -14
@@ -484,7 +484,7 @@ focus_tree = {
 		mutually_exclusive = { focus = SPR_secure_the_guardia_de_asalto }
 		
 		icon = GFX_focus_generic_support_the_left_right
-		x = 15
+		x = 4
 		y = 1
 		offset = {
 			x = -14
@@ -3716,7 +3716,7 @@ focus_tree = {
 		prerequisite = { focus = SPR_maintain_the_second_republic }
 		
 		icon = GFX_goal_generic_allies_build_infantry
-		x = 6
+		x = 5
 		y = 2
 		relative_position_id = SPR_disband_the_army
 		cost = 5
@@ -3813,7 +3813,7 @@ focus_tree = {
 		prerequisite = { focus = SPR_the_future_of_the_republic }
 		
 		icon = GFX_focus_usa_reestablish_the_gold_standard
-		x = 5
+		x = 4
 		y = 4
 		relative_position_id = SPR_disband_the_army
 		cost = 5
@@ -3842,7 +3842,7 @@ focus_tree = {
 		prerequisite = { focus = SPR_the_future_of_the_republic }
 		
 		icon = GFX_goal_generic_propaganda
-		x = 7
+		x = 6
 		y = 4
 		relative_position_id = SPR_disband_the_army
 		cost = 5
@@ -4767,7 +4767,7 @@ focus_tree = {
 		prerequisite = { focus = SPR_disband_the_army }
 		
 		icon = GFX_focus_spr_maintain_the_republic
-		x = 11
+		x = 10
 		y = 1
 		relative_position_id = SPR_disband_the_army
 		cost = 5
