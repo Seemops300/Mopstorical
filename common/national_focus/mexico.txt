@@ -30,7 +30,7 @@ focus_tree = {
 	focus = {
 		id = MEX_focus_plan_of_agua_prieta
 		icon = GFX_focus_hol_the_foundations_of_defense
-		x = 23
+		x = 22
 		y = 0
 
 		cost = 5
@@ -695,7 +695,7 @@ focus_tree = {
 		id = MEX_focus_northern_steel_plants
 		icon = GFX_focus_generic_steel
 		prerequisite = { focus = MEX_focus_oil_field_expansion }
-		x = 7
+		x = 6
 		y = 1
 		relative_position_id = MEX_focus_oil_field_expansion
 
@@ -1648,7 +1648,7 @@ focus_tree = {
 		id = MEX_focus_ban_political_militias
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = MEX_focus_plan_of_agua_prieta }
-		x = 4
+		x = 3
 		y = 1
 		relative_position_id = MEX_focus_plan_of_agua_prieta
 
@@ -1761,7 +1761,7 @@ focus_tree = {
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = MEX_focus_control_the_army }
 		prerequisite = { focus = MEX_focus_ban_political_militias }
-		x = 3
+		x = 2
 		y = 1
 		relative_position_id = MEX_focus_control_the_army
 
