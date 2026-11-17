@@ -6952,7 +6952,7 @@ focus_tree = {
 	focus = {
 		id = SOV_the_path_of_marxism_leninism
 		icon = GFX_focus_SOV_the_path_of_marxism_leninism
-		x = 16
+		x = 14
 		y = 0
 		offset = {
 			x = -8
@@ -7008,7 +7008,7 @@ focus_tree = {
 		id = SOV_the_centre
 		icon = GFX_focus_fra_loyalty_stalin
 		prerequisite = { focus = SOV_the_path_of_marxism_leninism }
-		x = -8
+		x = -6
 		y = 1
 		offset = {
 			x = 8
@@ -8523,7 +8523,7 @@ focus_tree = {
 		id = SOV_addressing_internal_affairs
 		icon = GFX_focus_generic_self_management
 		prerequisite = { focus = SOV_the_path_of_marxism_leninism }
-		x = 24
+		x = 4
 		y = 1
 		offset = {
 			x = -7
@@ -8976,7 +8976,7 @@ focus_tree = {
 		id = SOV_the_comintern
 		icon = GFX_goal_support_communism
 		prerequisite = { focus = SOV_the_path_of_marxism_leninism }
-		x = 9
+		x = 8
 		y = 0
 		relative_position_id = SOV_addressing_internal_affairs
 		cost = 5
@@ -9026,7 +9026,7 @@ focus_tree = {
 		id = SOV_development_aid_for_eastern_allies
 		icon = GFX_SOV_development_aid_for_eastern_allies_ccp_2d_sov_compatibility
 		prerequisite = { focus = SOV_the_comintern }
-		x = -5
+		x = -4
 		y = 1
 		relative_position_id = SOV_the_comintern
 		cost = 5
@@ -9189,7 +9189,7 @@ focus_tree = {
 		id = SOV_send_military_advisors_to_spain
 		icon = GFX_focus_intervention_spain_republic
 		prerequisite = { focus = SOV_the_comintern }
-		x = -3
+		x = -2
 		y = 1
 		relative_position_id = SOV_the_comintern
 		cost = 5
@@ -10187,7 +10187,7 @@ focus_tree = {
 		id = SOV_claim_on_bessarabia
 		icon = GFX_focus_generic_attack_romania
 		prerequisite = { focus = SOV_claims_on_poland }
-		x = 3
+		x = 2
 		y = 1
 		relative_position_id = SOV_claims_on_poland
 		cost = 10
@@ -10315,7 +10315,7 @@ focus_tree = {
 		id = SOV_middle_east_diplomacy
 		icon = GFX_focus_TUR_treaty_of_saadabad
 		prerequisite = { focus = SOV_the_comintern }
-		x = 4
+		x = 3
 		y = 0
 		relative_position_id = SOV_baltic_security
 		cost = 5
