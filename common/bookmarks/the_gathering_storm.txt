@@ -789,7 +789,7 @@ bookmarks = {
 				FIN_sisu_2
 			}
 			focuses = {
-				FIN_red_finland
+				FIN_finnish_neutrality
 				FIN_winter_warfare
 				FIN_greater_finland
 			}
