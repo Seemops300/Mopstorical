@@ -1,0 +1,5019 @@
+focus_tree = {
+	id = belgium_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = BEL
+			has_dlc = "Gotterdammerung"
+		}
+	}
+
+	default = no
+
+	continuous_focus_position = { x = 50 y = 1500 }
+
+	shared_focus = CONGO_belgian_congo
+	shared_focus = CONGO_societe_generale_de_belgique
+	shared_focus = CONGO_congo_investments	
+
+   initial_show_position = { focus = BEL_perpetual_neutrality }
+
+
+
+#######################
+#######################
+###### DEFENSIVE ######
+#######################
+#######################
+
+
+	focus = {
+		id = BEL_perpetual_neutrality
+		icon = GFX_goal_generic_neutrality_focus							
+			
+		x = 40
+		y = 0
+	
+		cost = 10
+
+		available = {
+		}
+
+		bypass = {
+			OR = {
+				has_war = yes
+				always = no
+			}
+		}
+	
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+	
+		completion_reward = {
+			add_dynamic_modifier = { modifier = BEL_neutrality_dynamic_modifier }	
+		}
+	}
+
+	focus = {
+		id = BEL_independent_neutral_and_loyal
+		icon = GFX_focus_BEL_independent_neutral_and_loyal
+	
+		prerequisite = { focus = BEL_perpetual_neutrality }								
+
+		relative_position_id = BEL_perpetual_neutrality
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+			
+		x = 0
+		y = 1
+	
+		cost = 10
+
+		available = {
+		}
+
+		bypass = {
+			OR = {
+				has_war = yes
+				
+				always = no
+
+				AND = {
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = BEL_neutrality_dynamic_modifier
+						}
+					}
+					has_completed_focus = BEL_perpetual_neutrality
+				}
+				
+			}
+			
+		}
+	
+		completion_reward = {
+			custom_effect_tooltip = BEL_modify_neutrality_dynamic_modifier_tt
+			add_to_variable = { 
+				BEL_neutrality_production_speed_infrastructure_factor = 0.1
+				tooltip = production_speed_infrastructure_factor_tt				
+			}	
+			add_to_variable = { 
+				BEL_neutrality_production_speed_arms_factory_factor = 0.1
+				tooltip = production_speed_arms_factory_factor_tt				
+			}	
+			add_to_variable = { 
+				BEL_neutrality_production_speed_industrial_complex_factor  = 0.1
+				tooltip = production_speed_industrial_complex_factor_tt				
+			}
+			add_to_variable = { 
+				BEL_neutrality_enemy_justify_war_goal_time = 0.5
+				tooltip = enemy_justify_war_goal_time_tt				
+			}
+			add_to_variable = { 
+				BEL_neutrality_send_volunteers_tension = 1
+				tooltip = send_volunteers_tension_tt				
+			}
+			add_to_variable = { 
+				BEL_neutrality_lend_lease_tension = 1
+				tooltip = lend_lease_tension_tt
+			}
+			if = {
+				limit = {
+					has_dlc = "By Blood Alone"
+				}
+				add_to_variable = { 
+					BEL_neutrality_embargo_threshold_factor = 1
+					tooltip = embargo_threshold_factor_tt				
+				}
+			}
+		}
+
+	}
+
+	focus = {
+		id = BEL_defensive_neutrality
+		icon = GFX_focus_BEL_defensive_neutrality
+
+		prerequisite = { focus = BEL_independent_neutral_and_loyal }
+	
+		relative_position_id = BEL_independent_neutral_and_loyal
+
+		search_filters= { FOCUS_FILTER_HISTORICAL }
+	
+		x = -15
+		y = 1
+	
+		cost = 5
+
+		available = {
+		}
+	
+		completion_reward = {
+
+			IF = {
+				limit = {
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = BEL_defensive_neutrality_dynamic_modifier
+						}
+						has_dynamic_modifier = { #tooltip reasons!
+							modifier = BEL_defensive_reorganization_dynamic_modifier
+						}
+					}
+				}
+
+				add_dynamic_modifier = { modifier = BEL_defensive_neutrality_dynamic_modifier }	
+
+				add_to_variable = { BEL_defensive_neutrality_production_speed_bunker_factor = 0.05 tooltip = production_speed_bunker_factor_tt }
+				add_to_variable = { BEL_defensive_neutrality_max_dig_in = 1 tooltip = max_dig_in_tt }
+			}
+
+			ELSE_IF = {
+				limit = { 
+					has_dynamic_modifier = {
+						modifier = BEL_defensive_neutrality_dynamic_modifier
+					}
+				}
+
+				custom_effect_tooltip = BEL_modify_defensive_neutrality_dynamic_modifier_tt
+
+				add_to_variable = { BEL_defensive_neutrality_production_speed_bunker_factor = 0.05 tooltip = production_speed_bunker_factor_tt }
+				add_to_variable = { BEL_defensive_neutrality_max_dig_in = 1 tooltip = max_dig_in_tt }
+
+			}
+
+			ELSE_IF = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = BEL_defensive_reorganization_dynamic_modifier
+					}
+				}
+
+				custom_effect_tooltip = BEL_modify_defensive_reorganization_dynamic_modifier_tt
+
+				add_to_variable = { BEL_defensive_neutrality_production_speed_bunker_factor = 0.05 tooltip = production_speed_bunker_factor_tt }
+				add_to_variable = { BEL_defensive_neutrality_max_dig_in = 1 tooltip = max_dig_in_tt }
+			}
+			
+		}
+
+	}
+
+	focus = {
+		id = BEL_national_redoubt_at_antwerp
+		icon = GFX_focus_BEL_national_redoubt_at_antwerp
+	
+		prerequisite = { focus = BEL_defensive_neutrality }
+
+		relative_position_id = BEL_defensive_neutrality
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+	
+		x = 1
+		y = 1
+	
+		cost = 5
+
+		available = {
+			BEL = { 
+				OR = {
+					controls_province = 6598
+					controls_province = 516 
+				}
+			}
+
+			custom_trigger_tooltip = {
+				tooltip = BEL_national_redoubt_at_antwerp_available_tt
+				OR = {
+					977 = { #Antwerpen
+						free_building_slots = {
+							building = bunker
+							size > 1
+							province = 6598
+						}
+					}
+
+					6 = { #Vlaanderen
+						free_building_slots = {
+							building = bunker
+							size > 0
+							province = 516
+						}
+					}
+				}
+			}
+			
+		}
+
+		bypass = {
+			OR = {
+				BEL = { 
+					NOT = {
+						controls_province = 6598
+						controls_province = 516 
+					}
+				}
+
+				custom_trigger_tooltip = {
+					tooltip = BEL_national_redoubt_at_antwerp_bypass_tt
+					AND = {
+						977 = { #Antwerpen
+							free_building_slots = {
+								building = bunker
+								size < 2
+								province = 6598
+							}
+						}
+
+						6 = { #Vlaanderen
+							free_building_slots = {
+								building = bunker
+								size < 1
+								province = 516
+							}
+						}
+					}
+				}
+			}
+		}
+	
+		completion_reward = {
+			IF = {
+				limit = {
+					6 = { #Vlaanderen
+						free_building_slots = {
+							building = bunker
+							size > 0
+							province = 516
+						}
+					}
+				}
+
+				6 = { #Vlaanderen
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province =  516
+					}
+				}	
+			}
+			IF = {
+				limit = {
+					977 = { #Antwerpen
+						free_building_slots = {
+							building = bunker
+							size > 1
+							province = 6598
+						}
+					}
+				}
+
+				977 = { #Antwerpen
+					add_building_construction = {
+						type = bunker
+						level = 2
+						instant_build = yes
+						province =  6598
+					}
+				}	
+			}
+		}
+	}
+
+	focus = {
+		id = BEL_belgian_gates
+		icon = GFX_focus_BEL_belgian_gates
+	
+		prerequisite = { focus = BEL_defensive_neutrality }
+
+		relative_position_id = BEL_defensive_neutrality
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+	
+		x = -1
+		y = 2
+	
+		cost = 5
+
+		available = {
+		}
+	
+		completion_reward = {
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = BEL_modify_defensive_neutrality_dynamic_modifier_tt
+			add_to_variable = { 
+				BEL_defensive_neutrality_max_dig_in = 1
+				tooltip = max_dig_in_tt				
+			}	
+			add_to_variable = { 
+				BEL_defensive_neutrality_production_speed_bunker_factor = 0.05
+				tooltip = production_speed_bunker_factor_tt				
+			}	
+		}
+	}
+
+	focus = {
+		id = BEL_fortify_liege
+		icon = GFX_goal_generic_fortify_city
+	
+		prerequisite = { focus = BEL_national_redoubt_at_antwerp }
+
+		relative_position_id = BEL_national_redoubt_at_antwerp
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+	
+		x = 0
+		y = 1
+	
+		cost = 5
+
+		available = {
+			OR = {
+				BEL = { controls_state = 34 }
+
+				custom_trigger_tooltip = {
+					tooltip = BEL_fortify_liege_available_tt
+					OR = {
+						34 = {
+							free_building_slots = {
+								building = bunker
+								size > 0
+								province = 11519
+							}
+						}
+						34 = {
+							free_building_slots = {
+								building = bunker
+								size > 0
+								province = 3516
+							}
+						}
+						34 = {
+							free_building_slots = {
+								building = bunker
+								size > 0
+								province = 13081
+							}
+						}
+					}
+				}
+			}
+		}
+
+		bypass = {
+			OR = {
+				NOT = { controls_state = 34 }
+
+				custom_trigger_tooltip = {
+					tooltip = BEL_fortify_liege_available_tt
+					AND = {
+						34 = {
+							free_building_slots = {
+								building = bunker
+								size < 1
+								province = 11519
+							}
+						}
+						34 = {
+							free_building_slots = {
+								building = bunker
+								size < 1
+								province = 3516
+							}
+						}
+						34 = {
+							free_building_slots = {
+								building = bunker
+								size < 1
+								province = 13081
+							}
+						}
+					}
+				}
+			}
+		}
+	
+		completion_reward = {
+
+			custom_effect_tooltip = BEL_fortify_liege_tt
+
+			hidden_effect = {
+				IF = {
+					limit = {
+						34 = {
+							free_building_slots = {
+								building = bunker
+								size > 0
+								province = 11519
+							}
+						}
+					}
+
+					34 = {
+						add_building_construction = {
+							type = bunker
+							level = 1
+							instant_build = yes
+							province = 11519
+						}
+					}
+				}
+
+				IF = {
+					limit = {
+						34 = {
+							free_building_slots = {
+								building = bunker
+								size > 0
+								province = 3516
+							}
+						}
+					}
+
+					34 = {
+						add_building_construction = {
+							type = bunker
+							level = 1
+							instant_build = yes
+							province = 3516
+						}
+					}
+				}
+
+				IF = {
+					limit = {
+						34 = {
+							free_building_slots = {
+								building = bunker
+								size > 0
+								province = 13081
+							}
+						}
+					}
+
+					34 = {
+						add_building_construction = {
+							type = bunker
+							level = 1
+							instant_build = yes
+							province = 13081
+						}
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = BEL_iron_wall
+		icon = GFX_focus_SWE_hedgehog_defense
+	
+		prerequisite = { focus = BEL_belgian_gates }
+
+		relative_position_id = BEL_belgian_gates
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+	
+		x = 0
+		y = 1
+	
+		cost = 5
+
+		available = {
+
+		}
+	
+		completion_reward = {
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = BEL_modify_defensive_neutrality_dynamic_modifier_tt
+			add_to_variable = { 
+				BEL_defensive_neutrality_max_dig_in = 1
+				tooltip = max_dig_in_tt				
+			}	
+			add_to_variable = { 
+				BEL_defensive_neutrality_production_speed_bunker_factor = 0.05
+				tooltip = production_speed_bunker_factor_tt				
+			}	
+			add_to_variable = { 
+				BEL_defensive_neutrality_land_bunker_effectiveness_factor = 0.05
+				tooltip = land_bunker_effectiveness_factor_tt				
+			}	
+		}
+
+	}
+
+	focus = {
+		id = BEL_eben_emael_fortress
+		icon = GFX_focus_BEL_eben_emael_fortress
+	
+		prerequisite = { focus = BEL_fortify_liege }
+
+		relative_position_id = BEL_fortify_liege
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+	
+		x = 0
+		y = 1
+	
+		cost = 5
+
+		available = {
+			BEL = { controls_province = 11519 }
+
+			custom_trigger_tooltip = {
+				tooltip = BEL_eben_emael_fortress_available_tt
+				34 = {
+					free_building_slots = {
+						building = bunker
+						size > 1
+						province = 11519
+					}
+				}
+			}
+
+			
+		}
+
+		bypass = {
+
+			OR = {
+				NOT = { controls_province = 11519 }
+
+				custom_trigger_tooltip = {
+					tooltip = BEL_eben_emael_fortress_bypass_tt
+					34 = {
+						free_building_slots = {
+							building = bunker
+							size < 2
+							province = 11519
+						}
+					}
+				}
+			}
+		}
+	
+		completion_reward = {
+
+			IF = {
+				limit = {
+					34 = {
+						free_building_slots = {
+							building = bunker
+							size > 1
+							province = 11519
+						}
+					}
+				}
+				34 = {
+					add_building_construction = {
+						type = bunker
+						level = 2
+						instant_build = yes
+						province = 11519
+					}
+				}
+			}
+		}
+
+	}
+
+	focus = {
+		id = BEL_our_southern_neighbour
+		icon = GFX_focus_BEL_our_southern_neighbour
+	
+		prerequisite = { focus = BEL_iron_wall }
+
+		relative_position_id = BEL_iron_wall
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	
+		x = -1
+		y = 1
+	
+		cost = 10
+
+		available = {
+		}
+
+		bypass = {
+			has_war_with = FRA
+		}
+	
+		search_filters = {  
+		}
+	
+		completion_reward = {
+
+			country_event = {
+				id = ww_BEL_event_diplomatic.34
+				hours = 0
+			}
+
+			
+		}
+
+	}
+
+	focus = {
+		id = BEL_koningshooikt_wavre_line
+		icon = GFX_focus_BEL_koningshooikt_wavre_line
+	
+		prerequisite = { focus = BEL_eben_emael_fortress }
+		prerequisite = { focus = BEL_iron_wall }
+
+		relative_position_id = BEL_eben_emael_fortress
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+	
+		x = 0
+		y = 1
+	
+		cost = 5
+
+		available = {
+		}
+	
+		completion_reward = {
+			custom_effect_tooltip = BEL_modify_defensive_neutrality_dynamic_modifier_tt
+			add_to_variable = { 
+				BEL_defensive_neutrality_bunker_max_level_terrain_limit = 1
+				tooltip = modifier_bunker_max_level_terrain_limit_tt				
+			}	
+			add_to_variable = { 
+				BEL_defensive_neutrality_coastal_bunker_max_level_terrain_limit = 1
+				tooltip = modifier_coastal_bunker_max_level_terrain_limit_tt			
+			}	
+		}
+
+	}
+
+	focus = {
+		id = BEL_mobilize_the_nation
+		icon = GFX_focus_generic_limited_social_mobilization
+	
+		prerequisite = { focus = BEL_our_southern_neighbour focus = BEL_koningshooikt_wavre_line }
+
+		relative_position_id = BEL_our_southern_neighbour
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+	
+		x = 1
+		y = 1
+	
+		cost = 10
+
+		available = {
+			NOT = { 
+				has_idea = BEL_lack_of_junior_officers_ns
+			}
+		}
+	
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = { 
+						has_dynamic_modifier = { 
+							modifier = BEL_mobilize_the_nation_dynamic_modifier
+						}
+					}
+				}
+				add_dynamic_modifier = { modifier = BEL_mobilize_the_nation_dynamic_modifier }
+				else = {
+					custom_effect_tooltip = BEL_modify_mobilize_the_nation_dynamic_modifier_tt
+					add_to_variable = { 
+						BEL_mobilize_the_nation_conscription = 0.015
+						tooltip = conscription_tt				
+					}	 
+				}		 
+			}
+			add_timed_idea = { 
+				idea = BEL_lack_of_junior_officers_ns
+				days = 180
+			}
+		}
+	}
+
+	focus = {
+		id = BEL_flooded_tank_barriers
+		icon = GFX_focus_BEL_flooded_tank_barriers
+	
+		prerequisite = { focus = BEL_koningshooikt_wavre_line }
+
+		relative_position_id = BEL_koningshooikt_wavre_line
+	
+		x = 1
+		y = 1
+	
+		cost = 5
+
+		available = {
+		}
+	
+		search_filters = {  
+		}
+	
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					or = {
+						state = 6
+						state = 977
+						state = 34
+						state = 980
+					}
+				}
+				add_dynamic_modifier = {
+					scope = BEL
+					modifier = BEL_flooded_tank_barriers_dynamic_modifier
+				}
+			}
+		}
+
+	}
+
+	focus = {
+		id = BEL_protect_against_france
+		icon = GFX_focus_SWI_fortify_border_with_france
+	
+		prerequisite = { focus = BEL_our_southern_neighbour }
+
+		relative_position_id = BEL_our_southern_neighbour
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	
+		x = 0
+		y = 2
+	
+		cost = 10
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = BEL_protect_against_france_available_tt
+				OR = {
+					34 = {
+						free_building_slots = {
+							building = bunker
+							size > 0
+							province = 9536
+						}
+					}
+					6 = {
+						free_building_slots = {
+							building = bunker
+							size > 0
+							province = 3576
+						}
+					}
+					6 = {
+						free_building_slots = {
+							building = bunker
+							size > 0
+							province = 6446
+						}
+					}
+				}
+			}
+		}
+	
+		completion_reward = {
+
+			IF = {
+				limit = {
+					34 = {
+						free_building_slots = {
+							building = bunker
+							size > 0
+							province = 9536
+						}
+					}
+				}
+
+				34 = {
+					add_building_construction = { type = bunker province = 9536 level = 1 instant_build = yes }
+				}
+			}
+
+			IF = {
+				limit = {
+					6 = {
+						free_building_slots = {
+							building = bunker
+							size > 0
+							province = 3576
+						}
+					}
+				}
+
+				6 = {
+					add_building_construction = { type = bunker province = 3576 level = 1 instant_build = yes }
+				}
+			}
+
+			IF = {
+				limit = {
+					6 = {
+						free_building_slots = {
+							building = bunker
+							size > 0
+							province = 6446
+						}
+					}
+				}
+
+				6 = {
+					add_building_construction = { type = bunker province = 6446 level = 1 instant_build = yes }
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = BEL_dam_the_consequences
+		icon = GFX_focus_BEL_dam_the_consequences
+	
+		prerequisite = { focus = BEL_flooded_tank_barriers }
+
+		relative_position_id = BEL_flooded_tank_barriers
+	
+		x = 0
+		y = 1
+	
+		cost = 2
+
+		available = {
+			controls_province = 3488
+		}
+	
+		search_filters = {  
+		}
+	
+		completion_reward = {
+
+			980 = {
+				damage_building = {
+					tags = dam_building
+					damage = 1 # levels of damage
+					province = 3488
+					repair_speed_modifier = -0.8
+				}
+
+				add_dynamic_modifier = {
+					scope = BEL
+					modifier = dam_blown_modifier
+					days = 360
+				}
+			}
+
+			
+		}
+
+	}
+
+	focus = {
+		id = BEL_defensive_reorganization
+		icon = GFX_focus_generic_defensive_reorganization
+	
+		prerequisite = { focus = BEL_mobilize_the_nation }
+		prerequisite = { focus = BEL_koningshooikt_wavre_line }		
+
+		relative_position_id = BEL_mobilize_the_nation
+	
+		x = 1
+		y = 2
+	
+		cost = 10
+
+		available = {
+		}
+	
+		search_filters = {  
+		}
+	
+		completion_reward = {
+			hidden_effect = {
+				remove_dynamic_modifier = { modifier = BEL_defensive_neutrality_dynamic_modifier }
+				add_dynamic_modifier = { modifier = BEL_defensive_reorganization_dynamic_modifier }
+			}
+
+			custom_effect_tooltip = BEL_remove_defensive_neutrality_dynamic_modifier_tt
+			add_to_variable = { 
+				BEL_defensive_neutrality_max_dig_in = 2
+				tooltip = max_dig_in_tt				
+			}	
+			add_to_variable = { 
+				BEL_defensive_neutrality_production_speed_bunker_factor = 0.05
+				tooltip = production_speed_bunker_factor_tt				
+			}	
+			add_to_variable = { 
+				BEL_defensive_neutrality_land_bunker_effectiveness_factor = 0.05
+				tooltip = land_bunker_effectiveness_factor_tt				
+			}	
+		}	
+	}
+	
+
+#######################
+#######################
+######## ARMY #########
+#######################
+#######################
+
+	focus = {
+		id = BEL_defense_bill
+		icon = GFX_focus_generic_treaty
+
+		prerequisite = { focus = BEL_independent_neutral_and_loyal }	
+	
+		relative_position_id = BEL_independent_neutral_and_loyal
+
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ARMY_XP }
+
+		x = -3
+		y = 1
+	
+		cost = 10
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+	
+		completion_reward = {
+			add_command_power = 50
+			army_experience = 25
+
+			IF = {
+				limit = {
+					has_completed_focus = BEL_repudiate_treaty_with_france
+				}
+
+				remove_dynamic_modifier = {
+					modifier = BEL_scars_of_ww1_dynamic_modifier
+				}
+			}
+
+			ELSE = {
+				custom_effect_tooltip = BEL_modify_scars_of_ww1_dynamic_modifier_tt
+				add_to_variable = { 
+					BEL_scars_of_ww1_production_speed_arms_factory_factor = 0.2
+					tooltip = production_speed_arms_factory_factor_tt
+				}
+				add_to_variable = { 
+					BEL_scars_of_ww1_conscription_factor = 0.10
+					tooltip = conscription_factor_tt
+				}
+				add_to_variable = { 
+					BEL_scars_of_ww1_war_support_factor = 0.15
+					tooltip = war_support_factor_tt
+				}	
+				add_to_variable = { 
+					BEL_scars_of_ww1_army_org_factor = 0.10
+					tooltip = army_org_factor_tt
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = BEL_royal_military_academy
+		icon = GFX_focus_generic_military_academy
+	
+		prerequisite = { focus = BEL_defense_bill }	
+
+		relative_position_id = BEL_defense_bill
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	
+		x = -6
+		y = 1
+	
+		cost = 10
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+	
+		completion_reward = {
+			add_research_slot = 1
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_dynamic_modifier = { modifier = BEL_royal_military_academy_dynamic_modifier }
+		}
+
+	}
+
+	focus = {
+		id = BEL_multi_language_courses
+		icon = GFX_focus_BEL_multi_language_courses
+	
+		prerequisite = { focus = BEL_royal_military_academy }	
+
+		relative_position_id = BEL_royal_military_academy
+	
+		x = -1
+		y = 1
+	
+		cost = 10
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+	
+		completion_reward = {
+			custom_effect_tooltip = BEL_modify_royal_military_academy_dynamic_modifier_tt
+			add_to_variable = { 
+				BEL_royal_military_academy_army_org_factor = 0.1
+				tooltip = army_org_factor_tt				
+			}	 
+		}
+
+	}
+
+	focus = {
+		id = BEL_department_of_telecommunications
+		icon = GFX_goal_generic_radar
+	
+		prerequisite = { focus = BEL_royal_military_academy }	
+
+		relative_position_id = BEL_royal_military_academy
+	
+		x = 1
+		y = 1
+	
+		cost = 10
+
+		available = {
+		}
+	
+		completion_reward = {
+			custom_effect_tooltip = BEL_modify_royal_military_academy_dynamic_modifier_tt
+			add_to_variable = { 
+				BEL_royal_military_academy_initiative_factor = 0.15
+				tooltip = initiative_factor_tt				
+			}	
+		}
+
+	}
+
+	focus = {
+		id = BEL_department_of_ballistic_metrology
+		icon = GFX_goal_generic_position_armies
+	
+		prerequisite = { focus = BEL_royal_military_academy }	
+
+		relative_position_id = BEL_royal_military_academy
+	
+		x = 3
+		y = 1
+	
+		cost = 10
+
+		available = {
+		}
+	
+		completion_reward = {
+			custom_effect_tooltip = BEL_modify_royal_military_academy_dynamic_modifier_tt
+			add_to_variable = { 
+				BEL_royal_military_academy_army_artillery_attack_factor = 0.1
+				tooltip = army_artillery_attack_factor_tt				
+			}	
+		}
+
+	}
+
+	focus = {
+		id = BEL_resist_and_bite
+		icon = GFX_focus_BEL_resist_and_bite
+	
+		prerequisite = { focus = BEL_multi_language_courses }	
+
+		relative_position_id = BEL_multi_language_courses
+
+		search_filters = { FOCUS_FILTER_RESEARCH}
+	
+		x = -1
+		y = 1
+	
+		cost = 5
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			IF = {
+				limit = {
+					has_dlc = "No Compromise, No Surrender"
+				}
+				add_doctrine_cost_reduction = {
+					name = BEL_resist_and_bite
+					cost_reduction = 0.25
+					uses = 2
+					category = special_forces_doctrine
+				}
+				custom_effect_tooltip = ranger_subdoctrines_default_add_mastery_bonus_effect_tooltip
+				hidden_effect = {
+					add_mastery_bonus = {
+						name = BEL_resist_and_bite
+						bonus = 0.1
+						days = 240
+						sub_doctrine = rangers_1
+					}
+					add_mastery_bonus = {
+						name = BEL_resist_and_bite
+						bonus = 0.1
+						days = 240
+						sub_doctrine = rangers_2
+					}
+				}				
+				add_tech_bonus = {
+					name = BEL_resist_and_bite
+					bonus = 1
+					uses = 1
+					category = rangers_tech_cat
+				}
+			}
+			ELSE_IF = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				add_doctrine_cost_reduction = {
+					name = BEL_resist_and_bite
+					cost_reduction = 0.25
+					uses = 2
+					category = special_forces_doctrine
+				}
+				add_tech_bonus = {
+					name = BEL_resist_and_bite
+					bonus = 1
+					uses = 1
+					category = mountaineers_tech
+				}
+				custom_effect_tooltip = mountaineer_subdoctrines_default_add_mastery_bonus_effect_tooltip
+				hidden_effect = {
+					add_mastery_bonus = {
+						name = BEL_resist_and_bite
+						bonus = 0.1
+						days = 240
+						sub_doctrine = mountaineers_1
+					}
+					add_mastery_bonus = {
+						name = BEL_resist_and_bite
+						bonus = 0.1
+						days = 240
+						sub_doctrine = mountaineers_2
+					}
+				}				
+			}
+			ELSE = {
+				add_tech_bonus = {
+					name = BEL_resist_and_bite
+					bonus = 1
+					uses = 1
+					category = mountaineers_tech
+				}
+			}
+		}
+
+	}
+
+	focus = {
+		id = BEL_center_for_advanced_military_studies
+		icon = GFX_focus_generic_advanced_military_studies
+	
+		prerequisite = { focus = BEL_multi_language_courses }	
+		prerequisite = { focus = BEL_department_of_telecommunications }	
+
+		relative_position_id = BEL_multi_language_courses
+	
+		x = 1
+		y = 1
+	
+		cost = 10
+
+		available = {
+		}
+	
+		completion_reward = {
+			custom_effect_tooltip = BEL_modify_royal_military_academy_dynamic_modifier_tt
+			add_to_variable = { 
+				BEL_royal_military_academy_army_attack_factor = 0.05
+				tooltip = army_attack_factor_tt				
+			}	
+		}
+
+	}
+
+	focus = {
+		id = BEL_anti_tank_guns
+		icon = GFX_focus_generic_anti_tank_guns
+	
+		prerequisite = { focus = BEL_department_of_ballistic_metrology }	
+		
+		relative_position_id = BEL_department_of_ballistic_metrology
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	
+		x = -1
+		y = 1
+	
+		cost = 5
+
+		available = {
+		}
+	
+		completion_reward = {
+			add_tech_bonus = {
+				name = BEL_anti_tank_guns
+				bonus = 1
+				uses = 2
+				category = cat_anti_tank	# optional 
+				# tecnology  = technology_id # optional
+			}
+			custom_effect_tooltip = BEL_anti_tank_guns_tt
+			hidden_effect = {
+				set_technology = {
+					SWE_bofors_antitank_gun = 1
+					popup = no
+				}
+			}
+		}
+
+	}
+
+	focus = {
+		id = BEL_junior_officer_training
+		icon = GFX_focus_BEL_junior_officer_training
+	
+		prerequisite = { focus = BEL_royal_military_academy }	
+		
+		relative_position_id = BEL_royal_military_academy
+	
+		x = 4
+		y = 2
+	
+		cost = 5
+
+		available = {
+		}
+	
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_RESEARCH }
+	
+		completion_reward = {
+			army_experience = 50
+			add_doctrine_cost_reduction = { 
+				name = BEL_junior_officer_training
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine # optional 
+				# tecnology  = technology_id # optional
+			}
+		}
+
+	}
+
+	focus = {
+		id = BEL_belgian_special_forces
+		icon = GFX_focus_BEL_belgian_special_forces
+	
+		prerequisite = { focus = BEL_resist_and_bite }	
+		
+		relative_position_id = BEL_resist_and_bite
+	
+		x = 0
+		y = 1
+	
+		cost = 5
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+	
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_RESEARCH }
+	
+		completion_reward = {
+			IF = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				add_potential_special_forces_tree = yes
+				add_doctrine_cost_reduction = {
+					name = BEL_belgian_special_forces
+					cost_reduction = 0.25
+					uses = 1
+					category = special_forces_doctrine
+				}
+			}
+			show_unit_leaders_tooltip = BEL_eddy_blondeel
+		}
+
+	}
+
+	focus = {
+		id = BEL_senior_officer_training
+		icon = GFX_focus_generic_military_mission
+	
+		prerequisite = { focus = BEL_center_for_advanced_military_studies }	
+		
+		relative_position_id = BEL_center_for_advanced_military_studies
+	
+		x = 0
+		y = 1
+	
+		cost = 10
+
+		available = {
+		}
+	
+		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER }
+	
+		completion_reward = {
+			every_army_leader = {
+				add_planning = 1
+				add_logistics = 1
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			custom_effect_tooltip = BEL_modify_royal_military_academy_dynamic_modifier_tt
+			add_to_variable = { 
+				BEL_royal_military_academy_army_leader_start_planning_level = 1
+				tooltip = army_leader_start_planning_level_tt				
+			}			
+			add_to_variable = { 
+				BEL_royal_military_academy_army_leader_start_logistics_level = 1
+				tooltip = army_leader_start_logistics_level_tt				
+			}	
+		}
+
+	}
+
+	focus = {
+		id = BEL_fonderie_royale_de_canons_liege
+		icon = GFX_goal_generic_army_artillery2
+	
+		prerequisite = { focus = BEL_department_of_ballistic_metrology }	
+		
+		relative_position_id = BEL_department_of_ballistic_metrology
+	
+		x = 0
+		y = 2
+	
+		cost = 10
+
+		available = {
+		}
+	
+		completion_reward = {
+
+			IF = {
+				limit = { has_dlc = "Arms Against Tyranny"}
+
+				mio:BEL_fonderie_royale_de_canons_liege_organization = {
+					add_mio_size = 2
+					add_mio_funds_gain_factor = 0.2
+					add_mio_research_bonus = 0.05
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				mio:BEL_vickers_armstrong_bel_organization = {
+					add_mio_size = 1
+
+					unlock_mio_trait_tooltip = BEL_mio_trait_fonderie_royale_canons
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				mio:BEL_renault_organization = {
+					add_mio_size = 1
+
+					unlock_mio_trait_tooltip = BEL_mio_trait_fonderie_royale_canons
+				}
+			}
+
+			ELSE = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = fonderie_royale_de_canons_liege
+				custom_effect_tooltip = generic_skip_one_line_tt
+
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = vickers_armstrong_bel
+				custom_effect_tooltip = generic_skip_one_line_tt
+				
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = renault_bel
+			}
+		}
+
+	}
+
+	focus = {
+		id = BEL_interpreters
+		icon = GFX_focus_BEL_interpreters
+	
+		prerequisite = { focus = BEL_belgian_special_forces }	
+		
+		relative_position_id = BEL_belgian_special_forces
+	
+		x = 0
+		y = 1
+	
+		cost = 10
+
+		available = {
+			is_in_faction = yes
+		}
+
+		available_if_capitulated = yes
+	
+		search_filters = {  
+		}
+	
+		completion_reward = {
+			add_ideas = BEL_interpreters_ns
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			custom_effect_tooltip = BEL_interpreters_tt
+
+			hidden_effect = {
+				every_other_country = {
+					limit = { 
+						is_in_faction_with = ROOT
+					}
+					add_ideas = BEL_interpreters_ns
+				}
+			}
+		}
+
+	}
+
+	focus = {
+		id = BEL_center_of_nuclear_chemistry
+		icon = GFX_focus_wonderweapons
+	
+		prerequisite = { focus = BEL_center_for_advanced_military_studies }	
+		
+		relative_position_id = BEL_center_for_advanced_military_studies
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	
+		x = 1
+		y = 2
+	
+		cost = 10
+
+		available = {
+		}
+	
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = { 
+						has_dynamic_modifier = { 
+							modifier = BEL_academies_of_belgium_dynamic_modifier
+						}
+					}
+				}
+				add_dynamic_modifier = { modifier = BEL_academies_of_belgium_dynamic_modifier }
+				add_to_variable = { 
+					BEL_academies_of_belgium_specialization_nuclear_speed_factor = 0.05
+					tooltip = specialization_nuclear_speed_factor_tt				
+				}	
+				else = {
+					custom_effect_tooltip = BEL_academies_of_belgium_dynamic_modifier_tt
+					add_to_variable = { 
+						BEL_academies_of_belgium_specialization_nuclear_speed_factor = 0.05
+						tooltip = specialization_nuclear_speed_factor_tt				
+					}	 
+				}		 
+			}
+
+			custom_effect_tooltip =	generic_skip_one_line_tt
+
+			add_breakthrough_progress = {
+				specialization = specialization_nuclear
+				value = 0.25
+			}
+		}
+	}
+
+	focus = {
+		id = BEL_strategic_doctrine_development
+		icon = GFX_goal_generic_army_doctrines
+	
+		prerequisite = { focus = BEL_junior_officer_training }	
+		
+		relative_position_id = BEL_junior_officer_training
+	
+		x = 0
+		y = 2
+	
+		cost = 5
+
+		available = {
+		}
+	
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = BEL_strategic_doctrine_development
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine # optional 
+				# tecnology  = technology_id # optional
+			}
+		}
+
+	}
+
+	focus = {
+		id = BEL_belgian_tank_development
+		icon = GFX_focus_generic_tank_production
+	
+		prerequisite = { focus = BEL_strategic_doctrine_development }	
+		prerequisite = { focus = BEL_fonderie_royale_de_canons_liege }			
+		
+		relative_position_id = BEL_fonderie_royale_de_canons_liege
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	
+		x = 0
+		y = 2
+	
+		cost = 10
+
+		available = {
+		}
+	
+		completion_reward = {
+			add_tech_bonus = {
+				name = BEL_belgian_tank_development
+				bonus = 0.5
+				uses = 2
+				category = armor
+			}
+		}
+
+	}
+
+	focus = {
+		id = BEL_doctrinal_innovations
+		icon = GFX_focus_generic_army_doctrines_2
+	
+		prerequisite = { focus = BEL_strategic_doctrine_development }			
+		
+		relative_position_id = BEL_strategic_doctrine_development
+	
+		x = 1
+		y = 2
+	
+		cost = 10
+
+		available = {
+		}
+	
+		search_filters = {  
+		}
+	
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = BEL_doctrinal_innovations
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine # optional 
+				# tecnology  = technology_id # optional
+			}
+			add_doctrine_cost_reduction = {
+				name = BEL_doctrinal_innovations
+				cost_reduction = 0.5
+				uses = 1
+				category = special_forces_doctrine
+			}
+		}
+
+	}
+
+	focus = {
+		id = BEL_modernized_army
+		icon = GFX_focus_generic_license_production
+	
+		prerequisite = { focus = BEL_defensive_reorganization }		
+		prerequisite = { focus = BEL_senior_officer_training }	
+		prerequisite = { focus = BEL_doctrinal_innovations }	
+
+		relative_position_id = BEL_senior_officer_training	
+
+		search_filters = { FOCUS_FILTER_RESEARCH }				
+	
+		x = 0
+		y = 4
+	
+		cost = 10
+
+		available = {
+		}
+	
+		search_filters = {  
+		}
+	
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = { 
+						has_dynamic_modifier = { 
+							modifier = BEL_academies_of_belgium_dynamic_modifier
+						}
+					}
+				}
+				add_dynamic_modifier = { modifier = BEL_academies_of_belgium_dynamic_modifier }
+				add_to_variable = { 
+					BEL_academies_of_belgium_special_project_speed_factor = 0.1
+					tooltip = special_project_speed_factor_tt				
+				}	
+				else = {
+					custom_effect_tooltip = BEL_academies_of_belgium_dynamic_modifier_tt
+					add_to_variable = { 
+						BEL_academies_of_belgium_special_project_speed_factor = 0.1
+						tooltip = special_project_speed_factor_tt				
+					}	 
+				}		 
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.5
+			}
+		}
+	}
+
+	focus = { 
+		id = BEL_increased_length_of_service
+		icon = GFX_focus_generic_little_entente
+	
+		prerequisite = { focus = BEL_defense_bill }								
+
+		relative_position_id = BEL_defense_bill
+
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_HISTORICAL }
+
+		x = 1
+		y = 1
+	
+		cost = 5
+
+		available = {
+			NOT = { 
+				has_idea = BEL_lack_of_junior_officers_ns
+			}
+		}
+	
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = { 
+						has_dynamic_modifier = { 
+							modifier = BEL_mobilize_the_nation_dynamic_modifier
+						}
+					}
+				}
+				add_dynamic_modifier = { modifier = BEL_mobilize_the_nation_dynamic_modifier }
+				else = {
+					custom_effect_tooltip = BEL_modify_mobilize_the_nation_dynamic_modifier_tt
+					add_to_variable = { 
+						BEL_mobilize_the_nation_conscription = 0.015
+						tooltip = conscription_tt				
+					}	 
+				}		 
+			}
+			add_timed_idea = { 
+				idea = BEL_lack_of_junior_officers_ns
+				days = 180
+			}
+		}
+
+	}
+
+	focus = {
+		id = BEL_fn_herstal
+		icon = GFX_focus_BEL_fn_herstal
+	
+		prerequisite = { focus = BEL_defense_bill }								
+
+		relative_position_id = BEL_defense_bill
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+			
+		x = 0
+		y = 2
+	
+		cost = 10
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+	
+		completion_reward = {
+			IF = {
+				limit = { has_dlc = "Arms Against Tyranny"}
+
+				mio:BEL_fn_herstal_organization = {
+					add_mio_size = 1
+					add_mio_funds_gain_factor = 0.2
+					add_mio_research_bonus = 0.05
+
+					unlock_mio_trait_tooltip = BEL_mio_trait_outsourced_production
+				}
+			}
+
+			ELSE = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = fn_herstal
+			}
+			
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			custom_effect_tooltip = BEL_modify_economic_downturn_dynamic_modifier_tt
+			add_to_variable = { 
+				BEL_economic_downturn_industrial_capacity_factory = 0.05
+				tooltip = industrial_capacity_factory_tt				
+			}
+		}
+
+	}
+
+	focus = {
+		id = BEL_poudreries_reunies_de_belgique
+		icon = GFX_focus_BEL_poudreries_reunies_de_belgique
+	
+		prerequisite = { focus = BEL_fn_herstal }								
+
+		relative_position_id = BEL_fn_herstal
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+			
+		x = 1
+		y = 1
+	
+		cost = 10
+		available_if_capitulated = yes
+		available = {
+			6 = {
+				is_fully_controlled_by = ROOT
+			}
+		}
+
+		bypass = {
+			6 = {
+				NOT = { is_fully_controlled_by = ROOT }
+			}
+		}
+		
+		bypass_effect = {
+			custom_effect_tooltip = BEL_modify_economic_downturn_dynamic_modifier_tt
+			add_to_variable = { 
+				BEL_economic_downturn_industrial_capacity_factory = 0.05
+				tooltip = industrial_capacity_factory_tt				
+			}
+		}
+	
+		completion_reward = {
+			6 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			custom_effect_tooltip = BEL_modify_economic_downturn_dynamic_modifier_tt
+			add_to_variable = { 
+				BEL_economic_downturn_industrial_capacity_factory = 0.05
+				tooltip = industrial_capacity_factory_tt				
+			}
+		}
+
+	}
+
+	focus = {
+		id = BEL_minerva_imperia
+		icon = GFX_focus_SWE_lynx_armored_car
+	
+		prerequisite = { focus = BEL_fn_herstal }	
+		prerequisite = { focus = BEL_dyle_plan }								
+
+		relative_position_id = BEL_fn_herstal
+			
+		x = 0
+		y = 2
+	
+		cost = 10
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+	
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	
+		completion_reward = {
+
+			IF = {
+				limit = { has_dlc = "Arms Against Tyranny"}
+
+				IF = {
+					limit = { has_dlc = "La Resistance"}
+
+					mio:BEL_minerva_imperia_armored_car_organization = {
+						add_mio_size = 1
+						add_mio_funds_gain_factor = 0.2
+						add_mio_research_bonus = 0.05
+
+						unlock_mio_trait_tooltip = BEL_mio_trait_knight_engines
+					}
+					custom_effect_tooltip = generic_skip_one_line_tt
+				}
+
+				
+				mio:BEL_minerva_imperia_motorized_organization = {
+					add_mio_size = 1
+					add_mio_funds_gain_factor = 0.2
+					add_mio_research_bonus = 0.05
+				}
+			}
+
+			ELSE = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = minerva_imperia_motorized
+			}
+			
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			custom_effect_tooltip = BEL_modify_economic_downturn_dynamic_modifier_tt
+			add_to_variable = { 
+				BEL_economic_downturn_industrial_capacity_factory = 0.05
+				tooltip = industrial_capacity_factory_tt				
+			}
+		}
+
+	}
+
+	focus = {
+		id = BEL_legacy_of_the_great_war
+		icon = GFX_focus_BEL_legacy_of_the_great_war
+	
+		prerequisite = { focus = BEL_minerva_imperia }								
+
+		relative_position_id = BEL_minerva_imperia
+
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_ARMY_XP }
+			
+		x = 0
+		y = 1
+	
+		cost = 10
+
+		available = {
+			has_war = yes
+		}
+
+		available_if_capitulated = yes
+	
+		search_filters = {  
+		}
+	
+		completion_reward = {
+			add_ideas = BEL_legacy_of_the_great_war_ns
+		}
+
+	}
+
+############################
+############################
+######## Political #########
+############################
+############################
+
+	focus = {
+		id = BEL_repudiate_treaty_with_france
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+	
+		prerequisite = { focus = BEL_independent_neutral_and_loyal }								
+
+		relative_position_id = BEL_independent_neutral_and_loyal
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER FOCUS_FILTER_HISTORICAL }
+			
+		x = 1
+		y = 1
+	
+		cost = 10
+
+		available = {
+		}
+	
+		completion_reward = {
+
+			IF = {
+				limit = {
+					has_completed_focus = BEL_defense_bill
+				}
+
+				remove_dynamic_modifier = {
+					modifier = BEL_scars_of_ww1_dynamic_modifier
+				}
+			}
+
+			ELSE = {
+				custom_effect_tooltip = BEL_modify_scars_of_ww1_dynamic_modifier_tt
+				add_to_variable = { 
+					BEL_scars_of_ww1_war_support_factor = 0.15
+					tooltip = war_support_factor_tt
+				}
+				add_to_variable = { 
+					BEL_scars_of_ww1_conscription_factor = 0.05
+					tooltip = conscription_factor_tt
+				}
+				add_to_variable = { 
+					BEL_scars_of_ww1_army_org_factor = 0.05
+					tooltip = army_org_factor_tt
+				}
+			}
+			
+
+			if = {
+				limit = {
+					FRA = {
+						has_guaranteed = BEL
+					}
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				if = {
+					limit = {
+						BEL = {
+							has_guaranteed = FRA
+						}
+					}
+					diplomatic_relation = { 
+						country = FRA 
+						relation = guarantee
+						active = no
+					}
+				}
+				FRA = {
+					diplomatic_relation = { 
+						country = BEL 
+						relation = guarantee
+						active = no
+					}
+				}
+				FRA = {	country_event = { id = ww_BEL_event_diplomatic.1 hours = 6 }	}
+			}
+			else_if = { #Just in case FRA already removed their guarantee but BEL hasn't
+				limit = {
+					BEL = {
+						has_guaranteed = FRA
+					}
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				diplomatic_relation = { 
+					country = FRA 
+					relation = guarantee
+					active = no
+				}
+			}
+			if = {
+				limit = {
+					ENG = {
+						has_guaranteed = BEL
+					}
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				if = {
+					limit = {
+						BEL = {
+							has_guaranteed = ENG
+						}
+					}
+					diplomatic_relation = { 
+						country = ENG 
+						relation = guarantee
+						active = no
+					}
+				}
+				ENG = {
+					diplomatic_relation = { 
+						country = BEL 
+						relation = guarantee
+						active = no
+					}
+				}
+				ENG = {	country_event = { id = ww_BEL_event_diplomatic.1 hours = 6 }	}
+			}
+			else_if = { #Just in case ENG already removed their guarantee but BEL hasn't
+				limit = {
+					BEL = {
+						has_guaranteed = ENG
+					}
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				diplomatic_relation = { 
+					country = ENG 
+					relation = guarantee
+					active = no
+				}
+			}
+		}
+
+	}
+
+	focus = {
+		id = BEL_dyle_plan
+		icon = GFX_focus_BEL_dyle_plan
+	
+		prerequisite = { focus = BEL_repudiate_treaty_with_france }								
+
+		relative_position_id = BEL_repudiate_treaty_with_france
+
+		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_POLITICAL }
+			
+		x = 0
+		y = 3
+	
+		cost = 5
+
+		available = {
+			NOT ={
+				OR = {
+					has_war_with = FRA
+					has_war_with = ENG
+				}
+			}
+		}
+
+		bypass = {
+			OR = {
+				has_war_with = FRA
+				has_war_with = ENG
+			}
+		}
+	
+		completion_reward = {
+
+			IF = {
+				limit = { FRA = { exists = yes} }
+
+				FRA = {
+					add_ai_strategy = { 
+						type = dont_defend_ally_borders
+						id = BEL
+						value = -50
+					}
+
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = medium_increase
+					}
+				}
+
+				add_opinion_modifier = {
+					target = FRA
+					modifier = medium_increase
+				}
+				
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+
+			IF = {
+				limit = { ENG = { exists = yes} }
+
+				ENG = {
+					add_ai_strategy = { 
+						type = dont_defend_ally_borders
+						id = BEL
+						value = -50
+					}
+
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = medium_increase
+					}
+				}
+
+				add_opinion_modifier = {
+					target = ENG
+					modifier = medium_increase
+				}
+				
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			custom_effect_tooltip = BEL_dyle_plan_tt
+			
+		}
+
+	}
+
+
+#############################
+#############################
+######## Historical #########
+#############################
+#############################
+
+	focus = {
+		id = BEL_government_resigns
+		icon = GFX_focus_BEL_government_resigns								
+
+		x = 43
+		y = 0
+	
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+	
+		completion_reward = {
+			country_event = { id = ww_BEL_event_political.1 }
+			custom_effect_tooltip = BEL_modify_corruption_dynamic_modifier_tt
+			add_to_variable = { 
+				BEL_corruption_political_power_gain = 0.1
+				tooltip = political_power_gain_tt				
+			}	
+			add_to_variable = { 
+				BEL_corruption_production_speed_buildings_factor = 0.05
+				tooltip = production_speed_buildings_factor_tt				
+			}
+			add_to_variable = { 
+				BEL_corruption_fascism_drift = -0.04
+				tooltip = fascism_drift_tt				
+			}
+		}
+
+	}
+
+	focus = {
+		id = BEL_government_of_national_unity
+		icon = GFX_goal_generic_national_unity
+	
+		prerequisite = { focus = BEL_government_resigns }								
+
+		relative_position_id = BEL_government_resigns
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_COMPLETED_BY_EVENT }
+			
+		x = 2
+		y = 1
+	
+		cost = 0
+
+		allow_branch = {
+			IF = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { always = no }
+				
+			}
+		}
+
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = BEL_auto_complete_government_resigns_tt
+				always = no
+			}
+		}
+
+		available_if_capitulated = yes
+	
+		completion_reward = {
+			custom_effect_tooltip = BEL_government_resigns_complete_national_unity_tt
+
+			hidden_effect = {
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+					}
+					mark_focus_tree_layout_dirty = yes
+				}
+			}
+		}
+
+	}
+
+	focus = {
+		id = BEL_investigate_bribery_charges
+		icon = GFX_focus_generic_court
+	
+		prerequisite = { focus = BEL_government_resigns }								
+
+		relative_position_id = BEL_government_resigns
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_HISTORICAL }
+			
+		x = 0
+		y = 1
+	
+		cost = 5
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+	
+		completion_reward = {
+			custom_effect_tooltip = BEL_modify_corruption_dynamic_modifier_tt
+			add_to_variable = { 
+				BEL_corruption_political_power_gain = 0.05
+				tooltip = political_power_gain_tt				
+			}	
+			add_to_variable = { 
+				BEL_corruption_stability_factor = 0.05
+				tooltip = stability_factor_tt				
+			}
+			add_to_variable = { 
+				BEL_corruption_production_speed_buildings_factor = 0.10
+				tooltip = production_speed_buildings_factor_tt				
+			}
+			add_to_variable = { 
+				BEL_corruption_fascism_drift = -0.04
+				tooltip = fascism_drift_tt				
+			}
+			IF = {
+				limit = {
+					NOT = { 
+						always = no
+					}
+				 }
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = BEL_investigate_pm_tt
+			}
+		}
+
+	}
+
+	focus = {
+		id = BEL_royal_intervention
+		icon = GFX_focus_rom_royal_dictatorship
+	
+		prerequisite = { focus = BEL_investigate_bribery_charges }					
+		prerequisite = { focus = BEL_government_of_national_unity }	
+		prerequisite = { focus = BEL_repudiate_treaty_with_france }
+
+		relative_position_id = BEL_government_of_national_unity
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+			
+		x = 0
+		y = 2
+	
+		cost = 5
+
+		available = {
+			has_idea = BEL_collapsing_government_ns
+		}
+
+		available_if_capitulated = yes
+	
+		completion_reward = {
+			country_event = { id = ww_BEL_event_political.3 }
+			custom_effect_tooltip = BEL_royal_intervention_tt
+		}
+	}
+
+	focus = {
+		id = BEL_paul_emile_janson
+		icon = GFX_focus_BEL_paul_emile_janson
+	
+		prerequisite = { focus = BEL_royal_intervention }					
+
+
+		relative_position_id = BEL_royal_intervention
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL FOCUS_FILTER_COMPLETED_BY_EVENT }
+			
+		x = -2
+		y = 1
+	
+		cost = 0
+
+		allow_branch = {
+			IF = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+
+				NOT = {
+					always = no 
+					always = no 
+				}
+				
+			}
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = BEL_auto_complete_royal_intervention_tt
+				always = no
+			}
+		}
+	
+		completion_reward = {
+			custom_effect_tooltip = BEL_royal_intervention_complete_janson_tt
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			effect_tooltip = {
+				add_country_leader_role = {
+				    character = BEL_paul_emile_janson
+				    promote_leader = yes
+				    country_leader = {
+				        ideology = conservatism
+				        expire = "1965.1.1.1"
+				        traits = { BEL_royal_appointee }
+				    }
+				}
+
+				set_party_name = {
+					ideology = democratic
+					long_name = BEL_liberal_party_long
+					name = BEL_liberal_party
+				}
+
+				remove_ideas = BEL_collapsing_government_ns 
+			}
+
+			hidden_effect = {
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+					}
+					mark_focus_tree_layout_dirty = yes
+				}
+			}
+		}
+
+	}
+
+	focus = {
+		id = BEL_plan_de_man
+		icon = GFX_focus_generic_full_employment
+	
+		prerequisite = { focus = BEL_paul_emile_janson }					
+
+		relative_position_id = BEL_paul_emile_janson
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+			
+		x = 0
+		y = 1
+	
+		cost = 10
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+	
+		completion_reward = {
+			custom_effect_tooltip = BEL_modify_economic_downturn_dynamic_modifier_tt
+			add_to_variable = { 
+				BEL_economic_downturn_consumer_goods_factor = -0.1
+				tooltip = consumer_goods_factor_tt				
+			}	
+		}
+
+	}
+
+	focus = {
+		id = BEL_economic_recovery
+		icon = GFX_focus_generic_economic_recovery
+	
+		#prerequisite = { focus = BEL_paul_emile_janson }		
+		prerequisite = { focus = BEL_plan_de_man }						
+		prerequisite = { focus = BEL_dyle_plan }	
+
+		relative_position_id = BEL_paul_emile_janson
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+			
+		x = 0
+		y = 2
+	
+		cost = 10
+
+		available = { 
+		}
+
+		available_if_capitulated = yes
+	
+		completion_reward = {
+			country_event = { id = ww_BEL_event_political.4 }
+			add_ideas = BEL_economic_recovery_ns
+		}
+
+	}
+
+	focus = {
+		id = BEL_adriaan_martens_crisis
+		icon = GFX_goal_generic_political_pressure
+	
+		prerequisite = { focus = BEL_economic_recovery }			
+
+		relative_position_id = BEL_economic_recovery
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_HISTORICAL }
+			
+		x = 0
+		y = 1
+	
+		cost = 5
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			country_event = { id = ww_BEL_event_political.5 }
+			custom_effect_tooltip = BEL_modify_corruption_dynamic_modifier_tt
+			add_to_variable = { 
+				BEL_corruption_political_power_gain = 0.05
+				tooltip = political_power_gain_tt				
+			}	
+			add_to_variable = { 
+				BEL_corruption_stability_factor = 0.05
+				tooltip = stability_factor_tt				
+			}
+			add_to_variable = { 
+				BEL_corruption_fascism_drift = -0.02
+				tooltip = fascism_drift_tt				
+			}
+		}
+
+	}
+
+	focus = {
+		id = BEL_tripartite_government
+		icon = GFX_goal_tripartite_pact
+	
+		prerequisite = { focus = BEL_adriaan_martens_crisis }	
+
+
+		relative_position_id = BEL_adriaan_martens_crisis
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
+			
+		x = 1
+		y = 1
+	
+		cost = 10
+
+		available = { 
+			has_country_leader = { 
+				character = BEL_hubert_pierlot
+				ruling_only = yes
+			}
+		}
+	
+		completion_reward = {
+			remove_ideas = BEL_language_barriers_ns
+			add_stability = 0.10
+			add_war_support = 0.10
+
+		}
+
+	}
+
+	focus = {
+		id = BEL_broken_neutrality
+		icon = GFX_focus_BEL_broken_neutrality
+	
+		prerequisite = { focus = BEL_tripartite_government }			
+
+		relative_position_id = BEL_tripartite_government
+			
+		x = 0
+		y = 1
+	
+		cost = 10
+
+		available = {
+			has_dynamic_modifier = { modifier = BEL_neutrality_dynamic_modifier }
+		}
+	
+		completion_reward = {
+
+			country_event = {
+				id = ww_BEL_event_diplomatic.33
+				hours = 0
+			}
+		}
+	}
+
+#######################################
+#######################################
+######## Fascist- Nationalist #########
+#######################################
+#######################################
+
+#######################################
+#######################################
+######## Fascist- Shared ##############
+#######################################
+#######################################
+
+
+#############################################
+#############################################
+######## Fascist- Expansionist ##############
+#############################################
+#############################################
+
+#####################################
+#####################################
+######## Defensive Democrat #########
+#####################################
+#####################################
+
+############################
+############################
+######## Communist #########
+############################
+############################
+
+######################################
+######################################
+######## The King Surrenders #########
+######################################
+######################################
+
+	focus = {
+		id = BEL_the_king_surrenders
+		icon = GFX_focus_generic_surrender
+	
+		x = 35
+		y = 11
+	
+		cost = 0
+
+		available = {
+			always = no
+		}
+
+		available_if_capitulated = yes
+	
+		completion_reward = {
+			IF = {
+				limit = {
+					COG = {
+						NOT = {
+							has_dynamic_modifier = {
+								modifier = COG_belgian_congo_colonial_dynamic_modifier
+							}	
+						}
+					}
+				}
+				COG = {
+					add_dynamic_modifier = { 
+						modifier = COG_belgian_congo_colonial_dynamic_modifier
+					}
+					custom_effect_tooltip = generic_skip_one_line_tt
+					custom_effect_tooltip = warning_this_idea_can_be_removed_tt
+				}
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			custom_effect_tooltip = modify_COG_belgian_congo_colonial_dynamic_modifier_tt
+			add_to_variable = { BEL.COG_belgian_congo_colonial_dynamic_modifier_cic_to_overlord_factor = 0.15 tooltip = cic_to_overlord_factor_tt }
+			add_to_variable = { BEL.COG_belgian_congo_colonial_dynamic_modifier_mic_to_overlord_factor = 0.25 tooltip = mic_to_overlord_factor_tt }
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = BEL_the_king_surrenders_tt
+		}
+
+	}
+
+	focus = {
+		id = BEL_unfit_to_reign
+		icon = GFX_focus_BEL_unfit_to_reign
+	
+		prerequisite = { focus = BEL_the_king_surrenders }
+
+		mutually_exclusive = { focus = BEL_prisoner_king }
+
+		relative_position_id = BEL_the_king_surrenders
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_HISTORICAL }
+
+		x = -2
+		y = 1
+	
+		cost = 5
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+	
+
+		completion_reward = {
+			IF = {
+				limit = {
+					has_idea = BEL_the_kings_surrender_ns
+				}
+				remove_ideas = BEL_the_kings_surrender_ns
+				custom_effect_tooltip = generic_skip_one_line_tt
+			}
+			
+			add_stability = -0.25
+			add_war_support = 0.10
+       		clr_country_flag = BEL_leopold_flag
+		}
+
+	}
+
+	focus = {
+		id = BEL_prisoner_king
+		icon = GFX_focus_BEL_prisoner_king
+	
+		prerequisite = { focus = BEL_the_king_surrenders }
+
+		mutually_exclusive = { focus = BEL_unfit_to_reign }
+
+		relative_position_id = BEL_the_king_surrenders
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER }
+
+		x = 2
+		y = 1
+	
+		cost = 5
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+	
+		completion_reward = {
+			promote_character = {
+			 	character = BEL_king_leopold_iii 
+			 	ideology = despotism 
+			}
+
+			BEL_king_leopold_iii = {
+				add_trait = {
+				 trait = BEL_leopold_prisoner_king
+				 ideology = despotism
+				}
+			}
+
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+				name = BEL_leopold_party
+				long_name = BEL_leopold_party_long
+			}
+
+			add_popularity = {
+			    ideology = neutrality
+			    popularity = 0.10
+			}
+
+			remove_ideas = BEL_the_kings_surrender_ns
+		}
+
+	}
+
+	focus = {
+		id = BEL_government_in_exile
+		icon = GFX_focus_generic_government_in_exile
+	
+		prerequisite = { focus = BEL_unfit_to_reign }
+
+		relative_position_id = BEL_unfit_to_reign
+
+		x = -1
+		y = 1
+	
+		cost = 5
+
+		available = {
+			is_government_in_exile = yes
+		}
+
+		available_if_capitulated = yes
+	
+		completion_reward = {
+			custom_effect_tooltip = BEL_government_in_exile_tt
+		}
+
+	}
+
+	focus = {
+		id = BEL_la_dame_blanche
+		icon = GFX_focus_BEL_la_dame_blanche
+	
+		prerequisite = { focus = BEL_government_in_exile }
+
+		relative_position_id = BEL_government_in_exile
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		x = 0
+		y = 1
+	
+		cost = 5
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+	
+		completion_reward = {
+			if = {
+				limit = {
+					has_dlc = "La Resistance"
+				}
+				if = {
+					limit = {
+						has_intelligence_agency = no
+					}
+					create_intelligence_agency = yes
+				}
+				add_ideas = BEL_dame_blanche_ns
+			}
+			else = {
+				add_tech_bonus = {
+					bonus = 0.75
+					uses = 2
+					category = decryption_tech
+				}
+			}
+		}
+
+	}
+
+	focus = {
+		id = BEL_moi_dabord
+		icon = GFX_goal_generic_political_pressure
+	
+		prerequisite = { focus = BEL_government_in_exile }
+
+		relative_position_id = BEL_government_in_exile
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY FOCUS_FILTER_MANPOWER }
+
+		x = -2
+		y = 1
+	
+		cost = 5
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+	
+		completion_reward = {
+			add_political_power = 150
+			add_war_support = 0.10
+			add_legitimacy = 25
+			add_stability = 0.10
+			add_manpower = 5000
+		}
+
+	}
+
+	focus = {
+		id = BEL_v_for_victory
+		icon = GFX_focus_BEL_v_for_victory
+	
+		prerequisite = { focus = BEL_moi_dabord }
+
+		relative_position_id = BEL_moi_dabord
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		x = -1
+		y = 1
+	
+		cost = 5
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_offsite_building = { 
+				type = industrial_complex
+				level = 2 
+			}
+		}
+
+	}
+
+	focus = {
+		id = BEL_democratic_homecoming
+		icon = GFX_goal_support_democracy 
+	
+		prerequisite = { focus = BEL_v_for_victory } 
+
+		mutually_exclusive = { focus = BEL_leopolds_return focus = BEL_charles_count_of_flanders }
+
+		relative_position_id = BEL_v_for_victory
+
+		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER  }
+
+		x = -2
+		y = 1
+	
+		cost = 5
+
+		available = {
+		}
+	
+		completion_reward = {
+			add_country_leader_trait = BEL_democratic_homecoming_trait
+		}
+
+	}
+
+	focus = {
+		id = BEL_charles_count_of_flanders
+		icon = GFX_focus_BEL_charles_count_of_flanders
+	
+		prerequisite = { focus = BEL_v_for_victory } 
+
+		mutually_exclusive = { focus = BEL_leopolds_return focus = BEL_democratic_homecoming }
+
+		relative_position_id = BEL_v_for_victory
+
+		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_STABILITY }
+
+		x = 0
+		y = 1
+	
+		cost = 5
+
+		available = {
+		}
+	
+		completion_reward = {
+
+			IF = {
+				limit = {
+					always = no
+				}
+
+				BEL_charles_count_of_flanders_person = {
+					remove_trait = {
+						slot = political_advisor
+						trait = BEL_quiet_royal
+					}
+				}
+				add_country_leader_role = {
+					character = BEL_charles_count_of_flanders_person
+					promote_leader = yes
+					country_leader = {
+						ideology = conservatism
+						expire = 1965.1.1.1
+						traits = { BEL_charles_king_of_belgians} 
+					}
+				}
+			}
+
+			ELSE = {
+				
+				add_country_leader_role = {
+					character = BEL_charles_count_of_flanders_person
+					promote_leader = yes
+					country_leader = {
+						ideology = conservatism
+						expire = 1965.1.1.1
+						traits = { BEL_royal_regent } 
+					}
+				}
+			}
+			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = BEL_leopolds_return
+		icon = GFX_focus_BEL_leopolds_return
+	
+		prerequisite = { focus = BEL_v_for_victory }
+
+		mutually_exclusive = { focus = BEL_charles_count_of_flanders focus = BEL_democratic_homecoming }
+
+		relative_position_id = BEL_v_for_victory
+
+		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_POLITICAL }
+
+		x = 2
+		y = 1
+	
+		cost = 5
+
+		available = {
+			NOT = {
+				always = no
+			}
+		}
+	
+		completion_reward = {
+
+			add_country_leader_role = {
+				character = BEL_king_leopold_iii
+				promote_leader = yes
+				country_leader = {
+					ideology = conservatism
+					expire = 1965.1.1.1
+					traits = { BEL_leopold_unknown_sympathies } 
+				}
+			}
+
+			add_political_power = 200
+		}
+	}
+
+	focus = {
+		id = BEL_secretaries_general
+		icon = GFX_focus_generic_self_management
+	
+		prerequisite = { focus = BEL_unfit_to_reign focus = BEL_prisoner_king }
+
+		relative_position_id = BEL_unfit_to_reign
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+
+		x = 2
+		y = 1
+	
+		cost = 5
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+	
+		completion_reward = {
+			add_offsite_building = { 
+				type = industrial_complex
+				level = 2 
+			}
+
+			every_owned_state = {
+				limit = {
+					or = {
+						state = 6
+						state = 977
+						state = 34
+						state = 980
+					}
+				}
+				add_dynamic_modifier = {
+					modifier = BEL_belgian_resistance_state_dynamic_modifier
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = BEL_secretaries_general_tt
+			every_other_country = {
+				limit = {
+					OR = {
+						controls_state = 6
+						controls_state = 977
+						controls_state = 34
+						controls_state = 980
+					}
+				}
+				country_event = {
+					id = ww_BEL_event_war.6
+					hours = 1
+				}	
+			}
+			
+		}
+
+	}
+
+	focus = {
+		id = BEL_the_secret_army
+		icon = GFX_focus_generic_support_the_left_right
+	
+		prerequisite = { focus = BEL_secretaries_general }
+
+		relative_position_id = BEL_secretaries_general
+
+		x = -1
+		y = 1
+	
+		cost = 5
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+	
+		completion_reward = {
+			custom_effect_tooltip = BEL_modify_belgian_resistance_state_dynamic_modifier_tt
+			add_to_variable = { 
+				BEL_belgian_resistance_resistance_damage_to_garrison = 0.2
+				tooltip = resistance_damage_to_garrison_tt				
+			}
+		}
+
+	}
+
+	focus = {
+		id = BEL_the_belgian_legion
+		icon = GFX_focus_generic_home_defense
+	
+		prerequisite = { focus = BEL_secretaries_general }
+
+		relative_position_id = BEL_secretaries_general
+
+		x = 1
+		y = 1
+	
+		cost = 5
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = BEL_lambert_chardome_tt
+			if = {
+				limit = {
+					NOT = { 
+						has_dynamic_modifier = { 
+							modifier = BEL_belgian_legion_dynamic_modifier
+						}
+					}
+				}
+				add_dynamic_modifier = { modifier = BEL_belgian_legion_dynamic_modifier }
+				add_to_variable = { 
+					BEL_belgian_legion_army_infantry_attack_factor = 0.1
+					tooltip = army_infantry_attack_factor_tt				
+				}	 
+				else = {
+					custom_effect_tooltip = BEL_modify_belgian_legion_dynamic_modifier_tt
+					add_to_variable = { 
+						BEL_belgian_legion_army_infantry_attack_factor = 0.1
+						tooltip = army_infantry_attack_factor_tt				
+					}	 
+				}		 
+			}
+		}
+
+	}
+
+	focus = {
+		id = BEL_develop_home_support
+		icon = GFX_goal_generic_propaganda
+	
+		prerequisite = { focus = BEL_the_secret_army focus = BEL_the_belgian_legion }
+
+		relative_position_id = BEL_the_secret_army
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		x = 1
+		y = 1
+	
+		cost = 5
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+	
+		completion_reward = {
+			add_offsite_building = { 
+				type = arms_factory
+				level = 2 
+			}
+			add_offsite_building = { 
+				type = dockyard
+				level = 1 
+			}
+		}
+
+	}
+
+	focus = {
+		id = BEL_military_service_for_all_in_exile
+		icon = GFX_focus_generic_manpower
+	
+		prerequisite = { focus = BEL_the_secret_army }
+
+		relative_position_id = BEL_the_secret_army
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+
+		x = -1
+		y = 2
+	
+		cost = 5
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+	
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = { 
+						has_dynamic_modifier = { 
+							modifier = BEL_belgian_legion_dynamic_modifier
+						}
+					}
+				}
+				add_dynamic_modifier = { modifier = BEL_belgian_legion_dynamic_modifier }
+				add_to_variable = { 
+					BEL_belgian_legion_exile_manpower_factor = 0.1
+					tooltip = exile_manpower_factor_tt				
+				}
+				add_to_variable = { 
+					BEL_belgian_legion_weekly_manpower = 250
+					tooltip = weekly_manpower_tt				
+				}	 
+				else = {
+					custom_effect_tooltip = BEL_modify_belgian_legion_dynamic_modifier_tt
+					add_to_variable = { 
+						BEL_belgian_legion_exile_manpower_factor = 0.1
+						tooltip = exile_manpower_factor_tt				
+					}	 
+					add_to_variable = { 
+						BEL_belgian_legion_weekly_manpower = 250
+						tooltip = weekly_manpower_tt				
+					}	 
+				}		 
+			}
+			add_manpower = 10000
+		}
+
+	}
+
+	focus = {
+		id = BEL_consolidate_resistance_groups
+		icon = GFX_focus_ETH_freedom_at_gunpoint
+	
+		prerequisite = { focus = BEL_develop_home_support }
+
+		relative_position_id = BEL_develop_home_support
+
+		x = 0
+		y = 1
+	
+		cost = 5
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+	
+		completion_reward = {
+			custom_effect_tooltip = BEL_modify_belgian_resistance_state_dynamic_modifier_tt
+			add_to_variable = { 
+				BEL_belgian_resistance_resistance_growth = 0.2
+				tooltip = resistance_growth_tt				
+			}	
+		}
+
+	}
+
+	focus = {
+		id = BEL_free_belgian_forces
+		icon = GFX_focus_BEL_free_belgian_forces
+	
+		prerequisite = { focus = BEL_military_service_for_all_in_exile focus = BEL_consolidate_resistance_groups focus = BEL_expand_the_belgian_legion }
+
+		mutually_exclusive = { 
+		}
+
+		relative_position_id = BEL_consolidate_resistance_groups
+
+		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER }
+
+		x = 0
+		y = 1
+	
+		cost = 5
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+	
+		completion_reward = {
+
+			IF = {
+				limit = {
+					has_government = democratic
+				}
+
+				show_unit_leaders_tooltip = BEL_jean_baptise_piron
+			}
+
+			
+			
+			BEL_victor_van_strydonck_de_burkel = {
+				promote_leader = yes 
+			}
+
+			if = {
+				limit = {
+					NOT = { 
+						has_dynamic_modifier = { 
+							modifier = BEL_belgian_legion_dynamic_modifier
+						}
+					}
+				}
+				add_dynamic_modifier = { modifier = BEL_belgian_legion_dynamic_modifier }
+				add_to_variable = { 
+					BEL_belgian_legion_army_core_attack_factor = 0.1
+					tooltip = army_core_attack_factor_tt				
+				}
+
+				add_to_variable = { 
+					BEL_belgian_legion_army_core_defence_factor = 0.1
+					tooltip = army_core_attack_factor_tt				
+				}	 
+				else = {
+					custom_effect_tooltip = BEL_modify_belgian_legion_dynamic_modifier_tt
+					add_to_variable = { 
+						BEL_belgian_legion_army_core_attack_factor = 0.1
+						tooltip = army_core_attack_factor_tt					
+					}
+
+					add_to_variable = { 
+						BEL_belgian_legion_army_core_defence_factor = 0.1
+						tooltip = army_core_attack_factor_tt				
+					}	 
+				}		 
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			division_template = {
+				name = "Division d'Infanterie"
+				is_locked = yes
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }	
+				}
+			}
+	
+			IF = {
+				limit = {
+					is_government_in_exile = yes
+				}
+				random_state = {
+					limit = {
+						OWNER = {
+							is_hosting_exile = ROOT
+							controls_state = PREV
+						}
+						is_in_home_area = yes
+					}
+					create_unit = {
+						division = "name = \"Division d'Infanterie\" division_template = \"Division d'Infanterie\" start_experience_factor = 0.6" 
+						owner = ROOT
+						count = 2
+					}
+				}
+			}
+
+			ELSE = {
+				custom_effect_tooltip = BEL_free_belgian_forces_tt
+			}
+		}
+
+	}
+
+	focus = {
+		id = BEL_king_law_freedom
+		icon = GFX_focus_generic_monarchy_1
+	
+		prerequisite = { focus = BEL_prisoner_king }
+
+		relative_position_id = BEL_prisoner_king
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		x = 1
+		y = 1
+	
+		cost = 5
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+	
+		completion_reward = {
+			add_ideas = BEL_king_law_freedom_ns
+			add_popularity = {
+			    ideology = neutrality
+			    popularity = 0.15
+			}
+
+		}
+
+	}
+
+	focus = {
+		id = BEL_king_of_the_belgians
+		icon = GFX_focus_BEL_king_of_the_belgians
+	
+		prerequisite = { focus = BEL_king_law_freedom }
+
+		relative_position_id = BEL_king_law_freedom
+
+		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER }
+
+		x = 0
+		y = 1
+	
+		cost = 5
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+	
+		completion_reward = {
+			BEL_king_leopold_iii = {
+				swap_country_leader_traits = {
+					remove = BEL_leopold_prisoner_king
+					add = BEL_leopold_king_of_the_belgians
+				}
+			}
+		}
+
+	}
+
+	focus = {
+		id = BEL_rally_to_the_king
+		icon = GFX_focus_generic_monarchy_2
+	
+		prerequisite = { focus = BEL_the_belgian_legion }
+		prerequisite = { focus = BEL_king_of_the_belgians}
+
+		relative_position_id = BEL_the_belgian_legion
+
+		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER }
+
+		x = 1
+		y = 1
+	
+		cost = 5
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+	
+		completion_reward = {
+			custom_effect_tooltip = BEL_royal_commander_in_chief_tt
+		}
+
+	}
+
+	focus = {
+		id = BEL_van_overstraeten_on_the_home_front
+		icon = GFX_focus_generic_military_mission
+	
+		prerequisite = { focus = BEL_king_of_the_belgians }
+
+		relative_position_id = BEL_king_of_the_belgians
+
+		x = 1
+		y = 1
+	
+		cost = 5
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+	
+		completion_reward = {
+			COG = { 
+				country_event = { id = ww_congo.62 hours = 6 }
+			}
+		}
+
+	}
+
+	focus = {
+		id = BEL_expand_the_belgian_legion
+		icon = GFX_focus_generic_little_entente
+	
+		prerequisite = { focus = BEL_rally_to_the_king }
+
+		relative_position_id = BEL_rally_to_the_king
+
+		x = 0
+		y = 1
+	
+		cost = 5
+
+		available = {
+			is_government_in_exile = yes
+		}
+
+		available_if_capitulated = yes
+	
+		completion_reward = {
+
+			IF = {
+				limit = {
+					is_government_in_exile = yes
+				}
+				random_state = {
+					limit = {
+						OWNER = {
+							is_hosting_exile = ROOT
+							controls_state = PREV
+						}
+						is_in_home_area = yes
+					}
+					create_unit = {
+						division = "name = \"Division d'Infanterie\" division_template = \"Division d'Infanterie\" start_experience_factor = 0.6" 
+						owner = ROOT
+						count = 3
+					}
+				}
+			}
+
+			ELSE = {
+				custom_effect_tooltip = BEL_expand_the_belgian_legion_tt
+			}
+		}
+	}
+
+
+#############################
+#############################
+######## Industrial #########
+#############################
+#############################
+
+	focus = {
+		id = BEL_monetary_reconstruction
+		icon = GFX_focus_hol_abandon_the_gold_standard
+
+		relative_position_id = BEL_government_resigns
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL FOCUS_FILTER_STABILITY }
+
+		x = 7
+		y = 0
+	
+		cost = 10
+
+		offset = { 
+			x = -3
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = BEL_government_of_national_unity
+			}
+		}
+
+		offset = { 
+			x = -18
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = BEL_paul_emile_janson
+			}
+		}
+
+		offset = { 
+			x = -3
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				always = no
+			}
+		}
+
+		offset = { 
+			x = -8
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+
+				OR = {
+					always = no
+					always = no
+				}
+						
+					
+				
+			}
+		}
+
+		offset = { 
+			x = -13
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				always = no
+			}
+		}
+
+		offset = { 
+			x = -16
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				always = no
+			}
+		}
+
+		available = {
+		}
+	
+		completion_reward = {
+			add_stability = 0.05
+			custom_effect_tooltip = BEL_modify_economic_downturn_dynamic_modifier_tt
+			add_to_variable = { 
+				BEL_economic_downturn_consumer_goods_factor = -0.15
+				tooltip = consumer_goods_factor_tt				
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = BEL
+					is_fully_controlled_by = BEL
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}	
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = BEL
+					is_fully_controlled_by = BEL
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}	
+			}	
+		}
+
+	}
+
+	focus = {
+		id = BEL_rebuild_wallonian_industry
+		icon = GFX_focus_generic_industry_2
+	
+		prerequisite = { focus = BEL_monetary_reconstruction }
+
+		relative_position_id = BEL_monetary_reconstruction
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+
+		x = 1
+		y = 1
+	
+		cost = 10
+
+		available = {
+		}
+
+		bypass = {
+			NOT = { has_full_control_of_state = 34 }
+		}		
+	
+		completion_reward = {
+			IF = {
+				limit = {
+					34 = {
+						is_core_of = ROOT
+						is_fully_controlled_by = ROOT
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}	
+					}
+				}
+				34 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}	
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = BEL_gold_reserves
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+	
+		prerequisite = { focus = BEL_monetary_reconstruction }
+
+		relative_position_id = BEL_monetary_reconstruction
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+
+		x = -1
+		y = 1
+	
+		cost = 5
+
+		available = {
+		}
+	
+		completion_reward = {
+			add_dynamic_modifier = {
+				modifier = BEL_gold_reserves_dynamic_modifier
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			custom_effect_tooltip = BEL_unlock_gold_reserve_decisions_tt
+		}
+	}
+
+	focus = {
+		id = BEL_social_partners
+		icon = GFX_goal_generic_improve_relations
+	
+		prerequisite = { focus = BEL_rebuild_wallonian_industry }
+
+		relative_position_id = BEL_rebuild_wallonian_industry
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
+
+		x = -1
+		y = 1
+	
+		cost = 10
+
+		available = {
+		}
+	
+		completion_reward = {
+			add_stability = 0.05
+
+			custom_effect_tooltip = generic_skip_one_line_tt			
+			add_dynamic_modifier = { modifier = BEL_social_partners_dynamic_modifier }
+		}
+	}
+
+	focus = {
+		id = BEL_revive_coal_mining
+		icon = GFX_focus_generic_coal_mining
+	
+		prerequisite = { focus = BEL_rebuild_wallonian_industry }
+
+		relative_position_id = BEL_rebuild_wallonian_industry
+
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+
+		x = 1
+		y = 1
+	
+		cost = 5
+
+		available = {
+			34 = {
+				is_fully_controlled_by = ROOT
+			}
+		}
+
+		bypass = {
+			34 = {
+				NOT = { is_fully_controlled_by = ROOT } 
+			}
+		}
+	
+		completion_reward = {
+			34 = {
+				add_resource = {
+					type = steel
+					amount = 8
+				}
+				add_resource = {
+					type = coal
+					amount = 18
+				}
+			}
+			add_tech_bonus = {
+				name = BEL_revive_coal_mining
+				bonus = 0.5
+				uses = 2
+				category = excavation_tech
+			}
+		}
+
+	}
+
+	focus = {
+		id = BEL_40_hour_workweek
+		icon = GFX_focus_generic_workers
+	
+		prerequisite = { focus = BEL_social_partners }
+
+		relative_position_id = BEL_social_partners
+
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY }
+
+		x = -2
+		y = 1
+	
+		cost = 10
+
+		available = {
+		}
+	
+		completion_reward = {
+			add_stability = 0.05
+
+			custom_effect_tooltip = BEL_modify_social_partners_dynamic_modifier_tt
+			add_to_variable = { 
+				BEL_social_partners_production_factory_max_efficiency_factor  = 0.05
+				tooltip = production_factory_max_efficiency_factor_tt				
+			}
+		}
+
+	}
+
+	focus = {
+		id = BEL_cockerill
+		icon = GFX_focus_BEL_cockerill
+	
+		prerequisite = { focus = BEL_social_partners }
+		prerequisite = { focus = BEL_revive_coal_mining }
+
+		relative_position_id = BEL_social_partners
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		x = 0
+		y = 1
+	
+		cost = 10
+
+		available = {
+			34 = {
+				is_fully_controlled_by = ROOT
+			}
+		}
+
+		bypass = {
+			34 = {
+				NOT = { is_fully_controlled_by = ROOT } 
+			}
+		}
+	
+		completion_reward = {
+			34 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt	
+			if = {
+				limit = {
+					has_idea = BEL_cockerill_industrial
+				}
+				swap_ideas = {
+					remove_idea = BEL_cockerill_industrial
+					add_idea = BEL_cockerill_industrial_improved
+				}
+			}
+			else = {
+				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = BEL_cockerill_industrial
+						add_idea = BEL_cockerill_industrial_improved
+					}
+				}
+			}
+
+			custom_effect_tooltip = BEL_cockerill_tt
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			custom_effect_tooltip = BEL_modify_economic_downturn_dynamic_modifier_tt
+			add_to_variable = { 
+				BEL_economic_downturn_industrial_capacity_factory = 0.05
+				tooltip = industrial_capacity_factory_tt				
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			country_event = {
+				id = ww_BEL_event_misc.3
+				hours = 0
+			}
+		}
+
+	}
+
+	focus = {
+		id = BEL_railway_expansion
+		icon = GFX_goal_generic_construct_infrastructure
+	
+		prerequisite = { focus = BEL_revive_coal_mining }
+
+		relative_position_id = BEL_revive_coal_mining
+
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+
+		x = 0
+		y = 1
+	
+		cost = 10
+
+		available = {
+		}
+	
+		completion_reward = {
+			add_tech_bonus = {
+				name = ITA_railway_innovations
+				ahead_reduction = 1.5
+				bonus = 0.5
+				uses = 1
+				category = train_tech
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = BEL_modify_social_partners_dynamic_modifier_tt
+			add_to_variable = { 
+				BEL_social_partners_production_speed_rail_way_factor  = 0.1
+				tooltip = production_speed_rail_way_factor_tt
+			}
+			add_to_variable = { 
+				BEL_social_partners_production_speed_supply_node_factor  = 0.1
+				tooltip = production_speed_supply_node_factor_tt
+			}
+
+		}
+
+	}
+
+	focus = {
+		id = BEL_corporate_social_responsibility
+		icon = GFX_goal_generic_intelligence_exchange
+	
+		prerequisite = { focus = BEL_40_hour_workweek }
+
+		relative_position_id = BEL_40_hour_workweek
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY }
+
+		x = 0
+		y = 1
+	
+		cost = 10
+
+		available = {
+		}
+	
+		completion_reward = {
+			add_stability = 0.10
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.1
+			}			
+
+			custom_effect_tooltip = BEL_modify_social_partners_dynamic_modifier_tt
+			add_to_variable = { 
+				BEL_social_partners_production_factory_efficiency_gain_factor  = 0.1
+				tooltip = production_factory_efficiency_gain_factor_tt
+			}
+		}
+
+	}
+
+	focus = {
+		id = BEL_val_benoit_institutes
+		icon = GFX_goal_generic_scientific_exchange
+	
+		prerequisite = { focus = BEL_corporate_social_responsibility }
+
+		relative_position_id = BEL_corporate_social_responsibility
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		x = 0
+		y = 1
+	
+		cost = 10
+
+		available = {
+		}
+	
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+	}
+
+	focus = {
+		id = BEL_stk
+		icon = GFX_focus_BEL_stk
+	
+		prerequisite = { focus = BEL_val_benoit_institutes }
+		prerequisite = { focus = BEL_engine_of_the_economy }
+		
+		relative_position_id = BEL_val_benoit_institutes
+
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+
+		x = 1
+		y = 1
+	
+		cost = 10
+
+		available = {
+		}
+	
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = { 
+						has_dynamic_modifier = { 
+							modifier = BEL_academies_of_belgium_dynamic_modifier
+						}
+					}
+				}
+				add_dynamic_modifier = { modifier = BEL_academies_of_belgium_dynamic_modifier }
+				add_to_variable = { 
+					BEL_academies_of_belgium_special_project_speed_factor = 0.05
+					tooltip = special_project_speed_factor_tt				
+				}	
+				add_to_variable = { 
+					BEL_academies_of_belgium_production_speed_facility_factor = 0.1
+					tooltip = production_speed_facility_factor_tt				
+				}	
+				else = {
+					custom_effect_tooltip = BEL_academies_of_belgium_dynamic_modifier_tt
+					add_to_variable = { 
+						BEL_academies_of_belgium_special_project_speed_factor = 0.05
+						tooltip = special_project_speed_factor_tt				
+					}	 
+					add_to_variable = { 
+						BEL_academies_of_belgium_production_speed_facility_factor = 0.1
+						tooltip = production_speed_facility_factor_tt				
+					}	
+				}		 
+			}
+
+			hidden_effect = {
+				IF = {
+					limit = {
+						has_country_flag = BEL_serious_waffle_flag
+					}
+
+					clr_country_flag = BEL_serious_waffle_flag
+					set_country_flag = BEL_wunder_waffle_flag
+				}
+			}
+		}
+
+	}
+
+	focus = {
+		id = BEL_embrace_export_economy
+		icon = GFX_goal_generic_positive_trade_relations
+	
+		prerequisite = { focus = BEL_railway_expansion }
+
+		relative_position_id = BEL_railway_expansion
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		x = 0
+		y = 1
+	
+		cost = 10
+
+		available = {
+		}
+	
+		completion_reward = {
+			if = {
+				limit = { 
+					has_idea = export_focus
+				}
+				add_ideas = free_trade
+				else = { 
+					add_political_power = 100
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = BEL_engine_of_the_economy
+		icon = GFX_focus_BEL_engine_of_the_economy
+	
+		prerequisite = { focus = BEL_40_hour_workweek }
+		prerequisite = { focus = BEL_cockerill }
+		prerequisite = { focus = BEL_railway_expansion}
+
+		relative_position_id = BEL_cockerill
+
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY }
+
+		x = 0
+		y = 2
+	
+		cost = 10
+
+		available = {
+		}
+	
+		completion_reward = {
+			hidden_effect = {
+				remove_dynamic_modifier = { modifier = BEL_social_partners_dynamic_modifier }
+				add_dynamic_modifier = { modifier = BEL_engine_of_the_economy_dynamic_modifier }
+			}
+
+			add_stability = 0.10
+
+			custom_effect_tooltip = BEL_remove_social_partners_dynamic_modifier_tt
+			add_to_variable = { 
+				BEL_social_partners_production_factory_max_efficiency_factor  = 0.1
+				tooltip = production_factory_max_efficiency_factor_tt
+			}
+		}
+
+	}
+
+	focus = {
+		id = BEL_belgian_miracle
+		icon = GFX_focus_BEL_belgian_miracle
+	
+		prerequisite = { focus = BEL_engine_of_the_economy }
+		prerequisite = { focus = CONGO_congo_free_state focus = CONGO_overseas_department_of_belgium focus = CONGO_dominion_of_congo }
+
+		relative_position_id = BEL_engine_of_the_economy
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		x = 0
+		y = 8
+	
+		cost = 10
+
+		available = {
+		}
+	
+		search_filters = {  
+		}
+	
+		completion_reward = {
+			hidden_effect = {
+				remove_dynamic_modifier = { modifier = BEL_engine_of_the_economy_dynamic_modifier }
+				add_dynamic_modifier = { modifier = BEL_belgian_miracle_dynamic_modifier }
+			}
+
+			custom_effect_tooltip = BEL_remove_engine_of_the_economy_dynamic_modifier_tt
+			add_to_variable = { 
+				BEL_social_partners_industrial_capacity_factory  = 0.2
+				tooltip = industrial_capacity_factory_tt
+			}	
+			add_to_variable = { 
+				BEL_social_partners_production_speed_buildings_factor  = 0.1
+				tooltip = production_speed_buildings_factor_tt
+			}	
+		}
+	}
+
+
+######################
+######################
+######## AIR #########
+######################
+######################
+
+	focus = {
+		id = BEL_belgian_air_force
+		icon = GFX_goal_generic_air_fighter
+		relative_position_id = BEL_monetary_reconstruction
+
+		search_filters = { FOCUS_FILTER_AIR_XP }
+	
+		x = 34
+		y = 0
+
+		cost = 5
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+	
+		completion_reward = {
+			air_experience = 50
+
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT }
+				prioritize = { 34 } 
+				
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = BEL_develop_belgian_air_industry
+		icon = GFX_focus_generic_aircraft_production
+	
+		prerequisite = { focus = BEL_belgian_air_force }
+
+		relative_position_id = BEL_belgian_air_force
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+
+		x = -4
+		y = 1
+	
+		cost = 10
+
+		available = {
+		}
+	
+		completion_reward = {
+			random_core_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+					is_owned_and_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = BEL_develop_belgian_air_industry
+				bonus = 0.5
+				uses = 2
+				category = air_equipment
+			}
+		}
+
+	}
+
+	focus = {
+		id = BEL_renard_constructions_aeronautiques
+		icon = GFX_focus_BEL_renard_constructions_aeronautiques
+	
+		prerequisite = { focus = BEL_develop_belgian_air_industry }
+
+		relative_position_id = BEL_develop_belgian_air_industry
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		x = -1
+		y = 1
+	
+		cost = 5
+
+		available = {
+		}
+	
+		completion_reward = {
+			custom_effect_tooltip = {
+				localization_key = available_scientist_one_line_tt
+				CHARACTER = BEL_alfred_renard
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			IF = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				mio:BEL_renard_organization = {
+					add_mio_size = 1
+					add_mio_funds_gain_factor = 0.1
+					add_mio_research_bonus = 0.05
+				}
+			}
+
+			ELSE_IF = {
+				limit = { NOT = { has_completed_focus = BEL_stampe_et_vertrongen }}
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = renard
+			}
+
+			ELSE = {
+				air_experience = 25
+			}
+			
+		}
+
+	}
+
+	focus = {
+		id = BEL_stampe_et_vertrongen
+		icon = GFX_focus_BEL_stampe_et_vertrongen
+	
+		prerequisite = { focus = BEL_develop_belgian_air_industry }
+
+		relative_position_id = BEL_develop_belgian_air_industry
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		x = 1
+		y = 1
+	
+		cost = 5
+
+		available = {
+		}
+	
+		completion_reward = {
+
+			IF = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				mio:BEL_renard_organization = {
+					add_mio_size = 1
+					add_mio_funds_gain_factor = 0.1
+					add_mio_research_bonus = 0.05
+				}
+			}
+
+			ELSE_IF = {
+				limit = { NOT = { has_completed_focus = BEL_renard_constructions_aeronautiques }}
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = renard
+			}
+
+			ELSE = {
+				air_experience = 25
+			}
+		}
+
+	}
+
+	focus = {
+		id = BEL_relocate_air_production
+		icon = GFX_goal_reichsautobahn
+	
+		prerequisite = { focus = BEL_renard_constructions_aeronautiques }
+		prerequisite = { focus = BEL_stampe_et_vertrongen }
+
+		relative_position_id = BEL_renard_constructions_aeronautiques
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		x = 1
+		y = 1
+	
+		cost = 5
+
+		available = {
+		}
+	
+		completion_reward = {
+			custom_effect_tooltip = BEL_relocate_air_production_tt
+		}
+
+	}
+
+	focus = {
+		id = BEL_pressurized_cabin_development
+		icon = GFX_goal_generic_air_fighter2
+	
+		prerequisite = { focus = BEL_renard_constructions_aeronautiques }
+		prerequisite = { focus = CONGO_aviation_militaire_de_la_force_publique }
+
+		relative_position_id = BEL_renard_constructions_aeronautiques
+
+		x = 0
+		y = 4
+
+		cost = 10
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+	
+		completion_reward = {
+			add_ideas = { BEL_pressurized_cabins_ns }
+		}
+
+	}
+
+	focus = {
+		id = BEL_foreign_plane_purchases
+		icon = GFX_focus_SMB_purchase_aircraft
+	
+		prerequisite = { focus = BEL_belgian_air_force }
+
+		relative_position_id = BEL_belgian_air_force
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_INTERNATIONAL_TRADE }
+
+		x = 2
+		y = 1
+	
+		cost = 5
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+	
+		completion_reward = {
+			IF = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				add_equipment_subsidy = {
+					cic = 1000
+					equipment_type = small_plane_airframe
+					seller_tags = { USA ENG FRA ITA GER SOV HOL POL } 
+				}
+				add_equipment_subsidy = {
+					cic = 1000
+					equipment_type = large_plane_airframe
+					seller_tags = { USA ENG FRA ITA GER SOV HOL POL } 
+				}
+				add_equipment_subsidy = {
+					cic = 1000
+					equipment_type = medium_plane_airframe
+					seller_tags = { USA ENG FRA ITA GER SOV HOL POL } 
+				}
+			}
+			else = {
+				add_ideas = BEL_license_air_idea
+			}
+		}
+
+	}
+
+	focus = {
+		id = BEL_aviation_school
+		icon = GFX_focus_FIN_expand_air_force_academy
+	
+		prerequisite = { focus = BEL_foreign_plane_purchases focus = BEL_develop_belgian_air_industry }
+
+		relative_position_id = BEL_foreign_plane_purchases
+
+		search_filters = { FOCUS_FILTER_AIR_XP FOCUS_FILTER_RESEARCH}
+
+		x = -2
+		y = 1
+	
+		cost = 5
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+	
+		completion_reward = {
+			air_experience = 50
+			add_doctrine_cost_reduction = {
+				name = BEL_aviation_school
+				cost_reduction = 0.25
+				uses = 2
+				category = air_doctrine
+			}
+		}
+
+	}
+
+	focus = {
+		id = BEL_polish_licences
+		icon = GFX_focus_BEL_polish_licences
+#		Maybe use GFX_focus_generic_copy_plane_designs
+	
+		prerequisite = { focus = BEL_foreign_plane_purchases }
+
+		relative_position_id = BEL_foreign_plane_purchases
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_INTERNATIONAL_TRADE }
+
+		x = 1
+		y = 1
+	
+		cost = 5
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+	
+		completion_reward = {
+			add_ideas = BEL_license_POL_air_idea
+		}
+
+	}
+
+	focus = {
+		id = BEL_early_helicopters
+		icon = GFX_focus_BEL_early_helicopters
+	
+		prerequisite = { focus = BEL_aviation_school }
+
+		relative_position_id = BEL_aviation_school
+
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+
+		x = -1
+		y = 1
+	
+		cost = 10
+
+		available = {
+		}
+	
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = { 
+						has_dynamic_modifier = { 
+							modifier = BEL_academies_of_belgium_dynamic_modifier
+						}
+					}
+				}
+				add_dynamic_modifier = { modifier = BEL_academies_of_belgium_dynamic_modifier }
+				add_to_variable = { 
+					BEL_academies_of_belgium_sp_tag_helicopter_speed_factor = 0.1
+					tooltip = sp_tag_helicopter_speed_factor_tt				
+				}	
+				add_to_variable = { 
+					BEL_academies_of_belgium_production_speed_air_facility_factor = 0.1
+					tooltip = production_speed_air_facility_factor_tt				
+				}	
+				else = {
+					custom_effect_tooltip = BEL_academies_of_belgium_dynamic_modifier_tt
+					add_to_variable = { 
+						BEL_academies_of_belgium_sp_tag_helicopter_speed_factor = 0.1
+						tooltip = sp_tag_helicopter_speed_factor_tt				
+					}	 
+					add_to_variable = { 
+						BEL_academies_of_belgium_production_speed_air_facility_factor = 0.1
+						tooltip = production_speed_air_facility_factor_tt				
+					}	
+				}		 
+			}
+		}
+
+	}
+
+	focus = {
+		id = BEL_air_doctrine
+		icon = GFX_goal_generic_air_doctrine
+	
+		prerequisite = { focus = BEL_aviation_school }
+
+		relative_position_id = BEL_aviation_school
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		x = 1
+		y = 1
+	
+		cost = 5
+
+		available = {
+		}
+	
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = BEL_air_doctrine
+				cost_reduction = 0.5
+				uses = 2
+				category = air_doctrine
+			}
+		}
+
+	}
+
+	focus = {
+		id = BEL_legacy_of_the_belgian_airforce
+		icon = GFX_focus_BEL_legacy_of_the_belgian_airforce
+	
+		prerequisite = { focus = BEL_aviation_school }
+
+		relative_position_id = BEL_aviation_school
+
+		x = 0
+		y = 2
+	
+		cost = 10
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+	
+		completion_reward = {
+			add_ideas = { BEL_legacy_of_the_belgian_airforce_ns }
+		}
+
+	}
+
+#######################
+#######################
+######## Navy #########
+#######################
+#######################
+
+	focus = {
+		id = BEL_re_establish_belgian_navy
+		icon = GFX_focus_BEL_re_establish_belgian_navy
+		relative_position_id = BEL_belgian_air_force
+
+		search_filters = { FOCUS_FILTER_NAVY_XP FOCUS_FILTER_INDUSTRY }
+	
+		x = 7
+		y = 0
+	
+		cost = 5
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+	
+		completion_reward = {
+			navy_experience = 25
+			6 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = BEL_re_establish_belgian_navy
+				bonus = 1
+				uses = 1 
+				category = dd_tech
+			}
+		}
+
+	}
+
+	focus = {
+		id = BEL_re_build_the_fleet
+		icon = GFX_goal_generic_build_navy
+	
+		prerequisite = { focus = BEL_re_establish_belgian_navy }
+
+		relative_position_id = BEL_re_establish_belgian_navy
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		x = 0
+		y = 1
+	
+		cost = 5
+
+		available = {
+		}
+	
+		completion_reward = {
+			6 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_ideas = { BEL_re_build_the_fleet_ns }
+		}
+
+	}
+
+	focus = {
+		id = BEL_allied_donations
+		icon = GFX_goal_generic_positive_trade_relations
+	
+		prerequisite = { focus = BEL_re_establish_belgian_navy }
+
+		relative_position_id = BEL_re_establish_belgian_navy
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		x = 2
+		y = 1
+	
+		cost = 5
+
+		available = {
+			is_in_faction = yes
+			has_war = yes
+		}
+
+		available_if_capitulated = yes
+	
+		completion_reward = {
+			add_offsite_building = { 
+				type = dockyard 
+				level = 2 
+			}
+		}
+
+	}
+
+	focus = {
+		id = BEL_port_of_antwerp
+		icon = GFX_focus_POL_develop_polish_shipbuilding
+	
+		prerequisite = { focus = BEL_re_build_the_fleet }
+
+		relative_position_id = BEL_re_build_the_fleet
+
+		x = 0
+		y = 1
+	
+		cost = 10
+
+		available = {
+			has_completed_focus = BEL_social_partners
+		}
+	
+		completion_reward = {
+			custom_effect_tooltip = BEL_modify_social_partners_dynamic_modifier_tt
+			add_to_variable = { 
+				BEL_social_partners_resource_trade_cost_bonus_per_factory = 1
+				tooltip = resource_trade_cost_bonus_per_factory_tt				
+			}
+		}
+
+	}
+
+	focus = {
+		id = BEL_corvette_fleet
+		icon = GFX_focus_generic_destroyer
+	
+		prerequisite = { focus = BEL_re_build_the_fleet }
+
+		relative_position_id = BEL_re_build_the_fleet
+
+		x = 4
+		y = 1
+	
+		cost = 5
+
+		available = {
+		}
+	
+		completion_reward = {
+
+			add_ideas = BEL_corvette_fleet_ns
+		}
+	}
+
+	focus = {
+		id = BEL_boelwerf
+		icon = GFX_focus_generic_refit_civilian_ships
+	
+		prerequisite = { focus = BEL_port_of_antwerp }
+
+		relative_position_id = BEL_port_of_antwerp
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		x = -2
+		y = 1
+	
+		cost = 5
+
+		available = {
+		}
+	
+		completion_reward = {
+			977 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			swap_ideas = {
+				add_idea = BEL_maritime_support_ns
+				remove_idea = BEL_re_build_the_fleet_ns	
+			}
+		}
+
+	}
+
+	focus = {
+		id = BEL_cockerill_shipyards
+		icon = GFX_focus_BEL_cockerill_shipyards
+	
+		prerequisite = { focus = BEL_port_of_antwerp }
+
+		relative_position_id = BEL_port_of_antwerp
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		x = 0
+		y = 1
+	
+		cost = 10
+
+		available = {
+		}
+	
+		completion_reward = {
+
+			IF = {
+				limit = { has_dlc = "Arms Against Tyranny"}
+
+				mio:BEL_cockerill_shipyards_organization = {
+					add_mio_size = 1
+					add_mio_funds_gain_factor = 0.2
+					add_mio_research_bonus = 0.05
+				}
+			}
+
+			ELSE = {
+				add_doctrine_cost_reduction = {
+					name = BEL_cockerill_shipyards
+					cost_reduction = 0.5
+					uses = 1
+					category = naval_doctrine # optional 
+					# tecnology  = technology_id # optional
+				}
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			977 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+
+	focus = {
+		id = BEL_antwerp_maritime_academy
+		icon = GFX_focus_BEL_antwerp_maritime_academy
+	
+		prerequisite = { focus = BEL_port_of_antwerp }
+
+		relative_position_id = BEL_port_of_antwerp
+
+		x = 2
+		y = 1
+	
+		cost = 10
+
+		available = {
+		}
+	
+		completion_reward = {
+			navy_experience = 25
+			add_doctrine_cost_reduction = {
+				name = BEL_antwerp_maritime_academy
+				cost_reduction = 0.5
+				uses = 2
+				category = naval_doctrine # optional 
+				# tecnology  = technology_id # optional
+			}
+		}
+
+	}	
+
+		focus = {
+		id = BEL_naval_doctrine
+		icon = GFX_goal_generic_navy_doctrines_tactics
+	
+		prerequisite = { focus = BEL_antwerp_maritime_academy }
+
+		relative_position_id = BEL_antwerp_maritime_academy
+
+		x = 0
+		y = 1
+	
+		cost = 5
+
+		available = {
+		}
+	
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = BEL_naval_doctrine
+				cost_reduction = 0.5
+				uses = 2
+				category = naval_doctrine # optional 
+				# tecnology  = technology_id # optional
+			}
+		}
+
+	}
+
+	focus = {
+		id = BEL_convoy_protection_duties
+		icon = GFX_goal_generic_navy_cruiser
+	
+		prerequisite = { focus = BEL_corvette_fleet }
+
+		relative_position_id = BEL_corvette_fleet
+
+		x = 0
+		y = 1
+	
+		cost = 10
+
+		available = {
+		}
+	
+		completion_reward = {
+			add_ideas = { BEL_convoy_protection_duties_ns }
+		}
+
+	}
+
+	focus = {
+		id = BEL_maritime_phoenix
+		icon = GFX_focus_BEL_maritime_phoenix
+	
+		prerequisite = { focus = BEL_boelwerf }
+		prerequisite = { focus = BEL_cockerill_shipyards }
+
+		relative_position_id = BEL_boelwerf
+
+		x = 1
+		y = 1
+	
+		cost = 10
+
+		available = {
+		}
+	
+		search_filters = {  
+		}
+	
+		completion_reward = {
+
+			swap_ideas = {
+				add_idea = BEL_maritime_phoenix_ns
+				remove_idea = BEL_maritime_support_ns	
+			}
+		}
+
+	}
+
+
+
+
+
+
+
+}	
+
+
+

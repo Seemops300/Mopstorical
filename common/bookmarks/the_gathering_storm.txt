@@ -931,7 +931,7 @@ bookmarks = {
 			}
 			focuses = {
 				BEL_v_for_victory
-				BEL_belgica
+				BEL_government_in_exile
 				BEL_legacy_of_the_great_war
 			}
 		}
@@ -948,7 +948,7 @@ bookmarks = {
 			}
 			focuses = {
 				BEL_v_for_victory
-				BEL_belgica
+				BEL_government_in_exile
 				BEL_legacy_of_the_great_war
 			}
 		}
