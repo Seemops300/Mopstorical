@@ -891,9 +891,9 @@ bookmarks = {
 				AUS_widespread_unemployment
 			}
 			focuses = {
-				AUS_legacy_of_the_empire
-				AUS_repeal_the_may_constitution
-				AUS_second_brothers_war
+				AUS_totalitarian_safety
+				AUS_follow_the_jansa_plan
+				AUS_clamp_down_on_dnsap
 			}
 		}
 		HUN = {
