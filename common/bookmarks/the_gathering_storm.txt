@@ -112,8 +112,8 @@ bookmarks = {
 			}
 			focuses = {
 				GER_fuhrerprinzip
-				GER_the_peoples_victory
-				GER_glory_to_the_imperial_army
+				GER_remilitarize_the_rhineland
+				GER_anschluss
 			}
 		}
 
@@ -129,8 +129,8 @@ bookmarks = {
 			}
 			focuses = {
 				GER_fuhrerprinzip
-				GER_revive_the_kaiserreich
-				GER_reestablish_free_elections
+				GER_remilitarize_the_rhineland
+				GER_anschluss
 			}
 		}
 
