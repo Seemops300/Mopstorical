@@ -806,9 +806,9 @@ bookmarks = {
 				SWE_severe_lack_of_ammunition
 			}
 			focuses = {
-				SWE_strike_the_capitalist_beast_down
-				SWE_prevent_a_red_dictatorship
-				SWE_king_in_council
+				SWE_continue_the_second_industrial_revolution
+				SWE_coalition_war_cabinet
+				SWE_totalforsvar
 			}
 		}
 		NOR = {

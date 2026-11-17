@@ -619,7 +619,7 @@ bookmarks = {
 			}
 			focuses = {
 				SWE_as_the_barometer_falls
-				SWE_the_old_enemy_stirs
+				SWE_continue_the_second_industrial_revolution
 				SWE_coalition_war_cabinet
 			}
 		}
