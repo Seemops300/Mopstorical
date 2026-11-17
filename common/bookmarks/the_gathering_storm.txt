@@ -893,7 +893,7 @@ bookmarks = {
 			focuses = {
 				AUS_totalitarian_safety
 				AUS_follow_the_jansa_plan
-				AUS_second_brothers_war
+				AUS_clamp_down_on_dnsap
 			}
 		}
 		HUN = {
