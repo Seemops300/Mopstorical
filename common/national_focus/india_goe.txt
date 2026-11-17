@@ -98,7 +98,7 @@ focus_tree = {
     focus = {
         id = RAJ_indianize_the_army
         icon = GFX_focus_RAJ_indianisation_of_army
-        x = 0
+        x = -2
         y = 0
         mutually_exclusive = { focus = RAJ_keep_british_generals }
         cost = 5
@@ -332,7 +332,7 @@ focus_tree = {
         icon = GFX_focus_RAJ_provincial_autonomy
         #prerequisite = { focus = }
         mutually_exclusive = { focus = RAJ_his_majestys_loyal_government }
-        x = -41
+        x = -39
         y = 0
         relative_position_id = RAJ_indianize_the_army 
 
@@ -626,7 +626,7 @@ focus_tree = {
         id = RAJ_trade_port
         icon = GFX_focus_POL_develop_polish_shipbuilding
         prerequisite = { focus = RAJ_provincial_autonomy }
-        x = -51
+        x = -49
         y = 1
         relative_position_id = RAJ_indianize_the_army 
 
