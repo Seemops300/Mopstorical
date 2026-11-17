@@ -199,8 +199,8 @@ bookmarks = {
 			}
 			focuses = {
 				SAF_secure_interests_in_africa
-				SAF_support_the_german_coup
-				SAF_anti_colonialist_crusade
+				SAF_war_measures_act
+				SAF_joint_air_training_scheme
 			}
 		}
 
