@@ -439,7 +439,7 @@ bookmarks = {
 			}
 			focuses = {
 				SPA_expand_the_axis_gold_trade
-				SPA_the_spanish_miracle
+				SPA_dictator_for_life
 				SPA_la_division_azul
 			}
 		}
