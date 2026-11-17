@@ -79,8 +79,8 @@ bookmarks = {
 			}
 			focuses = {
 				ENG_imperial_federation
-				ENG_the_kings_party
-				ENG_organize_the_blackshirts
+				ENG_steady_as_she_goes
+				ENG_home_defence
 			}
 		}
 		"ENG"={
