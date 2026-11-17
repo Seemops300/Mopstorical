@@ -46,7 +46,7 @@ focus_tree = {
 		}
 		
 		icon = GFX_focus_generic_cryptologic_bomb
-		x = 0
+		x = 23
 		y = 0
 		cost = 10
 		ai_will_do = {
@@ -188,7 +188,7 @@ focus_tree = {
 	focus = {
 		id = limited_rearmament_focus
 		icon = GFX_goal_generic_build_tank
-		x = 5
+		x = 28
 		y = 0
 		cost = 10
 		ai_will_do = {
@@ -2084,7 +2084,7 @@ focus_tree = {
 		}
 
 		icon = GFX_goal_generic_national_unity
-		x = 29
+		x = 52
 		y = 0
 		offset = {
 			x = -2
@@ -5538,7 +5538,7 @@ focus_tree = {
 			}
 		}
 
-		x = 48
+		x = 66
 		y = 0
 
 		offset = {
