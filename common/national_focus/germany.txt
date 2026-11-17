@@ -8244,248 +8244,16 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = GER_heed_von_neuraths_concerns #Von Neurath
-		icon = GFX_focus_GER_heed_von_neuraths_concerns
-		prerequisite = { focus = GER_remilitarize_the_rhineland }
-		mutually_exclusive = { focus = GER_reorganize_the_wehrmacht }
-		x = -10
-		y = 1
-		relative_position_id = GER_remilitarize_the_rhineland
-		cost = 5
-		available = {
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
-
-		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.05
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = konstantin_von_neurath
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			custom_effect_tooltip = {
-				localization_key = remove_character_as_tt
-				CHARACTER = GER_joachim_von_ribbentrop
-				ROLE = political_advisor
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			if = {
-				limit = {
-					has_country_leader_with_trait = GER_der_fuhrer
-				}
-				random_character = {
-					limit = {
-						is_country_leader = yes
-					}
-					swap_country_leader_traits = {
-						remove = GER_der_fuhrer
-						add = GER_der_fuhrer_neurath
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					has_country_leader_with_trait = GER_der_fuhrer_fuhrerprinzip
-				}
-				random_character = {
-					limit = {
-						is_country_leader = yes
-					}
-					swap_country_leader_traits = {
-						remove = GER_der_fuhrer_fuhrerprinzip
-						add = GER_der_fuhrer_fuhrerprinzip_neurath
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					has_completed_focus = GER_fuhrerprinzip
-				}
-				add_country_leader_trait = GER_der_fuhrer_fuhrerprinzip_neurath
-			}
-			else = {
-				add_country_leader_trait = GER_der_fuhrer_neurath
-			}
-		}
-	}
-
-	focus = {
-		id = GER_war_preparations
-		icon = GFX_goal_generic_axis_build_infantry
-		#icon = GFX_goal_generic_military_sphere
-		#icon = GFX_goal_generic_small_arms
-		
-		prerequisite = { focus = GER_heed_von_neuraths_concerns }
-		x = 0
-		y = 1
-		relative_position_id = GER_heed_von_neuraths_concerns
-		cost = 5
-		available = {
-			has_war = no
-		}
-
-		search_filters = {}
-
-		completion_reward = {
-			custom_effect_tooltip = GER_war_preparations_tt
-			effect_tooltip = {
-				add_timed_idea = {
-					idea = GER_strengthened_supply_lines_ns
-					days = 730
-				}
-			}
-		}
-	}
-	
-	focus = {
-		id = GER_prepare_for_the_next_blockade_ww
-		icon = GFX_goal_generic_navy_cruiser
-		prerequisite = { focus = GER_war_preparations }
-
-		x = 0
-		y = 2
-		relative_position_id = GER_war_preparations
-		cost = 10
-		available = {
-			is_subject = no
-			has_war = no
-		}
-
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_WAR_SUPPORT }
-
-		completion_reward = {
-			add_war_support = 0.05
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			add_timed_idea = {
-				idea = GER_prepare_for_the_next_blockade_got
-				days = 545
-			}
-			
-			custom_effect_tooltip = generic_skip_one_line_tt
-			
-			add_equipment_to_stockpile = { 
-				type = convoy_1
-				amount = 50
-				producer = ROOT
-			}			
-			add_equipment_to_stockpile = {
-				type = train_equipment
-				amount = 25
-			}
-		}
-	}
-
-	focus = {
-		id = GER_reorganize_secret_services
-		icon = GFX_focus_generic_secret_service_agency
-		prerequisite = { focus = GER_war_preparations }
-		x = -1
-		y = 1
-		relative_position_id = GER_war_preparations
-		cost = 10
-
-		allow_branch = {
-			has_dlc = "La Resistance"
-		}
-
-		available = {
-		}
-
-		search_filters = {}
-
-		completion_reward = {
-			custom_effect_tooltip = generic_remove_as_political_advisor_tt
-			show_ideas_tooltip = GER_wilhelm_canaris
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			GER_add_or_modify_military_intelligence_service = yes
-			add_to_variable = { 
-				GER_military_intelligence_service_operative_slot = 1
-				tooltip = operative_slot_tt
-			}
-			add_to_variable = { 
-				GER_military_intelligence_service_agency_upgrade_time = -0.2
-				tooltip = agency_upgrade_time_tt
-			}
-
-			if = {
-				limit = {
-					has_dlc = "La Resistance"
-				}
-				GER_create_operative_hans_haupt = yes
-			}
-		}
-	}
-
-	focus = {
-		id = GER_subversive_infiltrators
-		icon = GFX_focus_ARG_keep_it_in_the_party
-		prerequisite = { focus = GER_reorganize_secret_services }
-
-		x = 0
-		y = 2
-		relative_position_id = GER_reorganize_secret_services
-		cost = 5
-		available = {
-		}
-
-		search_filters = {}
-
-		completion_reward = {
-			custom_effect_tooltip = GER_modify_military_intelligence_service_modifier_tt
-			add_to_variable = { 
-				GER_military_intelligence_service_operative_slot = 1
-				tooltip = operative_slot_tt
-			}
-			add_to_variable = { 
-				GER_military_intelligence_service_boost_ideology_mission_factor = 0.25
-				tooltip = boost_ideology_mission_factor_tt
-			}
-			add_to_variable = { 
-				GER_military_intelligence_service_master_ideology_drift = 0.15
-				tooltip = master_ideology_drift_tt
-			}
-
-			if = {
-				limit = {
-					has_dlc = "La Resistance"
-				}
-				GER_create_operative_otto_von_bolschwing = yes
-
-				if = {
-					limit = {
-						controls_state = 16 #PARIS
-					}
-					GER_create_operative_coco_chanel = yes
-				}
-				else = {
-					set_country_flag = GER_coco_chanel_ready_to_join_as_operative_flag
-				}
-			}
-		}
-	}
-
-	focus = {
 		id = GER_anschluss
 
 		icon = GFX_focus_GER_anschluss
 		alternate_icon = GFX_focus_GER_anschluss_historical
 
-		prerequisite = { focus = GER_reorganize_the_wehrmacht focus = GER_heed_von_neuraths_concerns }
+		prerequisite = { focus = GER_reorganize_the_wehrmacht }
 
-		x = 7
-		y = 1
-		relative_position_id = GER_heed_von_neuraths_concerns
+		x = -3
+		y = 2
+		relative_position_id = GER_remilitarize_the_rhineland
 		cost = 10
 
 		ai_will_do = {
@@ -9205,11 +8973,11 @@ focus_tree = {
 		id = GER_uplift_the_rosenberg_office
 		icon = GFX_focus_ger_reichskommisariats
 		alternate_icon = GFX_focus_ger_reichskommisariats_historical
-		prerequisite = { focus = GER_heed_von_neuraths_concerns focus = GER_reorganize_the_wehrmacht }
+		prerequisite = { focus = GER_reorganize_the_wehrmacht }
 
-		x = 17
-		y = 1
-		relative_position_id = GER_heed_von_neuraths_concerns
+		x = 7
+		y = 2
+		relative_position_id = GER_remilitarize_the_rhineland
 		cost = 5
 		available = {
 			has_government = fascism
@@ -10593,9 +10361,9 @@ focus_tree = {
 		alternate_icon = GFX_focus_GER_befriend_italy
 
 		prerequisite = { focus = GER_fate_of_czechoslovakia }
-		x = 3
-		y = 7
-		relative_position_id = GER_war_preparations
+		x = -7
+		y = 9
+		relative_position_id = GER_remilitarize_the_rhineland
 		cost = 5
 
 		bypass = {
@@ -13141,10 +12909,9 @@ focus_tree = {
 		alternate_icon = GFX_focus_GER_reorganize_the_wehrmacht_historical
 
 		prerequisite = { focus = GER_remilitarize_the_rhineland }
-		mutually_exclusive = { focus = GER_heed_von_neuraths_concerns }
-		x = 20
-		y = 0
-		relative_position_id = GER_heed_von_neuraths_concerns
+		x = 10
+		y = 1
+		relative_position_id = GER_remilitarize_the_rhineland
 		cost = 5
 		available = {
 		}
