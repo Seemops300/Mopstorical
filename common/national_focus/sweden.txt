@@ -30,7 +30,7 @@ focus_tree = {
 	focus = {
 		id = SWE_defense_act
 		icon = GFX_focus_SWE_defense_act
-		x = 3
+		x = 15
 		y = 0
 
 		cost = 5
@@ -316,7 +316,7 @@ focus_tree = {
 	focus = {
 		id = SWE_government_weapons_contract
 		icon = GFX_goal_generic_military_deal 
-		x = -17
+		x = -16
 		y = 1
 
 		cost = 5
@@ -1674,7 +1674,7 @@ focus_tree = {
 	focus = {
 		id = SWE_gotaverken
 		icon = GFX_goal_generic_construct_naval_dockyard 
-		x = -17
+		x = -16
 		y = 1
 
 		cost = 10
