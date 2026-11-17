@@ -30,7 +30,7 @@ focus_tree = {
 	shared_focus = HABSBURG_part_of_something_bigger
 
 	initial_show_position = {
-		x = 38
+		x = 36
 		y = 0
 	}
 
@@ -66,7 +66,7 @@ focus_tree = {
 	focus = { # HISTORICAL
 		id = AUS_totalitarian_safety
 		icon = GFX_focus_AUS_totalitarian_safety
-		x = 33
+		x = 31
 		y = 0
 
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
