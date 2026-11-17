@@ -302,38 +302,6 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = HOL_pre_empt_venezuelan_aggression
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = HOL_pre_empt_venezuelan_aggression_tt
-				NOT = {
-					OR = {
-						has_idea = HOL_shell_shocked_spectator_1
-						has_idea = HOL_shell_shocked_spectator_2
-						has_idea = HOL_shell_shocked_spectator_3
-						has_idea = HOL_shell_shocked_spectator_4
-						has_idea = HOL_shell_shocked_spectator_5
-					}
-				}
-			}
-			NOT = { has_idea = HOL_aloof_neutrality }
-			has_global_flag = ven_claims_abc_islands
-		}
-		prerequisite = { focus = HOL_antilles_defenses }
-		icon = GFX_goal_demand_sudetenland
-		x = -1
-		y = 1
-		relative_position_id = HOL_antilles_defenses
-		cost = 10
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			
-		}
-	}
-
 ###  ##   ## ###     ### #  # ###  ### ###  ## 
 #   #  # #    #       #  ## # #  #  #  #   #   
 ##  ####  #   #       #  # ## #  #  #  ##   #  
@@ -1639,38 +1607,6 @@ focus_tree = {
 	}
 
 	focus = {
-		id = HOL_pre_empt_venezuelan_aggression_taog
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = HOL_pre_empt_venezuelan_aggression_tt
-				NOT = {
-					OR = {
-						has_idea = HOL_shell_shocked_spectator_1
-						has_idea = HOL_shell_shocked_spectator_2
-						has_idea = HOL_shell_shocked_spectator_3
-						has_idea = HOL_shell_shocked_spectator_4
-						has_idea = HOL_shell_shocked_spectator_5
-					}
-				}
-			}
-			NOT = { has_idea = HOL_aloof_neutrality }
-			has_global_flag = ven_claims_abc_islands
-		}
-		prerequisite = { focus = HOL_expand_curacao_oil_refineries_taog }
-		icon = GFX_goal_demand_sudetenland
-		x = 1
-		y = 1
-		relative_position_id = HOL_expand_curacao_oil_refineries_taog
-		cost = 5
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
 		id = HOL_continue_the_war_in_batavia_taog
 		available = {
 			has_capitulated = yes
@@ -2958,35 +2894,6 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = HOL_the_ultimate_deterrent
-		prerequisite = { focus = HOL_domestic_innovation }
-		icon = GFX_focus_wonderweapons
-		x = 1
-		y = 1
-		relative_position_id = HOL_domestic_innovation
-		cost = 10
-
-		available_if_capitulated = yes
-		search_filters = {FOCUS_FILTER_RESEARCH}
-		completion_reward = {
-			
-
-			add_breakthrough_progress = {
-				specialization = specialization_nuclear
-				value = 0.5
-			}
-
-			add_tech_bonus = {
-				name = HOL_the_ultimate_deterrent
-				bonus = 0.8 # was 1
-				uses = 1
-				category = nuclear
-			}
-
-		}
-	}
-
 #   # ### #   ### ###  ##  ###  #   #     ### ###  ### ### 
 ## ##  #  #    #   #  #  # #  #  # #       #  #  # #   #   
 # # #  #  #    #   #  #### ###    #        #  ###  ##  ##  
@@ -3093,226 +3000,6 @@ focus_tree = {
 	}
 
 	focus = {
-		id = HOL_protect_against_britain
-		available = {
-			threat > 0.1
-			has_full_control_of_state = 7
-			has_full_control_of_state = 36
-		}
-		bypass = {
-			OR = {
-				is_in_faction_with = ENG
-				AND = {
-					has_defensive_war_with = ENG
-					NOT = {
-						focus_progress = {
-							focus = HOL_germany_is_the_greater_threat
-							progress > 0
-						}
-					}
-				}
-			}
-		}
-		prerequisite = { focus = HOL_prepare_the_inundation_lines }
-		mutually_exclusive = { focus = HOL_germany_is_the_greater_threat }
-		icon = GFX_focus_attack_britain
-		x = -1
-		y = 1
-		relative_position_id = HOL_prepare_the_inundation_lines
-		cost = 5
-		
-		ai_will_do = {
-			base = 1
-
-			modifier = {
-				factor = 0 #on taog's AI, on historical, dont do this?
-
-				has_dlc = "Thunder at Our Gates"
-				has_game_rule = {
-					rule = HOL_ai_behavior 
-					option = DEFAULT
-				}
-				is_historical_focus_on = yes
-
-
-			}
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			
-			7 = {
-				add_building_construction = {
-					type = coastal_bunker
-					level = 1
-					province = 3314
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = bunker
-					level = 1
-					province = 3314
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = coastal_bunker
-					level = 1
-					province = 9498
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = bunker
-					level = 1
-					province = 9498
-					instant_build = yes
-				}
-			}
-			36 = {	
-				add_building_construction = {
-					type = coastal_bunker
-					level = 1
-					province = 6336
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = bunker
-					level = 1
-					province = 6336
-					instant_build = yes
-				}
-			}
-			ENG = {
-				add_opinion_modifier = { target = HOL modifier = HOL_protect_against_britain }
-			}	
-		}
-	}
-
-	focus = {
-		id = HOL_further_reinforce_the_ports
-		available = {
-			threat > 0.15
-			has_full_control_of_state = 7
-			has_full_control_of_state = 36
-		}
-		prerequisite = { focus = HOL_protect_against_britain }
-		icon = GFX_focus_generic_coastal_fort
-		x = 0
-		y = 1
-		relative_position_id = HOL_protect_against_britain
-		cost = 5
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			
-			7 = {
-				add_building_construction = {
-					type = coastal_bunker
-					level = 1
-					province = 3314
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = bunker
-					level = 1
-					province = 3314
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = coastal_bunker
-					level = 1
-					province = 9498
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = bunker
-					level = 1
-					province = 9498
-					instant_build = yes
-				}
-			}
-			36 = {	
-				add_building_construction = {
-					type = coastal_bunker
-					level = 1
-					province = 6336
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = bunker
-					level = 1
-					province = 6336
-					instant_build = yes
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = HOL_southward_defenses
-		available = {
-			threat > 0.2
-			has_full_control_of_state = 7
-			has_full_control_of_state = 35
-			has_full_control_of_state = 36
-		}
-		prerequisite = { focus = HOL_further_reinforce_the_ports }
-		icon = GFX_goal_generic_construct_military
-		x = 0
-		y = 1
-		relative_position_id = HOL_further_reinforce_the_ports
-		cost = 5
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			
-			7 = {
-				add_building_construction = {
-					type = bunker
-					level = 2
-					province = 9498
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = coastal_bunker
-					level = 1
-					province = 3314
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = coastal_bunker
-					level = 1
-					province = 9498
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = anti_air_building
-					level = 2
-					instant_build = yes
-				}
-			}
-			35 = {
-				add_building_construction = {
-					type = bunker
-					level = 3
-					province = 11456
-					instant_build = yes
-				}
-			}
-			36 = {	
-				add_building_construction = {
-					type = coastal_bunker
-					level = 1
-					province = 6336
-					instant_build = yes
-				}
-			}
-		}
-	}
-
-	focus = {
 		id = HOL_germany_is_the_greater_threat
 		available = {
 			threat > 0.1
@@ -3326,16 +3013,12 @@ focus_tree = {
 				AND = {
 					has_defensive_war_with = GER
 					NOT = {
-						focus_progress = {
-							focus = HOL_protect_against_britain
-							progress > 0
-						}
+						always = no
 					}
 				}
 			}
 		}
 		prerequisite = { focus = HOL_prepare_the_inundation_lines }
-		mutually_exclusive = { focus = HOL_protect_against_britain }
 		icon = GFX_focus_attack_germany
 		x = 1
 		y = 1
@@ -3479,11 +3162,11 @@ focus_tree = {
 		available = {
 			threat > 0.15
 		}
-		prerequisite = { focus = HOL_protect_against_britain focus = HOL_germany_is_the_greater_threat }
+		prerequisite = { focus = HOL_germany_is_the_greater_threat }
 		icon = GFX_focus_hol_war_on_pacifism
-		x = 1
-		y = 3
-		relative_position_id = HOL_protect_against_britain
+		x = 0
+		y = 4
+		relative_position_id = HOL_prepare_the_inundation_lines
 		cost = 10
 
 		cancel_if_invalid = no
@@ -4894,14 +4577,10 @@ focus_tree = {
 		bypass = {
 			is_in_faction_with = ENG
 			NOT = {
-				focus_progress = {
-					focus = HOL_lead_the_minor_democracies
-					progress > 0
-				}
+				always = no
 			}
 		}
 		prerequisite = { focus = HOL_unity_through_democracy }
-		mutually_exclusive = { focus = HOL_lead_the_minor_democracies }
 		icon = GFX_focus_chi_british_cooperation
 		x = 5
 		y = 3
@@ -5341,257 +5020,5 @@ focus_tree = {
 #   ##  #### #  #      #  #### ##      # # #  #  # ## #  # ###      #  # ##  # # # #  # #    ###  #### #     #  ##   #  
 #   #   #  # #  #      #  #  # #       #   #  #  #  # #  # #  #     #  # #   #   # #  # #  # #  # #  # #  #  #  #     # 
 ### ### #  # ###       #  #  # ###     #   # ### #  #  ##  #  #     ###  ### #   #  ##   ##  #  # #  #  ##  ### ### ##  
-
-	focus = {
-		id = HOL_lead_the_minor_democracies
-		available = {
-			has_war = no
-			is_in_faction = no
-			is_subject = no
-		}
-		prerequisite = { focus = HOL_unity_through_democracy }
-		mutually_exclusive = { focus = HOL_go_with_britain }
-		icon = GFX_goal_generic_demand_territory
-		x = 2
-		y = 1
-		relative_position_id = HOL_unity_through_democracy
-		cost = 10
-
-		available_if_capitulated = yes
-		search_filters = {FOCUS_FILTER_POLITICAL}
-
-		ai_will_do = {
-			base = 0
-			modifier = {
-				add = 100
-				HOL_check_plan_lead_the_minor_democracies = yes
-			}
-		}
-
-		completion_reward = {
-			
-			add_political_power = 120
-			custom_effect_tooltip = generic_skip_one_line_tt
-			remove_ideas = HOL_aloof_neutrality
-			custom_effect_tooltip = generic_skip_one_line_tt
-			every_other_country = {
-				limit = {
-					capital_scope = {
-						is_on_continent = europe
-					}
-					is_major = no
-					has_government = democratic
-				}
-				add_opinion_modifier = { target = HOL modifier = HOL_lead_the_minor_democracies }
-				add_timed_idea = { idea = HOL_lead_the_minor_democracies days = 1095 }
-			}
-		}
-	}
-
-	focus = {
-		id = HOL_form_the_benelux
-		available = {
-			is_in_faction = no
-			is_subject = no
-			BEL = { is_in_faction = no }
-			LUX = { is_in_faction = no }
-		}
-		bypass = {
-			BEL = { exists = no }
-			LUX = { exists = no }
-		}
-		prerequisite = { focus = HOL_lead_the_minor_democracies }
-		icon = GFX_goal_generic_position_armies
-		x = -1
-		y = 1
-		relative_position_id = HOL_lead_the_minor_democracies
-		cost = 10
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			
-
-			set_rule = { can_create_factions = yes }
-			create_faction_from_template = {
-				template = faction_template_defensive_democratic
-				name = HOL_benelux
-				icon = GFX_faction_logo_generic_13
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-			BEL = {
-				custom_effect_tooltip = HOL_form_the_benelux_bel_tt
-			}
-			LUX = {
-				custom_effect_tooltip = HOL_form_the_benelux_lux_tt
-			}
-			hidden_effect = {
-				BEL = { country_event = { id = generic.5 hours = 6 } }
-				LUX = { country_event = { id = generic.5 hours = 6 } }
-			}
-			hidden_effect = { news_event = { id = mtg_news.53 days = 1 } }
-			if = {
-				limit = {
-					has_idea = HOL_weak_government
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-				remove_ideas = HOL_weak_government
-			}
-			custom_effect_tooltip = generic_skip_one_line_tt
-			unlock_decision_tooltip = HOL_propose_benelux_unification
-		}
-	}
-
-	focus = {
-		id = HOL_responsibility_for_our_own_defense
-		prerequisite = { focus = HOL_lead_the_minor_democracies }
-		icon = GFX_goal_generic_build_tank
-		x = 1
-		y = 1
-		relative_position_id = HOL_lead_the_minor_democracies
-		cost = 10
-
-		available_if_capitulated = yes
-		search_filters = {FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY}
-		completion_reward = {
-			
-			add_war_support = 0.05
-			custom_effect_tooltip = generic_skip_one_line_tt
-			add_ideas = HOL_responsibility_for_our_own_defense
-		}
-	}
-
-	focus = {
-		id = HOL_lessons_from_the_low_countries
-		prerequisite = { focus = HOL_form_the_benelux }
-		prerequisite = { focus = HOL_responsibility_for_our_own_defense }
-		icon = GFX_goal_generic_construct_military
-		x = 1
-		y = 1
-		relative_position_id = HOL_form_the_benelux
-		cost = 10
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			
-			add_ideas = HOL_lessons_from_the_low_countries
-		}
-	}
-
-	focus = {
-		id = HOL_foundations_for_a_european_union
-		available = {
-			is_faction_leader = yes
-		}
-		prerequisite = { focus = HOL_lessons_from_the_low_countries }
-		icon = GFX_focus_generic_the_council_of_europe
-		x = 0
-		y = 1
-		relative_position_id = HOL_lessons_from_the_low_countries
-		cost = 10
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			
-			IF = {
-				limit = {
-					is_faction_leader = yes
-				}
-				set_faction_name = BEL_european_union
-			}
-
-			ELSE_IF = {
-				limit = {
-					is_in_faction = yes
-					is_faction_leader = no
-				}
-
-				leave_faction = yes
-
-				custom_effect_tooltip = generic_skip_one_line_tt
-
-				create_faction_from_template = {
-					template = faction_template_european_unity
-					name = BEL_european_union
-					icon = GFX_faction_logo_eu
-				}
-			}
-
-			ELSE = {
-				create_faction_from_template = {
-					template = faction_template_european_unity
-					name = BEL_european_union
-					icon = GFX_faction_logo_eu
-				}
-			}
-
-			set_cosmetic_tag = european_union_leader
-			custom_effect_tooltip = generic_skip_one_line_tt
-			custom_effect_tooltip = BEL_the_council_of_europe_tt
-			custom_effect_tooltip = generic_skip_one_line_tt
-			custom_effect_tooltip = BEL_european_community_tt
-			
-			hidden_effect = { news_event = { id = mtg_news.54 days = 1 } }
-		}
-	}
-
-	focus = {
-		id = HOL_the_continents_best_and_brightest
-		prerequisite = { focus = HOL_foundations_for_a_european_union }
-		icon = GFX_goal_tfv_generic_tech_sharing
-		x = -1
-		y = 1
-		relative_position_id = HOL_foundations_for_a_european_union
-		cost = 10
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			
-			add_to_tech_sharing_group = HOL_europe_research
-			every_country = {
-				limit = {
-					is_in_faction_with = ROOT
-				}
-				add_to_tech_sharing_group = HOL_europe_research
-			}
-		}
-	}
-
-	focus = {
-		id = HOL_the_best_defense
-		available = {
-			NOT = { is_in_faction_with = GER }
-			NOT = { is_in_faction_with = ENG }
-		}
-		prerequisite = { focus = HOL_foundations_for_a_european_union }
-		will_lead_to_war_with = GER
-		will_lead_to_war_with = ENG
-		icon = GFX_goal_generic_major_war
-		x = 1
-		y = 1
-		relative_position_id = HOL_foundations_for_a_european_union
-		cost = 10
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			
-			create_wargoal = {
-			    type = puppet_wargoal_focus
-			    target = GER
-			    expire = 0
-			}
-			create_wargoal = {
-			    type = puppet_wargoal_focus
-			    target = ENG
-			    expire = 0
-			}
-		}
-	}
-
 
 }
