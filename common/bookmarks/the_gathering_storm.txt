@@ -746,7 +746,7 @@ bookmarks = {
 			focuses = {
 				POL_complete_april_constitution
 				POL_clamp_down_on_danzig
-				POL_the_between_the_seas_concept
+				POL_the_four_year_plan
 			}
 		}
 		SWI = {

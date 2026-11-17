@@ -569,9 +569,9 @@ bookmarks = {
 				deterrence
 			}
 			focuses = {
-				POL_the_baltic_alliance
-				POL_draw_closer_to_britain
-				POL_seek_accommodation_with_germany
+				POL_complete_april_constitution
+				POL_align_with_the_west
+				POL_join_allies
 			}
 		}
 		"SWI"={
