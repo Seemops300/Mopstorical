@@ -579,8 +579,8 @@ bookmarks = {
 			}
 			focuses = {
 				MEX_focus_aztec_eagles
-				MEX_focus_hispanic_alliance
-				MEX_focus_smash_the_bureaucrats
+				MEX_focus_support_spains_loyalists
+				MEX_focus_compensation
 			}
 		}
 
