@@ -3680,7 +3680,7 @@ focus_tree = {
 		icon = GFX_focus_CHI_promote_national_currency
 		#prerequisite = { focus = }
 	
-		x = 51
+		x = 37
 		y = 0
 		relative_position_id = CHI_dang_guo
 		offset = {
