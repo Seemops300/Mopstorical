@@ -146,7 +146,7 @@ bookmarks = {
 			}	
 			focuses = {
 				ITA_comandante_diavolo
-				ITA_il_sol_dell_avvenire
+				ITA_culto_del_duce
 				ITA_a_colonial_empire
 			}		
 		}
