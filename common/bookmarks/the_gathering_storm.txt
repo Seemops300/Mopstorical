@@ -613,8 +613,8 @@ bookmarks = {
 			}
 			focuses = {
 				SPA_caudillo_of_spain
-				SPA_no_compromise_on_carlist_ideals
-				SPR_anarchism_knows_no_borders
+				SPA_dictator_for_life
+				SPR_maintain_the_second_republic
 			}
 		}
 
