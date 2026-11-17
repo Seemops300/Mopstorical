@@ -67,9 +67,9 @@ bookmarks = {
 				GER_wehrwirtschaft_fake_ns
 			}
 			focuses = {
-				GER_shatter_usas_hegemony
+				GER_war_with_france
 				GER_war_with_the_ussr
-				GER_mittelafrika
+				GER_operation_sea_lion
 			}
 		}
 		ITA = {
