@@ -2006,7 +2006,7 @@ focus_tree = {
 		id = POL_complete_april_constitution
 		icon = GFX_focus_POL_complete_april_constitution
 		
-		x = 49
+		x = 45
 		y = 0
 		cost = 10
 
@@ -2548,7 +2548,7 @@ focus_tree = {
 		id = POL_plan_west
 		icon = GFX_focus_POL_plan_west
 		prerequisite = { focus = POL_prepare_for_the_next_war }
-		x = -14
+		x = -10
 		y = 1
 		relative_position_id = POL_complete_april_constitution
 		cost = 10
@@ -3117,7 +3117,7 @@ focus_tree = {
 		id = POL_plan_east
 		icon = GFX_focus_POL_plan_east
 		prerequisite = { focus = POL_prepare_for_the_next_war }
-		x = -16
+		x = -12
 		y = 1
 		relative_position_id = POL_complete_april_constitution
 		cost = 10
@@ -4148,7 +4148,7 @@ focus_tree = {
 			}
 		}
 		allow_branch = { has_dlc = "Man the Guns" }
-		x = 106
+		x = 56
 		y = 0
 		offset = {
 			x = 2
