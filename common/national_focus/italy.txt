@@ -8102,7 +8102,7 @@ focus_tree = {
 		id = ITA_the_abyssinian_fiasco
 		icon = GFX_focus_generic_anti_fascist_diplomacy
 		mutually_exclusive = { focus = ITA_solid_progress focus = ITA_struggle_in_ethiopia }
-		x = 29
+		x = 15
 		y = 0
 		relative_position_id = ITA_naval_power_projection
 		cost = 5
@@ -10430,7 +10430,7 @@ focus_tree = {
 			}
 		}
 
-		x = 50
+		x = 21
 		y = 1
 		offset = {
 			x = -29
@@ -10630,7 +10630,7 @@ focus_tree = {
 		icon = GFX_goal_generic_more_territorial_claims
 		prerequisite = { focus = ITA_potential_allies_in_the_balkans focus = ITA_balkan_ambition }
 
-		x = -12
+		x = -10
 		y = 1
 		relative_position_id = ITA_potential_allies_in_the_balkans
 		cost = 5
@@ -11410,7 +11410,7 @@ focus_tree = {
 		icon = GFX_goal_generic_military_deal
 		prerequisite = { focus = ITA_foreign_affairs }
 
-		x = 4
+		x = 3
 		y = 1
 		relative_position_id = ITA_foreign_affairs
 		cost = 5
@@ -13152,7 +13152,7 @@ focus_tree = {
 		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
 		prerequisite = { focus = ITA_the_abyssinian_fiasco }
 
-		x = -19
+		x = -6
 		y = 1
 		relative_position_id = ITA_the_abyssinian_fiasco
 		cost = 5
