@@ -2067,46 +2067,12 @@ focus_tree = {
     }
 
     focus = {
-        id = RAJ_india_united
-        icon = GFX_focus_RAJ_seek_allies_with_the_muslim_league
-        prerequisite = { focus = RAJ_a_congress_resurgent }
-        x = 3
-        y = 1
-        relative_position_id = RAJ_a_congress_resurgent
-        mutually_exclusive = { focus = RAJ_two_nation_theory_dlc }
-        cost = 10
-
-        ai_will_do = {
-            factor = 1
-        }
-
-        available = {
-             compare_autonomy_state > autonomy_colony
-        }
-        
-        bypass = {
-
-        }
-
-        cancel_if_invalid = yes
-        continue_if_invalid = no
-        available_if_capitulated = no
-
-        search_filters = {FOCUS_FILTER_POLITICAL}
-
-        completion_reward = {
-            custom_effect_tooltip = RAJ_india_united_tt
-        }
-    }
-
-    focus = {
         id = RAJ_two_nation_theory_dlc
         icon = GFX_focus_RAJ_two_nation_theory
         prerequisite = { focus = RAJ_a_congress_resurgent }
-        x = -6
-        y = 0
-        relative_position_id = RAJ_india_united
-        mutually_exclusive = { focus = RAJ_india_united }
+        x = -3
+        y = 1
+        relative_position_id = RAJ_a_congress_resurgent
         cost = 10
 
         ai_will_do = {
@@ -2418,147 +2384,6 @@ focus_tree = {
         }
     }
 
-    focus = {
-        id = RAJ_power_sharing_agreement
-        icon = GFX_focus_generic_treaty
-        prerequisite = { focus =  RAJ_india_united }
-        x = 0
-        y = 1
-        relative_position_id = RAJ_india_united
-        
-        cost = 5
-
-        ai_will_do = {
-            factor = 1 
-        }
-
-        available = {
- 
-        }
-        
-        bypass = {
-
-        }
-
-        cancel_if_invalid = yes
-        continue_if_invalid = no
-        available_if_capitulated = no
-
-        search_filters = {FOCUS_FILTER_POLITICAL}
-
-        complete_tooltip = {
-
-        }
-
-        completion_reward = {
-            add_timed_idea = {
-                idea = idea_RAJ_power_sharing_agreement
-                days = 1460
-            } 
-            every_controlled_state = {
-                limit = {
-                    is_in_array = {
-                        array = RAJ.owned_states_at_game_start
-                        value = THIS
-                    }
-                    has_resistance = yes
-
-                }
-
-                add_compliance = -50
-                add_resistance = -30
-            }
-        }
-    }
-
-    focus = {
-        id = RAJ_a_permanent_muslim_governmental_seat
-        icon = GFX_focus_TUR_turanist_ambition
-        prerequisite = { focus = RAJ_power_sharing_agreement }
-        x = 2
-        y = 1
-        relative_position_id = RAJ_power_sharing_agreement
-        
-        cost = 10
-
-        ai_will_do = {
-            factor = 1
-        }
-
-        available = {
-
-        }
-        
-        bypass = {
-
-        }
-
-        cancel_if_invalid = yes
-        continue_if_invalid = no
-        available_if_capitulated = no
-
-        search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_TFV_AUTONOMY}
-
-        complete_tooltip = {
-
-        }
-
-        completion_reward = {
-            if = {
-                limit = {
-                    has_idea = RAJ_marginalized_muslim_community_angry
-                }
-                swap_ideas = {
-                    add_idea = RAJ_marginalized_muslim_community_happy_alt
-                    remove_idea = RAJ_marginalized_muslim_community_angry
-                }
-            }
-            else = {
-                swap_ideas = {
-                    add_idea = RAJ_marginalized_muslim_community_happy_alt
-                    remove_idea = RAJ_marginalized_muslim_community
-                }
-            }
-        }
-    }
-
-    focus = {
-        id = RAJ_cabinet_mission_plan
-        icon = GFX_focus_ARG_cut_ties_with_britain
-        prerequisite = { focus = RAJ_power_sharing_agreement }
-        x = 0
-        y = 1
-        relative_position_id = RAJ_power_sharing_agreement
-        
-        cost = 5
-
-        ai_will_do = {
-            factor = 1
-        }
-
-        available = {
-
-        }
-        
-        bypass = {
-
-        }
-
-        cancel_if_invalid = yes
-        continue_if_invalid = no
-        available_if_capitulated = no
-
-        search_filters = {FOCUS_FILTER_POLITICAL}
-
-        complete_tooltip = {
-
-        }
-
-        completion_reward = {
-            add_ideas = idea_RAJ_guided_by_britain
-        }
-    }
-
 #    focus = {
 #        id = RAJ_post_war_independence
 #        #icon = GFX_
@@ -2731,52 +2556,6 @@ focus_tree = {
     }
 
     focus = {
-        id = RAJ_inclusive_nationalism
-        icon = GFX_goal_tfv_saf_anti_colonialist_crusade
-        prerequisite = { focus = RAJ_cabinet_mission_plan }
-        prerequisite = { focus = RAJ_a_permanent_muslim_governmental_seat }
-        x = 0
-        y = 1
-        relative_position_id = RAJ_cabinet_mission_plan
-        
-        cost = 10
-
-        ai_will_do = {
-            factor = 1
-        }
-
-        available = {
-
-        }
-        
-        bypass = {
-
-        }
-
-        cancel_if_invalid = yes
-        continue_if_invalid = no
-        available_if_capitulated = no
-
-        search_filters = {FOCUS_FILTER_ARMY_XP}
-
-        complete_tooltip = {
-
-        }
-
-        completion_reward = {
-            add_doctrine_cost_reduction = {
-                cost_reduction = 0.25
-                uses = 2
-                category = land_doctrine
-                name = RAJ_inclusive_nationalism
-            }
-
-            add_ideas = idea_RAJ_inclusive_nationalism
-
-        }
-    }
-
-    focus = {
         id = RAJ_partition_preparation
         icon = GFX_goal_generic_position_armies
         prerequisite = { focus = RAJ_united_bengal focus = RAJ_eastern_pakistan }
@@ -2887,46 +2666,6 @@ focus_tree = {
     }
 
     focus = {
-        id = RAJ_a_secular_state
-        icon = GFX_focus_generic_court
-        prerequisite = { focus =  RAJ_inclusive_nationalism }
-        x = 0
-        y = 1
-        relative_position_id = RAJ_inclusive_nationalism
-        
-        cost = 5
-
-        ai_will_do = {
-            factor = 1
-        }
-
-        available = {
-
-        }
-        
-        bypass = {
-
-        }
-
-        cancel_if_invalid = yes
-        continue_if_invalid = no
-        available_if_capitulated = no
-
-        complete_tooltip = {
-
-        }
-
-        search_filters = {FOCUS_FILTER_POLITICAL}
-
-        completion_reward = {
-            add_stability = -0.15
-            add_political_power = 150
-            set_country_flag = RAJ_allow_release_states
-        }
-    }
-
-
-    focus = {
         id = RAJ_indian_independence_act
         icon = GFX_focus_generic_self_management
         prerequisite = { focus = RAJ_haripura_session_of_the_indian_national_congress focus = RAJ_cripps_mission_dlc }
@@ -2987,7 +2726,7 @@ focus_tree = {
             }
             GFX_focus_RAJ_tryst_with_destiny = yes
         }
-        prerequisite = { focus = RAJ_united_bengal focus = RAJ_eastern_pakistan focus = RAJ_a_secular_state }
+        prerequisite = { focus = RAJ_united_bengal focus = RAJ_eastern_pakistan }
         x = 2
         y = 1
         relative_position_id = RAJ_hedgemony_of_the_subcontinent
@@ -3042,216 +2781,6 @@ focus_tree = {
         }
     }
 
-    focus = {
-        id = RAJ_i_am_death
-        icon = GFX_focus_RAJ_i_am_death
-        prerequisite = { focus = RAJ_tryst_with_destiny }
-        x = -10
-        y = 1
-        relative_position_id = RAJ_tryst_with_destiny
-        mutually_exclusive = { focus = RAJ_sideline_the_conflict focus = RAJ_pledge_for_the_allies }
-        cost = 10
-
-        ai_will_do = {
-            factor = 1
-        }
-
-        available = {
-
-        }
-        
-        bypass = {
-
-        }
-
-        allow_branch = {
-            has_country_flag = gandhi_survives_assasination_attempt
-        }
-        cancel_if_invalid = yes
-        continue_if_invalid = no
-        available_if_capitulated = no
-
-        complete_tooltip = {
-
-        }
-
-        search_filters = {FOCUS_FILTER_POLITICAL_CHARACTER}
-        search_filters = {FOCUS_FILTER_POLITICAL}
-
-        completion_reward = {
-            if = {
-                limit = {
-                    NOT = { 
-                        has_country_leader = {
-                             character = RAJ_mahatma_mohandas_gandhi 
-                         } 
-                    }
-                }
-
-                RAJ_mahatma_mohandas_gandhi = {
-                    add_country_leader_role = {
-                        promote_leader = yes
-                        country_leader = {
-                            ideology = liberalism
-                            expire = "1965.1.1"
-                            traits = { death } 
-                        }
-                    }
-                }
-            }
-            else = {
-                add_country_leader_trait = death
-            }
-
-            set_country_leader_portrait = {
-                portrait = GFX_portrait_RAJ_mohandas_gandi_nuclear
-            }
-            
-            set_politics = {
-                ruling_party = democratic
-                elections_allowed = no
-                election_frequency = 48
-            }
-
-            set_rule = { can_join_factions = yes }
-            set_rule = { CAN_DECLARE_WAR_ON_SAME_IDEOLOGY = yes }
-            set_rule = { can_only_justify_war_on_threat_country = no }
-            set_rule = { can_join_opposite_factions = yes }
-        }
-    }
-
-    focus = {
-        id = RAJ_sideline_the_conflict 
-        icon = GFX_goal_generic_neutrality_focus
-        prerequisite = { focus = RAJ_tryst_with_destiny }
-        x = -2
-        y = 1
-        relative_position_id = RAJ_tryst_with_destiny
-        mutually_exclusive = { focus = RAJ_i_am_death focus = RAJ_pledge_for_the_allies }
-        cost = 5
-
-        ai_will_do = {
-            factor = 1
-        }
-
-        available = {
-
-        }
-        
-        bypass = {
-
-        }
-
-        cancel_if_invalid = yes
-        continue_if_invalid = no
-        available_if_capitulated = no
-
-        search_filters = {FOCUS_FILTER_POLITICAL}
-        search_filters = {FOCUS_FILTER_INDUSTRY}
-
-        complete_tooltip = {
-
-        }
-
-        completion_reward = {
-            every_enemy_country = {
-                country_event = { id = GOE_RAJ.27 hours = 2 }
-            }
-
-            if = {
-                limit = {
-                    is_in_faction = yes
-                }
-
-                leave_faction = yes
-            }
-            add_timed_idea = {
-                idea = neutrality_idea
-                days = 90
-            }
-
-            add_timed_idea = {
-                 idea = idea_RAJ_booming_industry
-                 days = 280
-             }
-        }
-    }
-
-    focus = {
-        id = RAJ_kingmaker
-        icon = GFX_focus_RAJ_kingmaker
-        prerequisite = { focus = RAJ_sideline_the_conflict }
-        x = -1
-        y = 1
-        relative_position_id = RAJ_sideline_the_conflict
-        cost = 5
-
-        ai_will_do = {
-            factor = 1
-        }
-
-        available = {
-            is_in_faction = no
-            has_war = no
-        }
-        
-        bypass = {
- 
-        }
-
-        cancel_if_invalid = yes
-        continue_if_invalid = no
-        available_if_capitulated = no
-
-        complete_tooltip = {
-
-        }
-
-        completion_reward = {
-            unlock_decision_tooltip = {
-                decision = anti_democratic_raids
-                show_effect_tooltip = no # default is no
-                show_modifiers = no # default is no
-            }
-            unlock_decision_tooltip = {
-                decision = anti_neutrality_raids
-                show_effect_tooltip = no # default is no
-                show_modifiers = no # default is no
-            }
-
-            set_rule = { can_join_factions = yes }
-            set_rule = { can_guarantee_other_ideologies = yes }
-            set_rule = { CAN_DECLARE_WAR_ON_SAME_IDEOLOGY = yes }
-            set_rule = { can_only_justify_war_on_threat_country = no }
-
-            custom_effect_tooltip = generic_skip_one_line_tt
-            
-            add_ideas = idea_RAJ_kingmaker
-
-            hidden_effect = {
-                every_country = {
-                    limit = {
-                        NOT = {
-                            has_war_with = ROOT
-                        }
-                    }
-
-                    add_ai_strategy = {
-                        type = alliance
-                        id = ROOT
-                        value = 1800
-                    }
-
-                    add_ai_strategy = {
-                        type = befriend
-                        id = ROOT
-                        value = 1800
-                    }
-                }  
-            }
-        }
-    }
-
 #    focus = {
 #        id = unhide_gandhi_death
 #       # icon = GFX_goal_generic_neutrality_focus
@@ -3292,10 +2821,9 @@ focus_tree = {
         id = RAJ_pledge_for_the_allies
         icon = GFX_focus_eng_the_sun_never_sets
         prerequisite = { focus =  RAJ_tryst_with_destiny }
-        x = 4
-        y = 0
-        relative_position_id = RAJ_sideline_the_conflict
-        mutually_exclusive = { focus = RAJ_i_am_death focus = RAJ_sideline_the_conflict }
+        x = 2
+        y = 1
+        relative_position_id = RAJ_tryst_with_destiny
         cost = 5
 
         ai_will_do = {
@@ -3390,55 +2918,6 @@ focus_tree = {
         }
     }
 
-    focus = {
-        id = RAJ_destroyer_of_worlds
-        icon = GFX_focus_wonderweapons
-        prerequisite = { focus = RAJ_i_am_death }
-        x = 0
-        y = 2
-        relative_position_id = RAJ_i_am_death
-        
-        cost = 10
-
-        ai_will_do = {
-            factor = 1
-        }
-
-        available = {
-
-        }
-        
-        bypass = {
-
-        }
-
-        cancel_if_invalid = yes
-        continue_if_invalid = no
-        available_if_capitulated = no
-
-        search_filters = {FOCUS_FILTER_RESEARCH}
-        search_filters = {FOCUS_FILTER_MILITARY_CHARACTER}
-
-        complete_tooltip = {
-
-        }
-
-        completion_reward = {
-            add_tech_bonus = {
-                bonus = 1
-                uses = 1
-                technology  = atomic_research # optional
-            }
-
-           add_breakthrough_points = {
-                specialization = specialization_nuclear 
-                value = 1
-            }
-
-            add_country_leader_trait = destroyer_of_worlds
-        }
-    }
-
 #    focus = {
 #        id = RAJ_ban_untouchability_once_and_for_all
 #        #icon = GFX_
@@ -3481,10 +2960,10 @@ focus_tree = {
     focus = {
         id = RAJ_preamble_to_the_constitution_of_india
         icon = GFX_focus_generic_the_giant_wakes
-        prerequisite = { focus = RAJ_sideline_the_conflict focus = RAJ_pledge_for_the_allies focus = RAJ_i_am_death }
-        x = 2
-        y = 1 
-        relative_position_id = RAJ_sideline_the_conflict
+        prerequisite = { focus = RAJ_pledge_for_the_allies }
+        x = 0
+        y = 2 
+        relative_position_id = RAJ_tryst_with_destiny
         
         cost = 5
 
@@ -3516,84 +2995,6 @@ focus_tree = {
                 ideology = democratic
                 popularity = 0.15
             }
-        }
-    }
-
-    focus = {
-        id = RAJ_uranium_tipped_bullets
-        icon = GFX_focus_RAJ_uranium_tipped_bullets
-        prerequisite = { focus = RAJ_destroyer_of_worlds }
-        x = -2
-        y = 1
-        relative_position_id = RAJ_destroyer_of_worlds 
-        
-        cost = 10
-
-        ai_will_do = {
-            factor = 1
-        }
-
-        available = {
- 
-        }
-        
-        bypass = {
-
-        }
-
-        cancel_if_invalid = yes
-        continue_if_invalid = no
-        available_if_capitulated = no
-
-        search_filters = {FOCUS_FILTER_RESEARCH}
-
-        complete_tooltip = {
-            custom_effect_tooltip = RAJ_uranium_tipped_bullets_tt
-        }
-
-        completion_reward = {
-            custom_effect_tooltip = RAJ_uranium_tipped_bullets_tt
-            hidden_effect = {
-                set_technology = {
-                    uranium_tipped_bullets = 1
-                    popup = no
-                }
-            }
-        }
-    }
-
-    focus = {
-        id = RAJ_rolling_nuke_barrages
-        icon = GFX_focus_GER_wunderwaffe
-        prerequisite = { focus = RAJ_destroyer_of_worlds }
-        x = 2
-        y = 1
-        relative_position_id = RAJ_destroyer_of_worlds
-        
-        cost = 10
-
-        ai_will_do = {
-            factor = 1
-        }
-
-        available = {
-
-        }
-        
-        bypass = {
-
-        }
-
-        cancel_if_invalid = yes
-        continue_if_invalid = no
-        available_if_capitulated = no
-
-        complete_tooltip = {
-
-        }
-
-        completion_reward = {
-            add_ideas = idea_RAJ_rolling_nuke_barrages
         }
     }
 
@@ -3681,99 +3082,6 @@ focus_tree = {
         }
     }
 
-
-    focus = {
-        id = RAJ_contamination_cleanup_crew
-        icon = GFX_focus_RAJ_contamination_cleanup_crew
-        prerequisite = { focus = RAJ_uranium_tipped_bullets }
-        x = 0
-        y = 1
-        relative_position_id = RAJ_uranium_tipped_bullets 
-        
-        cost = 10
-
-        ai_will_do = {
-            factor = 1
-        }
-
-        available = {
-
-        }
-        
-        bypass = {
-
-        }
-
-        cancel_if_invalid = yes
-        continue_if_invalid = no
-        available_if_capitulated = no
-
-        complete_tooltip = {
-
-        }
-
-        completion_reward = {
-            add_ideas = idea_RAJ_contamination_cleanup_crew
-        }
-    }
-
-    focus = {
-        id = RAJ_jaguar
-        icon = GFX_focus_generic_jet_planes
-        prerequisite = { focus = RAJ_rolling_nuke_barrages }
-        x = 0
-        y = 1
-        relative_position_id = RAJ_rolling_nuke_barrages
-        
-        cost = 10
-
-        ai_will_do = {
-            factor = 1
-        }
-
-        available = {
-
-        }
-        
-        bypass = {
-            
-        }
-
-        cancel_if_invalid = yes
-        continue_if_invalid = no
-        available_if_capitulated = no
-
-        search_filters = {FOCUS_FILTER_INDUSTRY}
-        search_filters = {FOCUS_FILTER_RESEARCH}
-
-        complete_tooltip = {
-
-        }
-
-        completion_reward = {
-            random_owned_controlled_state = {
-                limit = {
-                    can_construct_building = air_facility
-                }
-                prioritize = { 439 }
-                construct_building_in_random_province = {
-                    air_facility = 1
-                }
-            }
-
-            add_breakthrough_points = {
-                specialization = specialization_air 
-                value = 1
-            }
-
-            add_tech_bonus = {
-                bonus = 1
-                uses = 2
-                category = heavy_air # optional 
-                # technology  = technology_id # optional
-            }
-        }
-    }
 
     focus = {
         id = RAJ_an_economy_unbound
@@ -3896,42 +3204,6 @@ focus_tree = {
 
         completion_reward = {
             remove_ideas = { idea_RAJ_remaining_paramilitary_organizations }
-        }
-    }
-
-    focus = {
-        id = RAJ_bathe_in_hellfire
-        icon = GFX_focus_RAJ_bathe_in_hellfire
-        prerequisite = { focus = RAJ_contamination_cleanup_crew  }
-        prerequisite = { focus = RAJ_jaguar }
-        x = 2
-        y = 1
-        relative_position_id = RAJ_contamination_cleanup_crew
-        
-        cost = 10
-
-        ai_will_do = {
-            factor = 1
-        }
-
-        available = {
-
-        }
-        
-        bypass = {
-
-        }
-
-        cancel_if_invalid = yes
-        continue_if_invalid = no
-        available_if_capitulated = no
-
-        complete_tooltip = {
-
-        }
-
-        completion_reward = {
-            custom_effect_tooltip = RAJ_bathe_in_hellfire_desc_tt
         }
     }
 
@@ -4860,73 +4132,6 @@ focus = {
 		}
 
 		country_event = { id = tfv_raj.1 days = 7 random_days = 2 }
-	}
-}
-
-focus = {
-	id = RAJ_the_jewel_becomes_the_crown
-	icon = GFX_focus_RAJ_the_jewel_becomes_the_crown
-	prerequisite = { focus = RAJ_the_indian_parliament focus = RAJ_the_integrity_of_india_act }
-
-	x = -1
-	y = 1
-	relative_position_id = RAJ_the_indian_parliament 
-	cost = 10
-
-	available = {
-		ENG = {
-			OR = {
-				has_capitulated = yes
-				surrender_progress > 0.05
-			}
-			is_ally_with = ROOT
-		}
-	}
-
-	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_TFV_AUTONOMY }
-
-	completion_reward = {
-		custom_effect_tooltip = RAJ_modify_a_loyal_government_tt
-		add_to_variable = { RAJ_a_loyal_government_industrial_capacity_factory = 0.15 tooltip = industrial_capacity_factory_tt }
-		add_to_variable = { RAJ_a_loyal_government_industrial_capacity_dockyard = 0.35 tooltip = industrial_capacity_dockyard_tt }
-
-		custom_effect_tooltip = generic_skip_one_line_tt
-
-		if = {
-			limit = {
-				is_subject_of = ENG
-			}
-			ENG = {
-				set_autonomy = {
-					target = ROOT
-					autonomy_state = autonomy_free
-				}
-			}
-		}
-		set_major = yes
-
-		if = { #Transfer British Navy to RAJ -> Only when ENG is AI
-			limit = {
-				ENG = {
-					is_ai = yes
-				}
-			}
-			ENG = {
-				transfer_navy = {
-				    target = ROOT
-				}
-			}
-		}
-
-		if = { #Just a fail safe
-			limit = {
-				ENG = {
-					has_character = ENG_winston_churchill
-				}
-			}
-			custom_effect_tooltip = generic_skip_one_line_tt
-			country_event = { id = GOE_RAJ_loyalist.11 hours = 36 random_hours = 12 }
-		}
 	}
 }
 
