@@ -1,0 +1,22 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_trait_MS_pre_grind"
+		texturefile = "gfx/interface/traits/trait_organizer.dds"
+	}
+	spriteType = {
+		name = "GFX_trait_MS_tank_gen"
+		texturefile = "gfx/interface/traits/trait_panzer_leader.dds"
+	}
+	spriteType = {
+		name = "GFX_trait_MS_inf_gen_152"
+		texturefile = "gfx/interface/traits/trait_infantry_leader.dds"
+	}
+	spriteType = {
+		name = "GFX_trait_MS_inf_gen_800"
+		texturefile = "gfx/interface/traits/trait_infantry_leader.dds"
+	}
+	spriteType = {
+		name = "GFX_trait_MS_inf_gen_200"
+		texturefile = "gfx/interface/traits/trait_infantry_leader.dds"
+	}
+}

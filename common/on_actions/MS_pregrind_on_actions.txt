@@ -1,0 +1,11 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			if = {
+				limit = { NOT = { has_global_flag = MS_pregrinded_done } }
+				set_global_flag = MS_pregrinded_done
+				SWE = { MS_pregrinded_effect = yes }
+			}
+		}
+	}
+}
