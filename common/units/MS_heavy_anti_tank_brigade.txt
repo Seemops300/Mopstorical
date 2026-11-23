@@ -1,0 +1,79 @@
+sub_units = {
+
+	MS_heavy_anti_tank_brigade = {
+		abbreviation = "HAT"
+		sprite = anti_tank
+		map_icon_category = infantry
+		priority = 1196
+		ai_priority = 50
+		active = yes
+
+		type = {
+			infantry
+			anti_tank
+		}
+
+		group = combat_support
+
+		categories = {
+			category_front_line
+			category_army
+			category_line_artillery
+			category_anti_tank
+		}
+
+		combat_width = 1
+
+		#guns cost 2x normal AT, trucks tow them
+		need = {
+			MS_heavy_anti_tank_equipment = 36
+			motorized_equipment = 12
+		}
+		manpower = 600
+		max_organisation = 0
+		default_morale = 0
+		max_strength = 1.6
+		training_time = 150
+		weight = 1
+
+		supply_consumption = 0.2
+
+		#heavy guns hate bad ground more than normal AT
+		forest = {
+			attack = -0.25
+			movement = -0.25
+		}
+
+		hills = {
+			movement = -0.1
+		}
+
+		mountain = {
+			attack = -0.1
+			movement = -0.3
+		}
+
+		jungle = {
+			attack = -0.3
+			movement = -0.3
+		}
+
+		marsh = {
+			attack = -0.25
+			movement = -0.4
+		}
+
+		fort = {
+			attack = 0.1
+		}
+
+		river = {
+			attack = -0.25
+			movement = -0.3
+		}
+
+		amphibious = {
+			attack = -0.5
+		}
+	}
+}
