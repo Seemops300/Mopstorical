@@ -1,6 +1,0 @@
-Heavy AT equipment art (gfx/interface/technologies/MS_heavy_at_*.dds)
-Adapted (cut out, flipped, repainted, resized, numeral added) from JuniorGeneral.org paper soldiers, CC BY-NC-SA 4.0:
-- German Anti-Tank Guns, by Clive: https://juniorgeneral.org/index.php/figure/view/GermanAntiTankGuns
-- Anti-Tank Guns (8th Army Desert), by Clive: https://juniorgeneral.org/index.php/figure/view/AntiTankGuns8thArmyDesert
-- Soviet AT Guns, by Teodor: https://juniorgeneral.org/index.php/figure/view/SovietATGuns
-These adapted images are shared under the same licence: https://creativecommons.org/licenses/by-nc-sa/4.0/
