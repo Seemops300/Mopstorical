@@ -1,0 +1,38 @@
+scripted_gui = {
+	MS_topbar_resources_toggle = {
+		context_type = player_context
+
+		window_name = "MS_topbar_resources_toggle_window"
+		parent_window_token = trade_tab
+		#visible = {
+			#	has_country_flag=fuel_system_enabled
+			#
+			#}
+
+		effects = {
+			MS_topbar_resources_toggle_button_click={
+				if={limit={check_variable={MS_topbar_resources_hidden=0}}
+					set_variable={MS_topbar_resources_hidden=1}}
+				else={clear_variable=MS_topbar_resources_hidden}
+			}
+		}
+		
+
+
+	}
+	
+	
+	MS_topbar_resources= {
+		context_type = player_context
+		window_name = "MS_topbar_resources_container"
+		visible = {
+			check_variable={MS_topbar_resources_hidden=0}
+		}
+		
+
+		triggers = {
+
+		}
+	}
+
+}
