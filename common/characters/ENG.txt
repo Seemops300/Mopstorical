@@ -357,12 +357,12 @@ characters={
 		}
 		
 		corps_commander={
-			traits={ inflexible_strategist career_officer }
-			skill=5
-			attack_skill=3
-			defense_skill=5
-			planning_skill=3
-			logistics_skill=5
+			traits = { career_officer }
+			skill = 5
+			attack_skill = 3
+			defense_skill = 5
+			planning_skill = 3
+			logistics_skill = 5
 			legacy_id=0
 		}
 	}

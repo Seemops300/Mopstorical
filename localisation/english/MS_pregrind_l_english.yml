@@ -1,0 +1,13 @@
+﻿l_english:
+ MS_pre_grind: "Pre-Grinded"
+ MS_pre_grind_desc: "Already fully trained, so this general gains no more experience and is very expensive to promote."
+ MS_tank_gen: "Tank General"
+ MS_tank_gen_desc: "Can lead an army of up to 52 divisions."
+ MS_inf_gen_152: "Infantry General"
+ MS_inf_gen_152_desc: "Can lead an army of up to 152 divisions."
+ MS_inf_gen_800: "Infantry General"
+ MS_inf_gen_800_desc: "Can lead an army of up to 800 divisions."
+ MS_inf_gen_200: "Infantry General"
+ MS_inf_gen_200_desc: "Can lead an army of up to 200 divisions."
+ MS_no_grinding: "No Grinding"
+ MS_no_grinding_desc: "Our generals arrive already trained and gain almost no experience or traits from drilling."

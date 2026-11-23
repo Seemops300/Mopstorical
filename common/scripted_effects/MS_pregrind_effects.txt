@@ -1,0 +1,431 @@
+# Pre-grinded generals
+MS_pregrinded_effect = {
+	every_country = {
+		limit = {
+			OR = {
+				tag = ENG
+				tag = FRA
+				tag = CAN
+				tag = AST
+				tag = BRA
+				tag = MEX
+				tag = NZL
+				tag = USA
+				tag = RAJ
+				tag = SAF
+				tag = IRE
+				tag = SOV
+				tag = NOR
+				tag = GER
+				tag = ITA
+				tag = HUN
+				tag = ROM
+				tag = SPR
+				tag = BUL
+				tag = JAP
+				tag = SIA
+				tag = MAN
+				tag = EFR
+				tag = FIN
+			}
+		}
+		add_ideas = { MS_no_grinding }
+	}
+	GER = {
+		GER_gerd_von_rundstedt = { add_skill_level = 1 }
+		GER_gerd_von_rundstedt = { add_logistics = 2 }
+		GER_gerd_von_rundstedt = { add_attack = 2 }
+		GER_gerd_von_rundstedt = { add_defense = 1 }
+		GER_gerd_von_rundstedt = { add_planning = 1 }
+		GER_gerd_von_rundstedt = { add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = organizer add_unit_leader_trait = infantry_leader add_unit_leader_trait = trickster add_unit_leader_trait = infantry_expert }
+		GER_gerd_von_rundstedt = { promote_leader = yes }
+		GER_gerd_von_rundstedt = { add_unit_leader_trait = logistics_wizard }
+		GER_erwin_rommel = { add_attack = 3 }
+		GER_erwin_rommel = { add_defense = 2 }
+		GER_erwin_rommel = { add_planning = 2 }
+		GER_erwin_rommel = { add_logistics = 3 }
+		GER_erwin_rommel = { add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = expert_improviser add_unit_leader_trait = trait_mountaineer add_unit_leader_trait = hill_fighter add_unit_leader_trait = panzer_leader add_unit_leader_trait = panzer_expert add_unit_leader_trait = trait_engineer add_unit_leader_trait = fortress_buster }
+		GER_erich_von_manstein = { add_attack = 5 }
+		GER_erich_von_manstein = { add_defense = 3 }
+		GER_erich_von_manstein = { add_planning = 1 }
+		GER_erich_von_manstein = { add_logistics = 2 }
+		GER_erich_von_manstein = { add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = MS_tank_gen add_unit_leader_trait = ranger add_unit_leader_trait = urban_assault_specialist add_unit_leader_trait = panzer_leader add_unit_leader_trait = panzer_expert add_unit_leader_trait = expert_improviser add_unit_leader_trait = trait_engineer add_unit_leader_trait = fortress_buster add_unit_leader_trait = cavalry_leader }
+		GER_fedor_von_bock = { add_attack = 2 }
+		GER_fedor_von_bock = { add_defense = 2 }
+		GER_fedor_von_bock = { add_planning = 1 }
+		GER_fedor_von_bock = { add_logistics = 3 }
+		GER_fedor_von_bock = { add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = ranger add_unit_leader_trait = hill_fighter add_unit_leader_trait = panzer_leader add_unit_leader_trait = combined_arms_expert add_unit_leader_trait = logistics_wizard add_unit_leader_trait = thorough_planner add_unit_leader_trait = trickster add_unit_leader_trait = organizer add_unit_leader_trait = cavalry_leader add_unit_leader_trait = trait_reckless add_unit_leader_trait = trait_engineer }
+		GER_fedor_von_bock = { promote_leader = yes }
+		GER_fedor_von_bock = { add_unit_leader_trait = logistics_wizard add_unit_leader_trait = thorough_planner add_unit_leader_trait = aggressive_assaulter }
+		GER_erwin_von_witzleben = { add_attack = 4 }
+		GER_erwin_von_witzleben = { add_defense = 3 }
+		GER_erwin_von_witzleben = { add_planning = 3 }
+		GER_erwin_von_witzleben = { add_logistics = 1 }
+		GER_erwin_von_witzleben = { add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = MS_inf_gen_200 add_unit_leader_trait = infantry_leader add_unit_leader_trait = infantry_expert add_unit_leader_trait = winter_specialist add_unit_leader_trait = trickster add_unit_leader_trait = guerilla_fighter add_unit_leader_trait = organizer }
+	}
+	ITA = {
+		ITA_giovanni_messe = { add_attack = 4 }
+		ITA_giovanni_messe = { add_defense = 2 }
+		ITA_giovanni_messe = { add_planning = 3 }
+		ITA_giovanni_messe = { add_logistics = 1 }
+		ITA_giovanni_messe = { add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = panzer_leader add_unit_leader_trait = panzer_expert add_unit_leader_trait = expert_improviser add_unit_leader_trait = trickster add_unit_leader_trait = desert_fox add_unit_leader_trait = hill_fighter add_unit_leader_trait = trait_engineer add_unit_leader_trait = fortress_buster }
+		ITA_emilio_de_bono = { add_skill_level = 3 }
+		ITA_emilio_de_bono = { add_attack = 4 }
+		ITA_emilio_de_bono = { add_planning = 3 }
+		ITA_emilio_de_bono = { add_logistics = 2 }
+		ITA_emilio_de_bono = { add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = infantry_leader add_unit_leader_trait = infantry_expert add_unit_leader_trait = trickster add_unit_leader_trait = guerilla_fighter add_unit_leader_trait = hill_fighter add_unit_leader_trait = trait_mountaineer add_unit_leader_trait = organizer }
+		ITA_emilio_de_bono = { add_unit_leader_trait = logistics_wizard }
+		ITA_ubaldo_soddu = { add_skill_level = 3 }
+		ITA_ubaldo_soddu = { add_attack = 3 }
+		ITA_ubaldo_soddu = { add_defense = 4 }
+		ITA_ubaldo_soddu = { add_planning = 2 }
+		ITA_ubaldo_soddu = { add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = infantry_leader add_unit_leader_trait = infantry_expert add_unit_leader_trait = guerilla_fighter add_unit_leader_trait = trickster add_unit_leader_trait = trait_mountaineer add_unit_leader_trait = organizer add_unit_leader_trait = hill_fighter add_unit_leader_trait = commando }
+		ITA_ubaldo_soddu = { promote_leader = yes }
+		ITA_ubaldo_soddu = { add_unit_leader_trait = logistics_wizard add_unit_leader_trait = thorough_planner }
+		ITA_rodolfo_graziani = { add_skill_level = 2 }
+		ITA_rodolfo_graziani = { add_attack = 4 }
+		ITA_rodolfo_graziani = { add_planning = 2 }
+		ITA_rodolfo_graziani = { add_logistics = 3 }
+		ITA_rodolfo_graziani = { add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = trait_engineer add_unit_leader_trait = infantry_expert add_unit_leader_trait = infantry_leader add_unit_leader_trait = trait_mountaineer add_unit_leader_trait = expert_improviser add_unit_leader_trait = trickster add_unit_leader_trait = fortress_buster }
+		ITA_ugo_cavallero = { add_skill_level = 2 }
+		ITA_ugo_cavallero = { add_attack = 5 }
+		ITA_ugo_cavallero = { add_defense = 2 }
+		ITA_ugo_cavallero = { add_planning = 1 }
+		ITA_ugo_cavallero = { add_logistics = 1 }
+		ITA_ugo_cavallero = { add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = panzer_leader add_unit_leader_trait = panzer_expert add_unit_leader_trait = expert_improviser add_unit_leader_trait = trickster add_unit_leader_trait = desert_fox add_unit_leader_trait = ranger add_unit_leader_trait = organizer }
+		ITA_ugo_cavallero = { promote_leader = yes }
+		ITA_ugo_cavallero = { add_unit_leader_trait = logistics_wizard add_unit_leader_trait = offensive_doctrine add_unit_leader_trait = thorough_planner add_unit_leader_trait = aggressive_assaulter }
+		ITA_sebastiano_visconti_prasca = { add_skill_level = 3 }
+		ITA_sebastiano_visconti_prasca = { add_attack = 1 }
+		ITA_sebastiano_visconti_prasca = { add_planning = -1 }
+		ITA_sebastiano_visconti_prasca = { add_logistics = 2 }
+		ITA_sebastiano_visconti_prasca = { add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = organizer add_unit_leader_trait = infantry_expert add_unit_leader_trait = infantry_leader add_unit_leader_trait = trickster add_unit_leader_trait = guerilla_fighter add_unit_leader_trait = MS_inf_gen_152 }
+		ITA_carlo_bergamini = { add_unit_leader_trait = green_water_expert }
+		ITA_inigo_campioni = { add_unit_leader_trait = green_water_expert }
+	}
+	HUN = {
+		HUN_geza_lakatos = { add_skill_level = 1 }
+		HUN_geza_lakatos = { add_attack = 4 }
+		HUN_geza_lakatos = { add_defense = 4 }
+		HUN_geza_lakatos = { add_planning = 3 }
+		HUN_geza_lakatos = { add_logistics = 2 }
+		HUN_geza_lakatos = { add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = panzer_leader add_unit_leader_trait = panzer_expert add_unit_leader_trait = trickster add_unit_leader_trait = expert_improviser add_unit_leader_trait = ranger add_unit_leader_trait = urban_assault_specialist add_unit_leader_trait = desert_fox add_unit_leader_trait = trait_engineer add_unit_leader_trait = fortress_buster add_unit_leader_trait = commando }
+		HUN_ivan_hindy = { add_attack = 5 }
+		HUN_ivan_hindy = { add_defense = 4 }
+		HUN_ivan_hindy = { add_planning = 3 }
+		HUN_ivan_hindy = { add_logistics = 3 }
+		HUN_ivan_hindy = { add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = organizer add_unit_leader_trait = panzer_leader add_unit_leader_trait = combined_arms_expert add_unit_leader_trait = hill_fighter add_unit_leader_trait = urban_assault_specialist }
+		HUN_ivan_hindy = { promote_leader = yes }
+		HUN_ivan_hindy = { add_unit_leader_trait = logistics_wizard add_unit_leader_trait = thorough_planner }
+		HUN_karoly_beregfy = { add_skill_level = 3 }
+		HUN_karoly_beregfy = { add_attack = 4 }
+		HUN_karoly_beregfy = { add_defense = 3 }
+		HUN_karoly_beregfy = { add_planning = 1 }
+		HUN_karoly_beregfy = { add_logistics = 2 }
+		HUN_karoly_beregfy = { add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = organizer add_unit_leader_trait = infantry_leader add_unit_leader_trait = infantry_expert add_unit_leader_trait = hill_fighter add_unit_leader_trait = trickster add_unit_leader_trait = urban_assault_specialist }
+		HUN_karoly_beregfy = { promote_leader = yes }
+		HUN_karoly_beregfy = { add_unit_leader_trait = logistics_wizard add_unit_leader_trait = thorough_planner }
+		HUN_lajos_veress = { add_skill_level = 2 }
+		HUN_lajos_veress = { add_attack = 3 }
+		HUN_lajos_veress = { add_defense = 4 }
+		HUN_lajos_veress = { add_planning = 2 }
+		HUN_lajos_veress = { add_logistics = 1 }
+		HUN_lajos_veress = { add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = trait_engineer add_unit_leader_trait = infantry_leader add_unit_leader_trait = infantry_expert add_unit_leader_trait = ranger add_unit_leader_trait = urban_assault_specialist add_unit_leader_trait = expert_improviser add_unit_leader_trait = trait_mountaineer add_unit_leader_trait = trickster add_unit_leader_trait = fortress_buster }
+	}
+	ROM = {
+		ROM_petre_dumitrescu = { add_attack = 2 }
+		ROM_petre_dumitrescu = { add_defense = 1 }
+		ROM_petre_dumitrescu = { add_planning = 3 }
+		ROM_petre_dumitrescu = { add_logistics = 2 }
+		ROM_petre_dumitrescu = { add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = organizer add_unit_leader_trait = infantry_leader add_unit_leader_trait = infantry_expert add_unit_leader_trait = thorough_planner add_unit_leader_trait = trickster add_unit_leader_trait = hill_fighter add_unit_leader_trait = trait_mountaineer add_unit_leader_trait = commando }
+		ROM_petre_dumitrescu = { add_unit_leader_trait = thorough_planner add_unit_leader_trait = logistics_wizard }
+		ROM_ioan_mihail_racovita = { add_skill_level = 1 }
+		ROM_ioan_mihail_racovita = { add_attack = 5 }
+		ROM_ioan_mihail_racovita = { add_defense = 2 }
+		ROM_ioan_mihail_racovita = { add_logistics = 3 }
+		ROM_ioan_mihail_racovita = { add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = trait_engineer add_unit_leader_trait = infantry_expert add_unit_leader_trait = infantry_leader add_unit_leader_trait = commando add_unit_leader_trait = trickster add_unit_leader_trait = expert_improviser add_unit_leader_trait = ranger add_unit_leader_trait = trait_mountaineer add_unit_leader_trait = trait_engineer add_unit_leader_trait = fortress_buster }
+	}
+	BUL = {
+		BUL_ivan_markov = { add_skill_level = 1 }
+		BUL_ivan_markov = { add_attack = 3 }
+		BUL_ivan_markov = { add_defense = 3 }
+		BUL_ivan_markov = { add_planning = 1 }
+		BUL_ivan_markov = { add_logistics = 1 }
+		BUL_ivan_markov = { add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = infantry_expert add_unit_leader_trait = hill_fighter add_unit_leader_trait = trait_engineer add_unit_leader_trait = infantry_leader add_unit_leader_trait = commando add_unit_leader_trait = trickster add_unit_leader_trait = expert_improviser add_unit_leader_trait = hill_fighter add_unit_leader_trait = fortress_buster }
+		BUL_georgi_markov = { add_skill_level = 1 }
+		BUL_georgi_markov = { add_attack = 2 }
+		BUL_georgi_markov = { add_planning = 3 }
+		BUL_georgi_markov = { add_logistics = 2 }
+		BUL_georgi_markov = { add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = guerilla_fighter add_unit_leader_trait = infantry_leader add_unit_leader_trait = trait_engineer add_unit_leader_trait = infantry_expert add_unit_leader_trait = commando add_unit_leader_trait = trickster add_unit_leader_trait = hill_fighter add_unit_leader_trait = trait_mountaineer add_unit_leader_trait = organizer }
+		BUL_georgi_markov = { promote_leader = yes }
+		BUL_georgi_markov = { add_unit_leader_trait = offensive_doctrine add_unit_leader_trait = thorough_planner add_unit_leader_trait = aggressive_assaulter add_unit_leader_trait = logistics_wizard }
+		BUL_nikola_mihov = { add_attack = 4 }
+		BUL_nikola_mihov = { add_defense = 3 }
+		BUL_nikola_mihov = { add_planning = 2 }
+		BUL_nikola_mihov = { add_logistics = 2 }
+		BUL_nikola_mihov = { add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = panzer_leader add_unit_leader_trait = panzer_expert add_unit_leader_trait = trickster add_unit_leader_trait = expert_improviser add_unit_leader_trait = hill_fighter add_unit_leader_trait = trait_engineer }
+		BUL_georgi_popov = { add_attack = 4 }
+		BUL_georgi_popov = { add_defense = 2 }
+		BUL_georgi_popov = { add_planning = 2 }
+		BUL_georgi_popov = { add_logistics = 1 }
+		BUL_georgi_popov = { add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = panzer_leader add_unit_leader_trait = combined_arms_expert add_unit_leader_trait = trickster add_unit_leader_trait = trait_mountaineer add_unit_leader_trait = hill_fighter add_unit_leader_trait = trait_engineer }
+		BUL_georgi_popov = { promote_leader = yes }
+		BUL_georgi_popov = { add_unit_leader_trait = offensive_doctrine add_unit_leader_trait = thorough_planner add_unit_leader_trait = logistics_wizard }
+	}
+	SPR = {
+		SPR_antonio_cordon_garcia = { add_skill_level = 2 }
+		SPR_antonio_cordon_garcia = { add_attack = 3 }
+		SPR_antonio_cordon_garcia = { add_defense = 3 }
+		SPR_antonio_cordon_garcia = { add_planning = 2 }
+		SPR_antonio_cordon_garcia = { add_logistics = 2 }
+		SPR_antonio_cordon_garcia = { add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = infantry_leader add_unit_leader_trait = infantry_expert add_unit_leader_trait = ranger add_unit_leader_trait = trickster add_unit_leader_trait = organizer add_unit_leader_trait = trait_engineer add_unit_leader_trait = fortress_buster add_unit_leader_trait = urban_assault_specialist }
+		SPR_antonio_cordon_garcia = { promote_leader = yes }
+		SPR_antonio_cordon_garcia = { add_unit_leader_trait = thorough_planner add_unit_leader_trait = logistics_wizard add_unit_leader_trait = aggressive_assaulter }
+		SPA_francisco_franco = { add_skill_level = 1 }
+		SPA_francisco_franco = { add_attack = 3 }
+		SPA_francisco_franco = { add_defense = 2 }
+		SPA_francisco_franco = { add_planning = 2 }
+		SPA_francisco_franco = { add_logistics = 3 }
+		SPA_francisco_franco = { add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = organizer add_unit_leader_trait = trickster add_unit_leader_trait = panzer_leader add_unit_leader_trait = panzer_expert add_unit_leader_trait = hill_fighter add_unit_leader_trait = ranger add_unit_leader_trait = trait_engineer add_unit_leader_trait = fortress_buster }
+		SPA_francisco_franco = { add_unit_leader_trait = thorough_planner add_unit_leader_trait = aggressive_assaulter }
+		SPR_mohamed_meziane = { add_attack = 2 }
+		SPR_mohamed_meziane = { add_defense = 3 }
+		SPR_mohamed_meziane = { add_planning = 2 }
+		SPR_mohamed_meziane = { add_logistics = 2 }
+		SPR_mohamed_meziane = { add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = panzer_leader add_unit_leader_trait = combined_arms_expert add_unit_leader_trait = trait_engineer add_unit_leader_trait = fortress_buster add_unit_leader_trait = trickster add_unit_leader_trait = expert_improviser add_unit_leader_trait = hill_fighter add_unit_leader_trait = ranger add_unit_leader_trait = desert_fox }
+		SPR_gonzalo_queipo_de_llano = { add_skill_level = 1 }
+		SPR_gonzalo_queipo_de_llano = { add_attack = 5 }
+		SPR_gonzalo_queipo_de_llano = { add_defense = 1 }
+		SPR_gonzalo_queipo_de_llano = { add_planning = 1 }
+		SPR_gonzalo_queipo_de_llano = { add_logistics = 3 }
+		SPR_gonzalo_queipo_de_llano = { add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = trait_engineer add_unit_leader_trait = infantry_leader add_unit_leader_trait = infantry_expert add_unit_leader_trait = trickster add_unit_leader_trait = expert_improviser add_unit_leader_trait = ranger add_unit_leader_trait = hill_fighter add_unit_leader_trait = fortress_buster add_unit_leader_trait = commando }
+		SPR_jose_asensio_torrado = { add_skill_level = 2 }
+		SPR_jose_asensio_torrado = { add_unit_leader_trait = combined_arms_expert }
+	}
+	JAP = {
+		JAP_tomoyuki_yamashita = { add_attack = 3 }
+		JAP_tomoyuki_yamashita = { add_planning = 1 }
+		JAP_tomoyuki_yamashita = { add_logistics = 1 }
+		JAP_tomoyuki_yamashita = { add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = commando add_unit_leader_trait = fortress_buster add_unit_leader_trait = trait_mountaineer add_unit_leader_trait = infantry_expert add_unit_leader_trait = infantry_leader add_unit_leader_trait = expert_improviser add_unit_leader_trait = trait_engineer add_unit_leader_trait = fortress_buster add_unit_leader_trait = panzer_expert add_unit_leader_trait = panzer_leader add_unit_leader_trait = ranger }
+		JAP_hisaichi_terauchi = { add_attack = 3 }
+		JAP_hisaichi_terauchi = { add_defense = 1 }
+		JAP_hisaichi_terauchi = { add_planning = 2 }
+		JAP_hisaichi_terauchi = { add_logistics = 3 }
+		JAP_hisaichi_terauchi = { add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = organizer add_unit_leader_trait = infantry_expert add_unit_leader_trait = infantry_leader add_unit_leader_trait = trait_engineer add_unit_leader_trait = trickster add_unit_leader_trait = hill_fighter add_unit_leader_trait = trait_mountaineer add_unit_leader_trait = panzer_expert add_unit_leader_trait = panzer_leader add_unit_leader_trait = aggressive_assaulter }
+		JAP_hisaichi_terauchi = { promote_leader = yes}
+		JAP_hisaichi_terauchi = { add_unit_leader_trait = logistics_wizard add_unit_leader_trait = thorough_planner }
+		JAP_akira_muto = { add_skill_level = 2 }
+		JAP_akira_muto = { add_attack = 4 }
+		JAP_akira_muto = { add_defense = -2 }
+		JAP_akira_muto = { add_planning = 2 }
+		JAP_akira_muto = { add_logistics = 4 }
+		JAP_akira_muto = { add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = infantry_expert add_unit_leader_trait = infantry_leader add_unit_leader_trait = guerilla_fighter add_unit_leader_trait = trickster add_unit_leader_trait = hill_fighter add_unit_leader_trait = trait_mountaineer add_unit_leader_trait = commando add_unit_leader_trait = MS_inf_gen_152 }
+		JAP_shizuichi_tanaka = { add_attack = 3 }
+		JAP_shizuichi_tanaka = { add_defense = 2 }
+		JAP_shizuichi_tanaka = { add_planning = 3 }
+		JAP_shizuichi_tanaka = { add_logistics = 1 }
+		JAP_shizuichi_tanaka = { add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = infantry_expert add_unit_leader_trait = infantry_leader add_unit_leader_trait = panzer_expert add_unit_leader_trait = panzer_leader add_unit_leader_trait = naval_invader add_unit_leader_trait = commando add_unit_leader_trait = expert_improviser add_unit_leader_trait = jungle_rat add_unit_leader_trait = trait_mountaineer add_unit_leader_trait = trait_engineer add_unit_leader_trait = fortress_buster add_unit_leader_trait = ranger }
+		JAP_kenkichi_ueda = { add_attack = 5 }
+		JAP_kenkichi_ueda = { add_defense = 3 }
+		JAP_kenkichi_ueda = { add_planning = 1 }
+		JAP_kenkichi_ueda = { add_logistics = 1 }
+		JAP_kenkichi_ueda = { add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = trait_engineer add_unit_leader_trait = panzer_leader add_unit_leader_trait = combined_arms_expert add_unit_leader_trait = hill_fighter add_unit_leader_trait = trait_mountaineer add_unit_leader_trait = trait_engineer add_unit_leader_trait = organizer }
+		JAP_kenkichi_ueda = { add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = infantry_expert add_unit_leader_trait = infantry_leader add_unit_leader_trait = trickster add_unit_leader_trait = guerilla_fighter }
+		JAP_kenkichi_ueda = { promote_leader = yes }
+		JAP_kenkichi_ueda = { add_unit_leader_trait = defensive_doctrine add_unit_leader_trait = logistics_wizard add_unit_leader_trait = thorough_planner }
+	}
+	SIA = {
+		SIA_phraya_songsuradet = { add_skill_level = 1 }
+		SIA_phraya_songsuradet = { add_attack = 4 }
+		SIA_phraya_songsuradet = { add_defense = 4 }
+		SIA_phraya_songsuradet = { add_planning = 2 }
+		SIA_phraya_songsuradet = { add_logistics = 1 }
+		SIA_phraya_songsuradet = { add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = commando add_unit_leader_trait = fortress_buster add_unit_leader_trait = trait_mountaineer add_unit_leader_trait = infantry_expert add_unit_leader_trait = expert_improviser add_unit_leader_trait = trait_engineer add_unit_leader_trait = fortress_buster add_unit_leader_trait = panzer_expert add_unit_leader_trait = panzer_leader add_unit_leader_trait = ranger }
+		SIA_phin_choonhavan = { add_skill_level = 1 }
+		SIA_phin_choonhavan = { add_attack = 4 }
+		SIA_phin_choonhavan = { add_defense = 2 }
+		SIA_phin_choonhavan = { add_planning = 2 }
+		SIA_phin_choonhavan = { add_logistics = 3 }
+		SIA_phin_choonhavan = { add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = organizer add_unit_leader_trait = infantry_expert add_unit_leader_trait = infantry_leader add_unit_leader_trait = trait_engineer add_unit_leader_trait = trickster add_unit_leader_trait = hill_fighter add_unit_leader_trait = trait_mountaineer add_unit_leader_trait = panzer_expert add_unit_leader_trait = panzer_leader add_unit_leader_trait = aggressive_assaulter }
+		SIA_phin_choonhavan = { promote_leader = yes}
+		SIA_phin_choonhavan = { add_unit_leader_trait = offensive_doctrine add_unit_leader_trait = logistics_wizard add_unit_leader_trait = thorough_planner }
+	}
+	FIN = {
+		FIN_erik_heinrichs = { add_attack = 2 }
+		FIN_erik_heinrichs = { add_defense = 1 }
+		FIN_erik_heinrichs = { add_planning = 2 }
+		FIN_erik_heinrichs = { add_logistics = 3 }
+		FIN_erik_heinrichs = { add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = organizer add_unit_leader_trait = infantry_expert add_unit_leader_trait = infantry_leader add_unit_leader_trait = commando add_unit_leader_trait = trait_mountaineer add_unit_leader_trait = guerilla_fighter add_unit_leader_trait = trickster }
+		FIN_erik_heinrichs = { promote_leader = yes }
+		FIN_erik_heinrichs = { add_unit_leader_trait = logistics_wizard add_unit_leader_trait = defensive_doctrine add_unit_leader_trait = thorough_planner }
+		FIN_vilho_petter_nenonen = { add_attack = 3 }
+		FIN_vilho_petter_nenonen = { add_defense = 4 }
+		FIN_vilho_petter_nenonen = { add_planning = 1 }
+		FIN_vilho_petter_nenonen = { add_logistics = 3 }
+		FIN_vilho_petter_nenonen = { add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = ranger add_unit_leader_trait = infantry_expert add_unit_leader_trait = infantry_leader add_unit_leader_trait = trait_engineer add_unit_leader_trait = fortress_buster add_unit_leader_trait = trickster add_unit_leader_trait = expert_improviser }
+	}
+	FRA = {
+		FRA_alphonse_juin = { add_attack = 4 }
+		FRA_alphonse_juin = { add_defense = 3 }
+		FRA_alphonse_juin = { add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = panzer_leader add_unit_leader_trait = panzer_expert add_unit_leader_trait = expert_improviser add_unit_leader_trait = ranger add_unit_leader_trait = trickster add_unit_leader_trait = desert_fox }
+		FRA_maxime_weygand = { add_attack = 1 }
+		FRA_maxime_weygand = { add_planning = 2 }
+		FRA_maxime_weygand = { add_logistics = 2 }
+		FRA_maxime_weygand = { add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = organizer add_unit_leader_trait = infantry_leader add_unit_leader_trait = infantry_expert add_unit_leader_trait = trickster add_unit_leader_trait = hill_fighter }
+		FRA_maxime_weygand = { add_unit_leader_trait = logistics_wizard add_unit_leader_trait = unyielding_defender }
+		FRA_charles_de_gaulle = { add_attack = 2 }
+		FRA_charles_de_gaulle = { add_defense = 1 }
+		FRA_charles_de_gaulle = { add_planning = 2 }
+		FRA_charles_de_gaulle = { add_logistics = 3 }
+		FRA_charles_de_gaulle = { add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = guerilla_fighter add_unit_leader_trait = trickster add_unit_leader_trait = panzer_expert add_unit_leader_trait = panzer_leader add_unit_leader_trait = urban_assault_specialist add_unit_leader_trait = organizer }
+		FRA_charles_de_gaulle = { promote_leader = yes }
+		FRA_charles_de_gaulle = { add_unit_leader_trait = logistics_wizard }
+		FRA_charles_huntziger = { add_attack = 2 }
+		FRA_charles_huntziger = { add_defense = 2 }
+		FRA_charles_huntziger = { add_logistics = 1 }
+		FRA_charles_huntziger = { add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = infantry_expert add_unit_leader_trait = infantry_leader add_unit_leader_trait = trickster add_unit_leader_trait = expert_improviser add_unit_leader_trait = guerilla_fighter add_unit_leader_trait = naval_invader add_unit_leader_trait = hill_fighter add_unit_leader_trait = trait_mountaineer }
+	}
+	SOV = {
+		SOV_georgy_zhukov = { add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = infantry_leader add_unit_leader_trait = ambusher add_unit_leader_trait = organizer add_unit_leader_trait = skilled_staffer }
+		SOV_georgy_zhukov = { promote_leader = yes }
+		SOV_georgy_zhukov = { add_unit_leader_trait = expert_delegator add_unit_leader_trait = defensive_doctrine add_unit_leader_trait = logistics_wizard }
+		SOV_nikolay_vatutin = { add_skill_level = 1 }
+		SOV_nikolay_vatutin = { add_attack = 1 }
+		SOV_nikolay_vatutin = { add_defense = 1 }
+		SOV_nikolay_vatutin = { add_planning = 1 }
+		SOV_nikolay_vatutin = { add_logistics = 1 }
+		SOV_nikolay_vatutin = { add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = MS_inf_gen_800 add_unit_leader_trait = trait_engineer add_unit_leader_trait = infantry_leader add_unit_leader_trait = infantry_expert add_unit_leader_trait = trickster add_unit_leader_trait = organizer }
+		SOV_dmitry_lelyushenko = { add_skill_level = 3 }
+		SOV_dmitry_lelyushenko = { add_attack = 3 }
+		SOV_dmitry_lelyushenko = { add_defense = 3 }
+		SOV_dmitry_lelyushenko = { add_planning = 2 }
+		SOV_dmitry_lelyushenko = { add_logistics = 2 }
+		SOV_dmitry_lelyushenko = { add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = MS_tank_gen add_unit_leader_trait = panzer_expert add_unit_leader_trait = panzer_leader add_unit_leader_trait = trait_engineer add_unit_leader_trait = trickster add_unit_leader_trait = ranger add_unit_leader_trait = hill_fighter add_unit_leader_trait = cavalry_leader add_unit_leader_trait = fortress_buster add_unit_leader_trait = winter_specialist }
+		SOV_andrey_grechko = { add_skill_level = 1 }
+		SOV_andrey_grechko = { add_attack = 3 }
+		SOV_andrey_grechko = { add_defense = 1 }
+		SOV_andrey_grechko = { add_planning = 1 }
+		SOV_andrey_grechko = { add_logistics = 1 }
+		SOV_andrey_grechko = { add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = infantry_leader add_unit_leader_trait = trickster add_unit_leader_trait = guerilla_fighter add_unit_leader_trait = cavalry_leader add_unit_leader_trait = cavalry_expert }
+		SOV_vasily_chuykov = { add_skill_level = 3 }
+		SOV_vasily_chuykov = { add_attack = 1 }
+		SOV_vasily_chuykov = { add_defense = 1 }
+		SOV_vasily_chuykov = { add_planning = 1 }
+		SOV_vasily_chuykov = { add_logistics = 2 }
+		SOV_vasily_chuykov = { add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = organizer add_unit_leader_trait = panzer_leader add_unit_leader_trait = cavalry_leader add_unit_leader_trait = combined_arms_expert add_unit_leader_trait = trickster add_unit_leader_trait = hill_fighter add_unit_leader_trait = ranger add_unit_leader_trait = winter_specialist add_unit_leader_trait = fortress_buster }
+		SOV_vasily_chuykov = { promote_leader = yes }
+		SOV_vasily_chuykov = { add_unit_leader_trait = logistics_wizard add_unit_leader_trait = thorough_planner }
+	}
+	ENG = {
+		ENG_bernard_montgomery = { add_attack = 2 }
+		ENG_bernard_montgomery = { add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = panzer_leader add_unit_leader_trait = combined_arms_expert add_unit_leader_trait = desert_fox add_unit_leader_trait = trickster }
+		ENG_claude_auchinleck = { add_attack = 2 }
+		ENG_claude_auchinleck = { add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = infantry_expert add_unit_leader_trait = infantry_leader add_unit_leader_trait = hill_fighter add_unit_leader_trait = trickster add_unit_leader_trait = guerilla_fighter add_unit_leader_trait = naval_invader add_unit_leader_trait = invader_ii add_unit_leader_trait = trait_engineer }
+		ENG_alan_cunningham = { add_attack = 1 }
+		ENG_alan_cunningham = { add_defense = 3 }
+		ENG_alan_cunningham = { add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = infantry_expert add_unit_leader_trait = infantry_leader add_unit_leader_trait = hill_fighter add_unit_leader_trait = naval_invader add_unit_leader_trait = organizer add_unit_leader_trait = trickster add_unit_leader_trait = guerilla_fighter }
+		ENG_alan_cunningham = { promote_leader = yes }
+		ENG_alan_cunningham = { add_unit_leader_trait = logistics_wizard }
+		ENG_william_slim = { add_attack = 2 }
+		ENG_william_slim = { add_defense = 2 }
+		ENG_william_slim = { add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = expert_improviser add_unit_leader_trait = trait_engineer add_unit_leader_trait = infantry_expert add_unit_leader_trait = infantry_leader add_unit_leader_trait = ranger }
+		ENG_harold_alexander = { add_attack = 1}
+		ENG_harold_alexander = { add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = panzer_leader add_unit_leader_trait = panzer_expert add_unit_leader_trait = hill_fighter add_unit_leader_trait = trait_engineer add_unit_leader_trait = trickster add_unit_leader_trait = organizer add_unit_leader_trait = guerilla_fighter }
+	}
+	USA = {
+		USA_george_s_patton = { add_attack = 1 }
+		USA_george_s_patton = { add_defense = 1 }
+		USA_george_s_patton = { add_planning = 3 }
+		USA_george_s_patton = { add_logistics = 1 }
+		USA_george_s_patton = { add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = panzer_expert add_unit_leader_trait = hill_fighter add_unit_leader_trait = fortress_buster add_unit_leader_trait = trait_engineer add_unit_leader_trait = expert_improviser add_unit_leader_trait = ranger }
+		USA_omar_bradley = { add_attack = 2 }
+		USA_omar_bradley = { add_logistics = 1 }
+		USA_omar_bradley = { add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = combined_arms_expert add_unit_leader_trait = hill_fighter add_unit_leader_trait = panzer_leader add_unit_leader_trait = organizer add_unit_leader_trait = urban_assault_specialist }
+		USA_omar_bradley = { promote_leader = yes }
+		USA_omar_bradley = { add_unit_leader_trait = thorough_planner add_unit_leader_trait = aggressive_assaulter add_unit_leader_trait = logistics_wizard }
+		USA_dwight_d_eisenhower = { add_attack = 3 }
+		USA_dwight_d_eisenhower = { add_defense = 2 }
+		USA_dwight_d_eisenhower = { add_unit_leader_trait = trait_engineer add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = infantry_expert add_unit_leader_trait = infantry_leader add_unit_leader_trait = hill_fighter add_unit_leader_trait = naval_invader add_unit_leader_trait = ranger add_unit_leader_trait = invader_ii }
+		USA_dwight_d_eisenhower = { promote_leader = yes }
+		USA_dwight_d_eisenhower = { add_unit_leader_trait = thorough_planner add_unit_leader_trait = aggressive_assaulter }
+		USA_geoffrey_keyes = { add_skill_level = 2 }
+		USA_geoffrey_keyes = { add_attack = 6 }
+		USA_geoffrey_keyes = { add_defense = 2 }
+		USA_geoffrey_keyes = { add_planning = 1 }
+		USA_geoffrey_keyes = { add_logistics = 2 }
+		USA_geoffrey_keyes = { add_unit_leader_trait = trickster add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = infantry_expert add_unit_leader_trait = infantry_leader add_unit_leader_trait = hill_fighter add_unit_leader_trait = fortress_buster add_unit_leader_trait = trait_engineer add_unit_leader_trait = expert_improviser add_unit_leader_trait = trait_mountaineer }
+	}
+	CAN = {
+		CAN_thomas_victor_anderson = { add_attack = 3 }
+		CAN_thomas_victor_anderson = { add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = trickster add_unit_leader_trait = desert_fox add_unit_leader_trait = panzer_leader add_unit_leader_trait = panzer_expert add_unit_leader_trait = organizer add_unit_leader_trait = guerilla_fighter add_unit_leader_trait = expert_improviser }
+		CAN_charles_foulkes = { add_attack = 1 }
+		CAN_charles_foulkes = { add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = organizer add_unit_leader_trait = hill_fighter add_unit_leader_trait = panzer_leader add_unit_leader_trait = combined_arms_expert add_unit_leader_trait = trickster add_unit_leader_trait = guerilla_fighter }
+		CAN_charles_foulkes = { add_unit_leader_trait = logistics_wizard }
+	}
+	SAF = {
+		SAF_george_edwin_brink = { add_unit_leader_trait = trickster add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = panzer_leader add_unit_leader_trait = panzer_expert add_unit_leader_trait = guerilla_fighter add_unit_leader_trait = expert_improviser }
+	}
+	AST = {
+		AST_leslie_morshead = { add_unit_leader_trait = trickster add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = guerilla_fighter add_unit_leader_trait = panzer_leader add_unit_leader_trait = combined_arms_expert add_unit_leader_trait = hill_fighter add_unit_leader_trait = organizer }
+		AST_leslie_morshead = { promote_leader = yes }
+		AST_leslie_morshead = { add_unit_leader_trait = logistics_wizard }
+		AST_thomas_blamey = { add_unit_leader_trait = trickster add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = guerilla_fighter add_unit_leader_trait = infantry_leader add_unit_leader_trait = infantry_expert add_unit_leader_trait = organizer add_unit_leader_trait = trait_mountaineer }
+		AST_thomas_blamey = { promote_leader = yes }
+		AST_thomas_blamey = { add_unit_leader_trait = logistics_wizard add_unit_leader_trait = offensive_doctrine }
+		AST_reginald_saunders = { add_unit_leader_trait = trickster add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = trait_engineer add_unit_leader_trait = infantry_expert add_unit_leader_trait = infantry_leader add_unit_leader_trait = desert_fox add_unit_leader_trait = guerilla_fighter add_unit_leader_trait = commando }
+		AST_alan_vasey = { add_skill_level = 1 }
+		AST_alan_vasey = { add_attack = 2 }
+		AST_alan_vasey = { add_unit_leader_trait = trickster add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = trait_engineer add_unit_leader_trait = panzer_leader add_unit_leader_trait = panzer_expert add_unit_leader_trait = hill_fighter add_unit_leader_trait = guerilla_fighter add_unit_leader_trait = expert_improviser }
+	}
+	BRA = {
+		BRA_eurico_gaspar_dutra = { add_unit_leader_trait = trickster add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = guerilla_fighter add_unit_leader_trait = infantry_leader add_unit_leader_trait = infantry_expert add_unit_leader_trait = organizer add_unit_leader_trait = naval_invader }
+		BRA_eurico_gaspar_dutra = { promote_leader = yes }
+		BRA_eurico_gaspar_dutra = { add_unit_leader_trait = offensive_doctrine add_unit_leader_trait = logistics_wizard }
+		BRA_mascarenhas_de_morais = { add_unit_leader_trait = trickster add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = trait_engineer add_unit_leader_trait = infantry_expert add_unit_leader_trait = infantry_leader add_unit_leader_trait = commando add_unit_leader_trait = guerilla_fighter }
+	}
+	MEX = {
+		MEX_heliodoro_charis = { add_skill_level = 1 }
+		MEX_heliodoro_charis = { add_logistics = 1 }
+		MEX_heliodoro_charis = { add_unit_leader_trait = trickster add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = trait_engineer add_unit_leader_trait = infantry_expert add_unit_leader_trait = infantry_leader add_unit_leader_trait = hill_fighter add_unit_leader_trait = guerilla_fighter add_unit_leader_trait = naval_invader }
+		MEX_gildardo_magana = { add_skill_level = 1 }
+		MEX_gildardo_magana = { add_attack = 1 }
+		MEX_gildardo_magana = { add_unit_leader_trait = trickster add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = guerilla_fighter add_unit_leader_trait = infantry_leader add_unit_leader_trait = infantry_expert add_unit_leader_trait = organizer add_unit_leader_trait = jungle_rat }
+		MEX_gildardo_magana = { promote_leader = yes }
+		MEX_gildardo_magana = { add_unit_leader_trait = logistics_wizard }
+		MEX_lazaro_cardenas = { add_skill_level = 1 }
+		MEX_lazaro_cardenas = { add_unit_leader_trait = commando }
+		MEX_abelardo_rodriguez = { add_skill_level = 1 }
+		MEX_abelardo_rodriguez = { add_attack = 2 }
+		MEX_abelardo_rodriguez = { add_unit_leader_trait = trickster add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = trait_engineer add_unit_leader_trait = panzer_leader add_unit_leader_trait = panzer_expert add_unit_leader_trait = hill_fighter add_unit_leader_trait = guerilla_fighter add_unit_leader_trait = expert_improviser }
+		MEX_luis_farell = { add_unit_leader_trait = trickster add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = guerilla_fighter add_unit_leader_trait = panzer_leader add_unit_leader_trait = combined_arms_expert add_unit_leader_trait = hill_fighter add_unit_leader_trait = organizer }
+		MEX_luis_farell = { promote_leader = yes }
+		MEX_luis_farell = { add_unit_leader_trait = logistics_wizard }
+	}
+	RAJ = {
+		RAJ_frank_messervy = { add_skill_level = 2 }
+		RAJ_frank_messervy = { add_unit_leader_trait = trickster add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = trait_engineer add_unit_leader_trait = infantry_expert add_unit_leader_trait = infantry_leader add_unit_leader_trait = guerilla_fighter add_unit_leader_trait = MS_tank_gen }
+		RAJ_douglas_gracey = { add_skill_level = 1 }
+		RAJ_douglas_gracey = { add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = guerilla_fighter add_unit_leader_trait = infantry_leader add_unit_leader_trait = infantry_expert add_unit_leader_trait = organizer add_unit_leader_trait = trickster }
+		RAJ_douglas_gracey = { promote_leader = yes }
+		RAJ_douglas_gracey = { add_unit_leader_trait = logistics_wizard }
+	}
+	NZL = {
+		NZL_robert_row = { add_unit_leader_trait = trickster add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = guerilla_fighter add_unit_leader_trait = infantry_leader add_unit_leader_trait = infantry_expert add_unit_leader_trait = naval_invader add_unit_leader_trait = hill_fighter }
+		NZL_william_stevens = { add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = guerilla_fighter add_unit_leader_trait = infantry_leader add_unit_leader_trait = infantry_expert add_unit_leader_trait = organizer add_unit_leader_trait = urban_assault_specialist add_unit_leader_trait = trickster }
+		NZL_william_stevens = { promote_leader = yes }
+		NZL_william_stevens = { add_unit_leader_trait = logistics_wizard add_unit_leader_trait = defensive_doctrine }
+		NZL_bernard_freyberg = { add_unit_leader_trait = commando }
+	}
+	IRE = {
+		IRE_michael_costello = { add_skill_level = 2 }
+		IRE_michael_costello = { add_unit_leader_trait = trickster add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = guerilla_fighter add_unit_leader_trait = infantry_leader add_unit_leader_trait = infantry_expert add_unit_leader_trait = naval_invader add_unit_leader_trait = urban_assault_specialist }
+	}
+	NOR = {
+		NOR_jacob_hivden_haug = { add_skill_level = 2 }
+		NOR_jacob_hivden_haug = { add_unit_leader_trait = trickster add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = guerilla_fighter add_unit_leader_trait = infantry_leader add_unit_leader_trait = infantry_expert add_unit_leader_trait = naval_invader add_unit_leader_trait = urban_assault_specialist }
+		NOR_wilhelm_von_tangen_hansteen = { add_skill_level = 1 }
+		NOR_wilhelm_von_tangen_hansteen = { add_unit_leader_trait = trickster add_unit_leader_trait = MS_pre_grind add_unit_leader_trait = guerilla_fighter add_unit_leader_trait = infantry_leader add_unit_leader_trait = infantry_expert add_unit_leader_trait = urban_assault_specialist add_unit_leader_trait = organizer }
+		NOR_wilhelm_von_tangen_hansteen = { promote_leader = yes }
+		NOR_wilhelm_von_tangen_hansteen = { add_unit_leader_trait = logistics_wizard }
+	}
+}

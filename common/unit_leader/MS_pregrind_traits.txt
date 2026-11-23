@@ -1,0 +1,63 @@
+leader_traits = {
+
+	MS_pre_grind = {
+		type = land
+		trait_type = personality_trait
+		non_shared_modifier = {
+			experience_gain_factor = -10
+			promote_cost_factor = 10000
+		}
+		new_commander_weight = {
+			factor = 0
+		}
+	}
+
+	#24 base + 28 = 52 divisions
+	MS_tank_gen = {
+		type = land
+		trait_type = personality_trait
+		non_shared_modifier = {
+			max_commander_army_size = 28
+		}
+		new_commander_weight = {
+			factor = 0
+		}
+	}
+
+	#24 base + 128 = 152 divisions
+	MS_inf_gen_152 = {
+		type = land
+		trait_type = personality_trait
+		non_shared_modifier = {
+			max_commander_army_size = 128
+		}
+		new_commander_weight = {
+			factor = 0
+		}
+	}
+
+	#24 base + 776 = 800 divisions
+	MS_inf_gen_800 = {
+		type = land
+		trait_type = personality_trait
+		non_shared_modifier = {
+			max_commander_army_size = 776
+		}
+		new_commander_weight = {
+			factor = 0
+		}
+	}
+
+	#24 base + 176 = 200 divisions
+	MS_inf_gen_200 = {
+		type = land
+		trait_type = personality_trait
+		non_shared_modifier = {
+			max_commander_army_size = 176
+		}
+		new_commander_weight = {
+			factor = 0
+		}
+	}
+
+}
