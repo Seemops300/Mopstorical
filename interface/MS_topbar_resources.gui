@@ -1,0 +1,251 @@
+guiTypes = {
+	containerWindowType = {
+			name = "MS_topbar_resources_toggle_window"
+		buttonType ={
+			name ="MS_topbar_resources_toggle_button"
+			#spriteType = "GFX_generic_text_bg_203"
+			spriteType = "GFX_division_designer_button"
+			#spriteType = "GFX_button_transparent"
+			buttonFont = "hoi_18mbs"
+			buttonText = "MS_topbar_resources_button"
+			#frame=0
+			#quadTextureSprite = "GFX_military_deployment_add_line_btn"
+			position = { x=270 y=10}
+			Orientation = "UPPER_LEFT"
+			#alwaystransparent = yes
+		}
+	}
+	containerWindowType = {
+		name = "MS_topbar_resources_container"
+		#position = { x = 966 y = 4 }
+		position = { x = 0 y = 4 }
+		size = { width=1920 height=1080}
+		Orientation = UPPER_LEFT
+		clipping=yes
+		#moveable = yes
+		containerWindowType = {
+		name = "MS_topbar_resources_inner"
+		position = { x = 1024 y = 0 }
+		size = { width=453 height=36}
+		Orientation = UPPER_LEFT
+		clipping=yes
+		moveable = yes
+		background = {
+			name = "Background"
+			spriteType = "GFX_MS_topbar_resources_bg"
+			alwaystransparent=no
+			
+		}
+		containerWindowType = {
+			name = "aluminium_container"
+			position = { x = 0 y = 0 }#3 abstand
+			Orientation = UPPER_LEFT
+			size = { width = 73 height = 30}
+			background = {
+				name = "Background2"
+				quadTextureSprite ="GFX_mini_tooltip"
+				alwaystransparent=yes
+			}
+		iconType = {
+			name = "aluminium_icon"
+			position = { x=2 y=0 }
+			spriteType = "GFX_resources_strip"
+			frame = 2
+			scale=1
+			alwaystransparent=yes
+			#pdx_tooltip = "disable_resources"
+		}
+		
+		instantTextboxType = {
+			name = "aluminium_value"
+			position = { x = 14 y = 4 }#x = 995
+			textureFile = ""
+			font = "hoi_18mbs"
+			borderSize = {x = 0 y = 0}
+			text= [MS_aluminium_text]
+			maxWidth = 57
+			maxHeight = 24
+			fixedsize = yes
+			format = center
+			#pdx_tooltip = "PRODUCTION_MATERIALS_tungsten"
+					}
+		}
+		
+		containerWindowType = {
+			name = "rubber_container"
+			position = { x = 73 y = 0 }#3 abstand
+			Orientation = UPPER_LEFT
+			size = { width = 73 height = 30}
+			background = {
+				name = "Background2"
+				quadTextureSprite ="GFX_mini_tooltip"
+				alwaystransparent=yes
+			}
+		iconType = {
+			name = "rubber_icon"
+			position = { x=1 y=1 }
+			spriteType = "GFX_resources_strip"
+			frame = 3
+			scale=1
+			alwaystransparent=yes
+			#pdx_tooltip = "disable_resources"
+		}
+		
+		instantTextboxType = {
+			name = "rubber_value"
+			position = { x = 14 y = 4 }#x = 995
+			textureFile = ""
+			font = "hoi_18mbs"
+			borderSize = {x = 0 y = 0}
+			text= [MS_rubber_text]
+			maxWidth = 57
+			maxHeight = 24
+			fixedsize = yes
+			format = center
+			#pdx_tooltip = "PRODUCTION_MATERIALS_tungsten"
+					}
+		}
+		containerWindowType = {
+			name = "tungsten_container"
+			position = { x = 146 y = 0 }#3 abstand
+			Orientation = UPPER_LEFT
+			size = { width = 73 height = 30}
+			background = {
+				name = "Background2"
+				quadTextureSprite ="GFX_mini_tooltip"
+				alwaystransparent=yes
+			}
+		iconType = {
+			name = "tungsten_icon"
+			position = { x=1 y=0 }
+			spriteType = "GFX_resources_strip"
+			frame = 4
+			scale=1
+			alwaystransparent=yes
+			#pdx_tooltip = "disable_resources"
+		}
+		
+		instantTextboxType = {
+			name = "tungsten_value"
+			position = { x = 14 y = 4 }#x = 995
+			textureFile = ""
+			font = "hoi_18mbs"
+			borderSize = {x = 0 y = 0}
+			text= [MS_tungsten_text]
+			maxWidth = 57
+			maxHeight = 24
+			fixedsize = yes
+			format = center
+			#pdx_tooltip = "PRODUCTION_MATERIALS_tungsten"
+					}
+		}
+		#steel			
+		containerWindowType = {
+			name = "steel_container"
+			position = { x = 219 y = 0 }#3 abstand
+			Orientation = UPPER_LEFT
+			size = { width = 73 height = 30}
+			background = {
+				name = "Background2"
+				quadTextureSprite ="GFX_mini_tooltip"
+				alwaystransparent=yes
+			}
+		iconType = {
+			name = "steel_icon"
+			position = { x=1 y=0 }
+			spriteType = "GFX_resources_strip"
+			frame = 5
+			scale=1
+			alwaystransparent=yes
+			#pdx_tooltip = "disable_resources"
+		}
+		
+		instantTextboxType = {
+			name = "steel_value"
+			position = { x = 14 y = 4 }#x = 995
+			textureFile = ""
+			font = "hoi_18mbs"
+			borderSize = {x = 0 y = 0}
+			text= [MS_steel_text]
+			maxWidth = 57
+			maxHeight = 24
+			fixedsize = yes
+			format = center
+			#pdx_tooltip = "PRODUCTION_MATERIALS_steel"
+					}
+		}
+		containerWindowType = {
+			name = "chromium_container"
+			position = { x = 292 y = 0 }#3 abstand
+			Orientation = UPPER_LEFT
+			size = { width = 73 height = 30}
+			background = {
+				name = "Background2"
+				quadTextureSprite ="GFX_mini_tooltip"
+				alwaystransparent=yes
+			}
+		iconType = {
+			name = "chromium_icon"
+			position = { x=2 y=1 }
+			spriteType = "GFX_resources_strip"
+			frame = 6
+			scale=1
+			alwaystransparent=yes
+			#pdx_tooltip = "disable_resources"
+		}
+		
+		instantTextboxType = {
+			name = "chromium_value"
+			position = { x = 14 y = 4 }#x = 995
+			textureFile = ""
+			font = "hoi_18mbs"
+			borderSize = {x = 0 y = 0}
+			text= [MS_chromium_text]
+			maxWidth = 57
+			maxHeight = 24
+			fixedsize = yes
+			format = center
+			#pdx_tooltip = "PRODUCTION_MATERIALS_chromium"
+					}
+		}
+		
+		containerWindowType = {
+			name = "coal_container"
+			position = { x = 365 y = 0 }#3 abstand
+			Orientation = UPPER_LEFT
+			size = { width = 73 height = 30}
+			background = {
+				name = "Background2"
+				quadTextureSprite ="GFX_mini_tooltip"
+				alwaystransparent=yes
+			}
+		iconType = {
+			name = "coal_icon"
+			position = { x=2 y=1 }
+			spriteType = "GFX_resources_strip"
+			frame = 7
+			scale=1
+			alwaystransparent=yes
+			#pdx_tooltip = "disable_resources"
+		}
+		
+		instantTextboxType = {
+			name = "coal_value"
+			position = { x = 14 y = 4 }#x = 995
+			textureFile = ""
+			font = "hoi_18mbs"
+			borderSize = {x = 0 y = 0}
+			text= [MS_coal_text]
+			maxWidth = 57
+			maxHeight = 24
+			fixedsize = yes
+			format = center
+			#pdx_tooltip = "PRODUCTION_MATERIALS_coal"
+					}
+		}
+						
+		}
+		}}
+	
+	
+

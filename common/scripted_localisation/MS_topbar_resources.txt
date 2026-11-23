@@ -1,0 +1,108 @@
+defined_text = { # global
+	name = MS_steel_text
+	text = {
+		trigger = {
+			check_variable = {resource_imported@steel>0}
+			check_variable = {resource@steel>resource_imported@steel}
+		}
+		localization_key = MS_steel_yellow_tt
+	}
+	text = {
+		trigger = {
+			always=yes
+		}
+		localization_key = MS_steel_green_tt
+	}
+
+
+}
+defined_text = { # global
+	name = MS_rubber_text
+	text = {
+		trigger = {
+			check_variable = {resource_imported@rubber>0}
+			check_variable = {resource@rubber>resource_imported@rubber}
+		}
+		localization_key = MS_rubber_yellow_tt
+	}
+	text = {
+		trigger = {
+			always=yes
+		}
+		localization_key = MS_rubber_green_tt
+	}
+
+
+}
+defined_text = { # global
+	name = MS_aluminium_text
+	text = {
+		trigger = {
+			check_variable = {resource_imported@aluminium>0}
+			check_variable = {resource@aluminium>resource_imported@aluminium}
+		}
+		localization_key = MS_aluminium_yellow_tt
+	}
+	text = {
+		trigger = {
+			always=yes
+		}
+		localization_key = MS_aluminium_green_tt
+	}
+
+
+}
+defined_text = { # global
+	name = MS_tungsten_text
+	text = {
+		trigger = {
+			check_variable = {resource_imported@tungsten>0}
+			check_variable = {resource@tungsten>resource_imported@tungsten}
+		}
+		localization_key = MS_tungsten_yellow_tt
+	}
+	text = {
+		trigger = {
+			always=yes
+		}
+		localization_key = MS_tungsten_green_tt
+	}
+
+
+}
+defined_text = { # global
+	name = MS_chromium_text
+	text = {
+		trigger = {
+			check_variable = {resource_imported@chromium>0}
+			check_variable = {resource@chromium>resource_imported@chromium}
+		}
+		localization_key = MS_chromium_yellow_tt
+	}
+	text = {
+		trigger = {
+			always=yes
+		}
+		localization_key = MS_chromium_green_tt
+	}
+
+
+}
+defined_text = { # global
+	name = MS_coal_text
+	text = {
+		trigger = {
+			check_variable = {resource_imported@coal>0}
+			check_variable = {resource@coal>resource_imported@coal}
+		}
+		localization_key = MS_coal_yellow_tt
+	}
+	text = {
+		trigger = {
+			always=yes
+		}
+		localization_key = MS_coal_green_tt
+	}
+
+
+}

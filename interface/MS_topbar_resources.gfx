@@ -1,0 +1,9 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_MS_topbar_resources_bg"
+		texturefile = "gfx/interface/MS_topbar_resources_bg.dds"
+	}
+
+
+}
