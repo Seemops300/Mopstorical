@@ -3190,7 +3190,7 @@ ENG_prepare_gibraltar = {
 	ai_strategy = {
 		type = build_building
 		id = naval_base
-		target = 4135
+		target = 13228
 		value = 100
 	}
 }
