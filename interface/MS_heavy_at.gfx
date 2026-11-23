@@ -1,0 +1,37 @@
+spriteTypes = {
+	spriteType = { name = "GFX_unit_MS_heavy_anti_tank_brigade_icon_medium" textureFile = "gfx/interface/counters/divisions_large/MS_unit_heavy_at_icon.dds" noOfFrames = 2 }
+	spriteType = { name = "GFX_unit_MS_heavy_anti_tank_brigade_icon_medium_white" textureFile = "gfx/interface/counters/divisions_small/MS_onmap_unit_heavy_at_icon.dds" noOfFrames = 2 }
+	spriteType = { name = "GFX_unit_MS_heavy_anti_tank_brigade_icon_small" textureFile = "gfx/texticons/MS_unit_heavy_anti_tank_icon_small.dds" legacy_lazy_load = no noOfFrames = 2 }
+	spriteType = { name = "GFX_MS_heavy_anti_tank_equipment_1_medium" textureFile = "gfx/interface/technologies/MS_heavy_at_1_allies.dds" }
+	spriteType = { name = "GFX_SOV_MS_heavy_anti_tank_equipment_1_medium" textureFile = "gfx/interface/technologies/MS_heavy_at_1_comintern.dds" }
+	spriteType = { name = "GFX_GER_MS_heavy_anti_tank_equipment_1_medium" textureFile = "gfx/interface/technologies/MS_heavy_at_1_axis.dds" }
+	spriteType = { name = "GFX_ITA_MS_heavy_anti_tank_equipment_1_medium" textureFile = "gfx/interface/technologies/MS_heavy_at_1_axis.dds" }
+	spriteType = { name = "GFX_JAP_MS_heavy_anti_tank_equipment_1_medium" textureFile = "gfx/interface/technologies/MS_heavy_at_1_axis.dds" }
+	spriteType = { name = "GFX_HUN_MS_heavy_anti_tank_equipment_1_medium" textureFile = "gfx/interface/technologies/MS_heavy_at_1_axis.dds" }
+	spriteType = { name = "GFX_ROM_MS_heavy_anti_tank_equipment_1_medium" textureFile = "gfx/interface/technologies/MS_heavy_at_1_axis.dds" }
+	spriteType = { name = "GFX_BUL_MS_heavy_anti_tank_equipment_1_medium" textureFile = "gfx/interface/technologies/MS_heavy_at_1_axis.dds" }
+	spriteType = { name = "GFX_MS_heavy_antitank1_medium" textureFile = "gfx/interface/technologies/MS_heavy_at_1_allies.dds" }
+	spriteType = { name = "GFX_SOV_MS_heavy_antitank1_medium" textureFile = "gfx/interface/technologies/MS_heavy_at_1_comintern.dds" }
+	spriteType = { name = "GFX_GER_MS_heavy_antitank1_medium" textureFile = "gfx/interface/technologies/MS_heavy_at_1_axis.dds" }
+	spriteType = { name = "GFX_ITA_MS_heavy_antitank1_medium" textureFile = "gfx/interface/technologies/MS_heavy_at_1_axis.dds" }
+	spriteType = { name = "GFX_JAP_MS_heavy_antitank1_medium" textureFile = "gfx/interface/technologies/MS_heavy_at_1_axis.dds" }
+	spriteType = { name = "GFX_HUN_MS_heavy_antitank1_medium" textureFile = "gfx/interface/technologies/MS_heavy_at_1_axis.dds" }
+	spriteType = { name = "GFX_ROM_MS_heavy_antitank1_medium" textureFile = "gfx/interface/technologies/MS_heavy_at_1_axis.dds" }
+	spriteType = { name = "GFX_BUL_MS_heavy_antitank1_medium" textureFile = "gfx/interface/technologies/MS_heavy_at_1_axis.dds" }
+	spriteType = { name = "GFX_MS_heavy_anti_tank_equipment_2_medium" textureFile = "gfx/interface/technologies/MS_heavy_at_2_allies.dds" }
+	spriteType = { name = "GFX_SOV_MS_heavy_anti_tank_equipment_2_medium" textureFile = "gfx/interface/technologies/MS_heavy_at_2_comintern.dds" }
+	spriteType = { name = "GFX_GER_MS_heavy_anti_tank_equipment_2_medium" textureFile = "gfx/interface/technologies/MS_heavy_at_2_axis.dds" }
+	spriteType = { name = "GFX_ITA_MS_heavy_anti_tank_equipment_2_medium" textureFile = "gfx/interface/technologies/MS_heavy_at_2_axis.dds" }
+	spriteType = { name = "GFX_JAP_MS_heavy_anti_tank_equipment_2_medium" textureFile = "gfx/interface/technologies/MS_heavy_at_2_axis.dds" }
+	spriteType = { name = "GFX_HUN_MS_heavy_anti_tank_equipment_2_medium" textureFile = "gfx/interface/technologies/MS_heavy_at_2_axis.dds" }
+	spriteType = { name = "GFX_ROM_MS_heavy_anti_tank_equipment_2_medium" textureFile = "gfx/interface/technologies/MS_heavy_at_2_axis.dds" }
+	spriteType = { name = "GFX_BUL_MS_heavy_anti_tank_equipment_2_medium" textureFile = "gfx/interface/technologies/MS_heavy_at_2_axis.dds" }
+	spriteType = { name = "GFX_MS_heavy_antitank2_medium" textureFile = "gfx/interface/technologies/MS_heavy_at_2_allies.dds" }
+	spriteType = { name = "GFX_SOV_MS_heavy_antitank2_medium" textureFile = "gfx/interface/technologies/MS_heavy_at_2_comintern.dds" }
+	spriteType = { name = "GFX_GER_MS_heavy_antitank2_medium" textureFile = "gfx/interface/technologies/MS_heavy_at_2_axis.dds" }
+	spriteType = { name = "GFX_ITA_MS_heavy_antitank2_medium" textureFile = "gfx/interface/technologies/MS_heavy_at_2_axis.dds" }
+	spriteType = { name = "GFX_JAP_MS_heavy_antitank2_medium" textureFile = "gfx/interface/technologies/MS_heavy_at_2_axis.dds" }
+	spriteType = { name = "GFX_HUN_MS_heavy_antitank2_medium" textureFile = "gfx/interface/technologies/MS_heavy_at_2_axis.dds" }
+	spriteType = { name = "GFX_ROM_MS_heavy_antitank2_medium" textureFile = "gfx/interface/technologies/MS_heavy_at_2_axis.dds" }
+	spriteType = { name = "GFX_BUL_MS_heavy_antitank2_medium" textureFile = "gfx/interface/technologies/MS_heavy_at_2_axis.dds" }
+}
